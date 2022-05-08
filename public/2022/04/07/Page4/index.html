@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Hubert Chen">
+
+
+    <meta name="subtitle" content="Now nothing here">
+
+
+
+
+<title>闲谈杂聊 | Hubert&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Hubert&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/tags">标签</a>
+                
+                    <a class="menu-item" href="/2022/03/01/%E6%AC%A2%E8%BF%8E%E5%8F%82%E8%A7%82/">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Hubert&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; 菜单</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/tags">标签</a>
+                
+                    <a class="menu-item" href="/2022/03/01/%E6%AC%A2%E8%BF%8E%E5%8F%82%E8%A7%82/">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6;    // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function () {
+            tocbot.refresh(obj_merge(tocbot_default_config, { hasInnerContainers: true }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function () {
+        tocbot.init(obj_merge(tocbot_default_config, { collapseDepth: 1 }));
+    });
+
+    function expandToc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, { collapseDepth: expanded ? 1 : DEPTH_MAX }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">闲谈杂聊</h1>
+            
+                <div class="post-meta">
+                    
+                        作者: <a itemprop="author" rel="author" href="/">Hubert Chen</a>
+                    
+
+                    
+                        <span class="post-time">
+                        日期: <a href="#">2022, 四月 07&nbsp;&nbsp;08:06:21</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p> 你好，欢迎来我的博客看文章，祝愿你天天开心</p>
+<h2 id="回顾搭建博客之前"><a href="#回顾搭建博客之前" class="headerlink" title="回顾搭建博客之前"></a>回顾搭建博客之前</h2><p>大概一个多星期前，我去翻了翻之前收藏的博客，发现只有很少的博客更新了几篇新文章，大多数的博客基本都停了，还有一些博客直接停了两年没更新</p>
+<p>至于为什么我会收藏博客，因为没搭建博客之前也有想法自己搭一个，似乎大多数博客也会写一个关于搭建的文章，于是我目前每看见一个个人博客都会添加到书签里</p>
+<p>而我的博客也已经一个多月没有更新新文章了，我并没有确定写作方向，恐怕就是更新力不足的原因</p>
+<p>以后博客可能会<del>月更</del>季更更符合实际吧，因为写一篇文章随便写点东西也不太好的样子，像这种闲聊的文章应该会比教程类的多一些</p>
+<h2 id="最近在学习的东西"><a href="#最近在学习的东西" class="headerlink" title="最近在学习的东西"></a>最近在学习的东西</h2><p>大概从寒假下半旬开始，我在 Yogabook 上试着画画，不过毕竟是笔记本嘛，屏幕大小和显示效果都不怎么好，于是我就利用 转换器把它接到我的台式机显示器上，于是我就有了一个正式练习画画的地方</p>
+<p>最近还买了个新数位板，还得熟悉熟悉，感觉自己桌面空间是有点小了，之前想画画的话就得把键盘鼠标全都挪开，想用台式又得把显示器接回去，现在可以直接在台式画了</p>
+<p>不过嘛，一个新手是没办法一下子就学会画画的，找了些教学视频，我得知了自己画画的问题： 勾线不好看，一条线没画好就随便擦一下应付，勾线应该一笔勾不好重新勾，于是我找了一些简单的二次元图来联系勾线，就是在 SAI 在原图上叠一个图，调整透明度就照着描，以往是希望一天画一幅的，结果到现在只画完了两幅，剩下衣服答应朋友要描的，也画了好久，这周回去看看能不能画完然后画一幅新的</p>
+<p>得益于我在 GitHub 里发现了 <a target="_blank" rel="noopener" href="https://github.com/niudai/How-to-be-a-good-programmer">程序员修炼宝典</a> 这个项目，我就下载了几本关于 Linux 的电子书看，因为手头并没有什么顺手的阅读设备（PDF 格式手机读着累，Yogabook 拿着压手），也就只读了百来页</p>
+<p>在约一年前我就有学习 C++ 的想法，当时只会在网上搜一些 C++ 写的程序，然后仿写出来自己试着理解，因为没有系统性的学习和要写的程序，也就不了了之</p>
+<p>似乎是从这个月初开始，我打算买本书正式学学 C 了，现在是感觉之前打算直接冲 C++ 是有点幼稚了，我翻了翻淘宝，但并没有买，去找了电子书版的 《C Prime Plus》 ，从 9 号我每天都在把《C Prime Plus》里需要写，或要理解的程序重新写一遍、写好注释，然后提交到私人 GitHub Repository 里，不过目前还没公开，等我学完那本书里需要学的东西后会公开的</p>
+<p>之前还试过做音乐，不过创作细胞还是太没活力了，不确定以后还会不会试试学，但感觉音乐的门槛是想学的几个东西中最高的 😢</p>
+<h2 id="假期打算与发牢骚"><a href="#假期打算与发牢骚" class="headerlink" title="假期打算与发牢骚"></a>假期打算与发牢骚</h2><p>也快接近五一假期了，学习 C 语言也有十来天了，虽然按照书里的学了快两百页，感觉总是只学到了点皮毛，要记数值对应的表达方式是有点费劲，在学校每天也只有晚自习的时间会学一个小时左右，这个进度下去得学多久啊…….</p>
+<p>感觉自己是有点懒了，从学习 C 语言或是写博客来说都是，这篇文章是从四月七日开始打算写的，但是现在已经是四月月底了</p>
+<p>上周的调休导致我也没回家，答应给朋友画的画还是没有画完，五一假期里一定要画完</p>
+<p>说到五一，五一就到明日方舟三周年了，但从这个学期开始真的很少很少玩了，好像当初停止玩是因为 BOSS 太难打不过去(当时查攻略的话应该是没问题的)</p>
+<p><img src="/images/post/hero.png"><br>Lineage OS 在 26 号的时候正式更新了 <a target="_blank" rel="noopener" href="https://lineageos.org/Changelog-26">Lineage OS 19</a>，不知道 <a target="_blank" rel="noopener" href="https://github.com/Linux4">Linux4</a> 大佬什么时候让我的 s10e 吃上 Official Lineage OS 🤤</p>
+<p>近几年半导体的东西价格都在涨，显卡 内存 硬盘 以及本来是打着廉价开发板的树莓派，现在都涨了，想整块 zero 2 w 当随身 Linux 主机的 😢</p>
+<p>这篇文章就写到这吧，<del>摸到月底发还能算月更博客</del> 🥴</p>
+
+        </div>
+
+        
+        <section class="post-tags">
+            <div>
+                <span>标签:</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E9%97%B2%E8%81%8A/"># 闲聊</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">返回</a>
+                <span>· </span>
+                <a href="/">主页</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2022/03/05/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">搭建一个自己的博客</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>©2022 Hubert Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

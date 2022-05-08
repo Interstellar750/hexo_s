@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Hubert Chen">
+
+
+    <meta name="subtitle" content="Now nothing here">
+
+
+
+
+<title>搭建一个自己的博客 | Hubert&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Hubert&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/tags">标签</a>
+                
+                    <a class="menu-item" href="/2022/03/01/%E6%AC%A2%E8%BF%8E%E5%8F%82%E8%A7%82/">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Hubert&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; 菜单</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/tags">标签</a>
+                
+                    <a class="menu-item" href="/2022/03/01/%E6%AC%A2%E8%BF%8E%E5%8F%82%E8%A7%82/">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6;    // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function () {
+            tocbot.refresh(obj_merge(tocbot_default_config, { hasInnerContainers: true }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function () {
+        tocbot.init(obj_merge(tocbot_default_config, { collapseDepth: 1 }));
+    });
+
+    function expandToc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, { collapseDepth: expanded ? 1 : DEPTH_MAX }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">搭建一个自己的博客</h1>
+            
+                <div class="post-meta">
+                    
+                        作者: <a itemprop="author" rel="author" href="/">Hubert Chen</a>
+                    
+
+                    
+                        <span class="post-time">
+                        日期: <a href="#">2022, 三月 05&nbsp;&nbsp;19:01:48</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>  你好！这里是 Hubert ，欢迎来我的博客看文章！</p>
+<h2 id="如何搭建自己的博客"><a href="#如何搭建自己的博客" class="headerlink" title="如何搭建自己的博客"></a>如何搭建自己的博客</h2><p> 搭建博客并没有那么困难，大部分的时候只需要跟着步骤走就行，当然有时候碰见bug会是不可避免的事，这就得看运气了<del>，我是属于运气差的那一类人。</del></p>
+<p> 本文里使用的博客框架为 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo">Hexo</a> ，服务器使用 <a href="github.io">GitHub Pages</a>。域名可使用 Github Pages 默认域名或自定义</p>
+<h2 id="那么就正式开始吧，毕竟我也不会写太多介绍"><a href="#那么就正式开始吧，毕竟我也不会写太多介绍" class="headerlink" title="那么就正式开始吧，毕竟我也不会写太多介绍"></a>那么就正式开始吧，毕竟我也不会写太多介绍</h2><h3 id="搭建博客需要准备的东西："><a href="#搭建博客需要准备的东西：" class="headerlink" title="搭建博客需要准备的东西："></a>搭建博客需要准备的东西：</h3> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 可正常使用且没有被限制的 GitHub 账户</span><br><span class="line">2. 搭载 Windows、Linux 或 Android 的设备</span><br><span class="line">3. 良好的网络环境（我不知道啊你不要问我）</span><br></pre></td></tr></table></figure>
+<p>首先创建 GitHub 账户，因为我们搭建博客要用到 GitHub Pages ，注册过程我就不多阐述了，看不懂可以打开浏览器的翻译功能，也可以在搜索引擎寻找对应的教程。<br>创建完了 GitHub 账户，需要创建一个仓库（Repositories）用于存放博客文件和启用 GitHub Pages 。</p>
+<p>登录到 GitHub 网页版后，可以看见左上角的 <strong>Recent Repositories</strong> 旁有个 <strong>New</strong> 按钮，点击它来新建仓库<img src="/images/post/github202203051935.png"><br>如果是使用手机来访问，可以进入 <code>https://github.com/&lt;你的github用户名&gt;?tab=repositories</code> ，就能看见那个New按钮了 <img src="/images/post/github202203051951.png"></p>
+<p>创建仓库需要设定仓库名与仓库类型（公开或私密），如果你希望使用 Github Pages 给的二级域名，你需要把仓库名设为 <code>&lt;你的GitHub用户名&gt;.github.io</code> ，否则你的 Github Pages 网页会变成 <code>&lt;你的GitHub用户名&gt;.github.io/&lt;创建的仓库名&gt;</code>，但如果你使用自定义域名的话随便设置都没问题，仓库类型推荐使用公开，因为似乎只有 Github 付费用户才能在私密的仓库中开启 Github Pages 功能。</p>
+<p>到这里  Github 的设置基本就完成了，接下来就应该开始配置 hexo 客户端了</p>
+<h2 id="配置-Hexo-客户端"><a href="#配置-Hexo-客户端" class="headerlink" title="配置 Hexo 客户端"></a>配置 Hexo 客户端</h2><p>一旦配置完 Hexo 客户端，博客控制文件是全平台通用的，所以这里只说明如何在各个客户端配置，搭建以及部署后面统一讲。</p>
+<hr>
+<h3 id="在-Windows-设备上配置-Hexo-客户端"><a href="#在-Windows-设备上配置-Hexo-客户端" class="headerlink" title="在 Windows 设备上配置 Hexo 客户端"></a>在 Windows 设备上配置 Hexo 客户端</h3><p>首先要安装 Windows 版 <a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">Node.js</a> ，选择 <strong>Windows Installer</strong></p>
+<p>安装完成后测试是否正常</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>都能正常提示版本号的话，那就可以直接安装 Hexo 客户端</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo version  # 检查 hexo 是否正常</span><br></pre></td></tr></table></figure>
+
+<p>然后还需要安装一下 Git , 方法有两个。</p>
+<ol>
+<li>进入 <a target="_blank" rel="noopener" href="https://git-scm.com/">Git官网</a> 下载常规安装包</li>
+<li>使用winget <code>winget install --id Git.Git -e --source winget</code></li>
+</ol>
+<p>这时候就可以部署 Hexo 了，创建一个放博客的文件夹比较好，推荐在用户文件夹下创建一个 hexo 文件夹给它，当然如果你已经在其他平台配置过了，也可以cd到那个文件夹直接进去继续操作。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd C:/Users/&lt;你的用户名&gt;/hexo/</span><br><span class="line">cd /d &lt;目录&gt;  # CMD用户使用这条命令来切换目录</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>到这里的 Windwos上的 hexo 已经部署完成了</p>
+<hr>
+<h3 id="在-Linux-设备上配置-Hexo-客户端"><a href="#在-Linux-设备上配置-Hexo-客户端" class="headerlink" title="在 Linux 设备上配置 Hexo 客户端"></a>在 Linux 设备上配置 Hexo 客户端</h3><p>相比于 Windows ，Linux 上的 Hexo 安装更为简单，只用在命令行运行几个命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install nodejs</span><br><span class="line">$ sudo apt install git # 如果已经安装了git可以跳过这一步</span><br><span class="line">$ sudo npm install -g hexo-cli</span><br><span class="line">$ hexo version</span><br></pre></td></tr></table></figure>
+
+<p>挺简单的，接着在<code>~/</code>下创建一个<code>hexo</code>文件夹再部署就行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir hexo</span><br><span class="line">$ cd hexo</span><br><span class="line">$ hexo init # 此步如果有报错，请使用sudo执行或清空部署文件夹</span><br></pre></td></tr></table></figure>
+
+<p>完成</p>
+<hr>
+<h2 id="在-Android-设备上配置-Hexo-客户端"><a href="#在-Android-设备上配置-Hexo-客户端" class="headerlink" title="在 Android 设备上配置 Hexo 客户端"></a>在 Android 设备上配置 Hexo 客户端</h2><h3 id="由于考虑到一些手机品牌的不可获取-root-性，本文章使用-Termux-来运行命令"><a href="#由于考虑到一些手机品牌的不可获取-root-性，本文章使用-Termux-来运行命令" class="headerlink" title="由于考虑到一些手机品牌的不可获取 root 性，本文章使用 Termux 来运行命令"></a>由于考虑到一些手机品牌的不可获取 root 性，本文章使用 Termux 来运行命令</h3><h4 id="但由于-termux-的默认用户文件夹是在-data-data-com-ternux-files-home-下，没有-root-权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到-GitHub-Pages-上，但后端控制文件可能得找其他办法传输出来。"><a href="#但由于-termux-的默认用户文件夹是在-data-data-com-ternux-files-home-下，没有-root-权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到-GitHub-Pages-上，但后端控制文件可能得找其他办法传输出来。" class="headerlink" title="但由于 termux 的默认用户文件夹是在 /data/data/com.ternux/files/home/ 下，没有 root 权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到 GitHub Pages 上，但后端控制文件可能得找其他办法传输出来。"></a>但由于 termux 的默认用户文件夹是在 <code>/data/data/com.ternux/files/home/</code> 下，没有 root 权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到 GitHub Pages 上，但后端控制文件可能得找其他办法传输出来。</h4><h4 id="不然也可以尝试在手机上安装完整-Linux-虚拟机"><a href="#不然也可以尝试在手机上安装完整-Linux-虚拟机" class="headerlink" title="不然也可以尝试在手机上安装完整 Linux 虚拟机"></a>不然也可以尝试在手机上安装完整 Linux 虚拟机</h4><h3 id="安装-Termux"><a href="#安装-Termux" class="headerlink" title="安装 Termux"></a>安装 Termux</h3><p>下载链接 <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.termux"><del>Play Store</del></a> 不推荐，已经很久没更新了 | <a target="_blank" rel="noopener" href="https://f-droid.org/repo/com.termux_118.apk">F-Droid</a> | <a target="_blank" rel="noopener" href="https://t5d.trle5.tk/Apk/com.termux_118_f-droid.apk">Hubert’s Box</a></p>
+<p>安装并打开，等待下载需要的配置文件</p>
+<p>更新源与升级</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ pkg update</span><br><span class="line">$ pkg upgrade</span><br><span class="line"># 如果以上命令不可用，可以试试把pkg改成apt，即 apt update</span><br></pre></td></tr></table></figure>
+
+<p>upgrade 中途可能有选择停顿，可根据个人喜好选择</p>
+<p>安装 Termux root 工具</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pkg install tsu # 手机有 root 权限选择这个</span><br><span class="line">$ pkg install proot # 手机没有 root 权限选择这个</span><br></pre></td></tr></table></figure>
+
+<p>切换到 root</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ tsu # tsu使用这条命令，执行后会向手机索要root权限</span><br><span class="line">$ termux-chroot # proot 使用这条命令，运行后 ~$ 没有变化 ，但权限有变</span><br></pre></td></tr></table></figure>
+
+<p>安装 nodejs 和 git 以及 hexo-cli </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ pkg install nodejs</span><br><span class="line">$ node -v &amp;&amp; npm -v # 查看nodejs与npm的版本</span><br><span class="line">$ pkg install git # 已安装git可以忽略此行</span><br><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ hexo version</span><br></pre></td></tr></table></figure>
+
+<p>这下 hexo 客户端已经成功部署到 Termux 了，来创建文件夹部署博客文件吧</p>
+<p>Termux 的默认文件夹在安卓系统的 <code>/data/data/com.termux/files/home/</code> ，最好也是在 home 下创建一个 hexo 文件夹部署进去</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir hexo # 如果是用的系统 su ，记得观察路径是不是在 Termux 的 home 文件夹下( termux-chroot 显示为 ~$ )，以免破坏 Android 系统</span><br><span class="line">$ cd hexo</span><br><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+
+<p>走完进度条也就部署完成了</p>
+<h3 id="在三个平台的部署都完成了，接下来要尝试让它在本地服务器上运行"><a href="#在三个平台的部署都完成了，接下来要尝试让它在本地服务器上运行" class="headerlink" title="在三个平台的部署都完成了，接下来要尝试让它在本地服务器上运行"></a>在三个平台的部署都完成了，接下来要尝试让它在本地服务器上运行</h3><h4 id="下面的-hexo-generate-hexo-server-和后面要讲的-hexo-deploy，都可以使用-hexo-g-hexo-s-hexo-d来代替，作用是一样的，也就是-generate-server-deploy-三个单词的首字母。"><a href="#下面的-hexo-generate-hexo-server-和后面要讲的-hexo-deploy，都可以使用-hexo-g-hexo-s-hexo-d来代替，作用是一样的，也就是-generate-server-deploy-三个单词的首字母。" class="headerlink" title="下面的 hexo generate  hexo server 和后面要讲的 hexo deploy，都可以使用 hexo g hexo s hexo d来代替，作用是一样的，也就是 generate server deploy 三个单词的首字母。"></a>下面的 <code>hexo generate</code>  <code>hexo server</code> 和后面要讲的 <code>hexo deploy</code>，都可以使用 <code>hexo g</code> <code>hexo s</code> <code>hexo d</code>来代替，作用是一样的，也就是 <strong>g</strong>enerate <strong>s</strong>erver <strong>d</strong>eploy 三个单词的首字母。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate # 初始化博客并生成初始页面，后期每写一篇新文章也需要再执行一次</span><br><span class="line">hexo server # 运行本地服务器，一般用来测试和在推送前检查是否有问题</span><br></pre></td></tr></table></figure>
+<p>接下来会提示本地服务器已经启用，访问 <code>http://localhost:4000/</code> 或 <code>http://127.0.0.1:4000/</code> 都可以查看初始博客。</p>
+<p>配置文件并部署博客到 Github Pages</p>
+<p>进入你的hexo文件夹，然后编辑其中的 <code>_config.yml</code> 文件</p>
+<p>下面放一些正常的设置类型</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: Hexo # 博客主标题</span><br><span class="line">subtitle:   # 博客副标题</span><br><span class="line">author: John Doe # 博客著名者</span><br><span class="line">language: en # 中文填 zh-CN</span><br><span class="line">timezone: Asia/Shanghai # 时间位置，需要按照规范填写</span><br><span class="line">url: http://example.com # 网站链接，影响到点击主副标题的跳转，可以填自定义域名或 Github Pages 二级域名</span><br></pre></td></tr></table></figure>
+
+<p>接下来是部署设置，配置文件也是在 <code>_config.yml</code> 文件里编辑</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># https://hexo.io/docs/one-command-deployment 查看 hexo 部署帮助文档</span><br><span class="line">deploy: # 此处不用填写，留空</span><br><span class="line">  type: git # 填 git 或 heroku ，根据你的部署位置来</span><br><span class="line">  repository:  https://github.com/&lt;/username&gt;/&lt;username&gt;.github.io # 也可以填你名下的其他仓库，正确即可</span><br><span class="line">  branch: main # 或 master，根据分支来，例如我的就是 hexo</span><br></pre></td></tr></table></figure>
+
+<h3 id="这下就可以部署到-Github-Pages-了，不过还得设定一些东西"><a href="#这下就可以部署到-Github-Pages-了，不过还得设定一些东西" class="headerlink" title="这下就可以部署到 Github Pages 了，不过还得设定一些东西"></a>这下就可以部署到 Github Pages 了，不过还得设定一些东西</h3><p>确保你的终端里配置有git，然后设置一下用户信息</p>
+<p>也可以手动编辑，Windows 的 .gitconfig 文件在用户文件夹目录，Linux 在用户文件夹下，Termux 在 home 文件夹下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;&lt;username&gt;&quot; </span><br><span class="line">git config --global user.mail &quot;&lt;username@github.com&gt;&quot;</span><br><span class="line"># 可能需要使用 root 权限执行</span><br><span class="line"># 可以不用加 &quot;&quot; 号，只是因为用户名有空格的话可能会造成git只记录下前一半</span><br></pre></td></tr></table></figure>
+
+<p>呃，还得安装一下hexo提供的一键部署工具</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd hexo  # 需要在博客文件夹里执行</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="到这里基本上就完成了，来部署吧！"><a href="#到这里基本上就完成了，来部署吧！" class="headerlink" title="到这里基本上就完成了，来部署吧！"></a>到这里基本上就完成了，来部署吧！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean # 慎重操作，会清除所有数据，但不会删除 _config.yml 文件，非必要选项</span><br><span class="line">hexo g # 重新生成默认博客，source文件夹里有新文章时会生成新的页面</span><br><span class="line">hexo d # 复制 public 文件夹里的文件到 .depoly_git 文件夹里，然后根据 _config.yml 里的设置开始部署</span><br></pre></td></tr></table></figure>
+
+<p>接下来git 会向你请求设定的部署网站的用户名与密钥，这里以 GitHub 作为演示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Username for &#x27;https://github.com&#x27;:&lt;username&gt;</span><br><span class="line">Password for &#x27;https://&lt;username&gt;@github.com&#x27;:&lt;yourpasswd&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="事实上这个时候填你得-Github-账号密码是没有用的，为了安全你得去-GitHub-申请一个-Personal-access-tokens"><a href="#事实上这个时候填你得-Github-账号密码是没有用的，为了安全你得去-GitHub-申请一个-Personal-access-tokens" class="headerlink" title="事实上这个时候填你得 Github 账号密码是没有用的，为了安全你得去 GitHub 申请一个 Personal access tokens"></a>事实上这个时候填你得 Github 账号密码是没有用的，为了安全你得去 GitHub 申请一个 Personal access tokens</h3><ol>
+<li>访问 <a target="_blank" rel="noopener" href="https://github.com/settings/tokens/">https://github.com/settings/tokens/</a></li>
+<li>点击 <strong>Generate new token</strong></li>
+<li>验证密码 ，然后输入一个名称，以及选择过期时间，为了安全，推荐不要设置成不过期，做好定期更换</li>
+<li>在下方选择该令牌的权限，不懂可以全选，也可以自定义</li>
+<li>点击 Generate token，生成令牌</li>
+</ol>
+<p>生成的令牌格式为 <code>ghp_1234567890abcdefghijklmnopqrst</code> ，也就是<code>ghp_</code> 加上<code>0-9</code> <code>a-z</code> <code>A-Z</code> 的随机生成数，一般也记不住，但也不要为方便直接保存在明文文件里</p>
+<h3 id="后面就可以继续博客的部署了，接下来说说博客自定义域名与DNS解析如何设置的问题"><a href="#后面就可以继续博客的部署了，接下来说说博客自定义域名与DNS解析如何设置的问题" class="headerlink" title="后面就可以继续博客的部署了，接下来说说博客自定义域名与DNS解析如何设置的问题"></a>后面就可以继续博客的部署了，接下来说说博客自定义域名与DNS解析如何设置的问题</h3><p>如果需要自定义域名，请在hexo的 <code>public</code> 和 <code>.deploy_git</code> 文件夹里都新建一个 <code>CNAME</code> 文件，用文本编辑器打开，里面填上你希望使用的域名，也可以在项目的设置里找到 Pages ，再找到 Custom domain ，填入域名，但你不在 hexo 里放的话，每更新 <code>(hexo d)</code> 一次你就得重新进这个页面设置一次，很麻烦</p>
+<h3 id="自定义域名的DNS设置"><a href="#自定义域名的DNS设置" class="headerlink" title="自定义域名的DNS设置"></a>自定义域名的DNS设置</h3><p>这个我也摸索了很久，但现在碰壁多了也就会了</p>
+<p>按照 <a target="_blank" rel="noopener" href="https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">Github 的 DNS 解析设置</a>，需要创建四条 <code>A</code> 记录，并分别定向到：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name: @ # 全都要使用 @ 号</span><br><span class="line">185.199.108.153</span><br><span class="line">185.199.109.153</span><br><span class="line">185.199.110.153</span><br><span class="line">185.199.111.153</span><br></pre></td></tr></table></figure>
+
+<p>还有四条 <code>AAAA</code> 记录，也得分别定向到：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name: @ # 全都要使用 @ 号</span><br><span class="line">2606:50c0:8000::153</span><br><span class="line">2606:50c0:8001::153</span><br><span class="line">2606:50c0:8002::153</span><br><span class="line">2606:50c0:8003::153</span><br></pre></td></tr></table></figure>
+
+<p>以及一条 <code>CNAME</code> 记录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name: www </span><br><span class="line">&lt;username&gt;.github.io. # 也就是GitHub Pages的默认页面</span><br></pre></td></tr></table></figure>
+
+<p>填写完成的样子就如下图，顺序没有关系</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>名称</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>@</td>
+<td>185.199.108.153</td>
+</tr>
+<tr>
+<td>A</td>
+<td>@</td>
+<td>185.199.109.153</td>
+</tr>
+<tr>
+<td>A</td>
+<td>@</td>
+<td>185.199.110.153</td>
+</tr>
+<tr>
+<td>A</td>
+<td>@</td>
+<td>185.199.111.153</td>
+</tr>
+<tr>
+<td>AAAA</td>
+<td>@</td>
+<td>2606:50c0:8000::153</td>
+</tr>
+<tr>
+<td>AAAA</td>
+<td>@</td>
+<td>2606:50c0:8001::153</td>
+</tr>
+<tr>
+<td>AAAA</td>
+<td>@</td>
+<td>2606:50c0:8002::153</td>
+</tr>
+<tr>
+<td>AAAA</td>
+<td>@</td>
+<td>2606:50c0:8003::153</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>www</td>
+<td>username.github.io.</td>
+</tr>
+</tbody></table>
+<p>设置完成点击保存，然后等个十来分钟应该就可以访问自定义域名了，如果访问出现 Github Pages 页面，但没有定位到你的博客，那可能是你 Github 仓库的 <code>CNAME</code> 文件被顶掉了</p>
+<p>到这里你的博客就搭建完成了，写文章的教程我会在后面再发一篇教程</p>
+<p>参考文章：</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102592286">从零开始搭建个人博客（超详细）</a><br><a target="_blank" rel="noopener" href="https://www.sqlsec.com/2018/05/termux.html">Termux 高级终端安装使用配置教程</a></p>
+
+        </div>
+
+        
+        <section class="post-tags">
+            <div>
+                <span>标签:</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E6%8A%80%E6%9C%AF/"># 技术</a>
+                    
+                        <a href="/tags/%E5%8D%9A%E5%AE%A2/"># 博客</a>
+                    
+                        <a href="/tags/GitHub/"># GitHub</a>
+                    
+                        <a href="/tags/%E5%9F%9F%E5%90%8D/"># 域名</a>
+                    
+                        <a href="/tags/DNS/"># DNS</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">返回</a>
+                <span>· </span>
+                <a href="/">主页</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2022/04/07/Page4/">闲谈杂聊</a>
+            
+            
+            <a class="next" rel="next" href="/2022/03/01/%E6%AC%A2%E8%BF%8E%E5%8F%82%E8%A7%82/">欢迎参观</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>©2022 Hubert Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
