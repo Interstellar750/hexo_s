@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Hubert Chen">
+
+
+
+
+
+<title>使用 FarPush 搭建微信消息推送服务 | Hubert&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Hubert&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Hubert&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; 菜单</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">展开全部</a>
+        <a onclick="go_top()">回到顶端</a>
+        <a onclick="go_bottom()">查看底部</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6;    // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function () {
+            tocbot.refresh(obj_merge(tocbot_default_config, { hasInnerContainers: true }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function () {
+        tocbot.init(obj_merge(tocbot_default_config, { collapseDepth: 1 }));
+    });
+
+    function expandToc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, { collapseDepth: expanded ? 1 : DEPTH_MAX }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">使用 FarPush 搭建微信消息推送服务</h1>
+            
+                <div class="post-meta">
+                    
+
+                    
+                        <span class="post-time">
+                        日期: <a href="#">01 九月, 2022&nbsp;&nbsp;20:29:28</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>好久不见，距离上次更新文章的时间是有点长了呢，不过还是欢迎你来看文章！</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  如果你像我一样注重手机后台会有哪些软件在运行，哪些软件是必要待在后台持续运行，哪些软件又是没有必要呆在后台占用系统资源的，那你一定知道 QQ 和微信这两个国内常见的社交软件，还有他们恐怖的空间与系统资源占用</p>
+<p>  我是很不喜欢这样的软件，我并没有那个能力每年跟进最新配置的手机，也没有办法摆脱对它们的依赖，我也不会为了长续航去选择电池大且厚重的手机，我只能防止它们在我的后台占用资源，也就造成了每当有人找我时，并不能及时的获得通知且考虑回复，会耽误事也会尴尬</p>
+<p>  还好，我发现了搭建微信推送的方法，不过我还是依然讨厌这种软件</p>
+<h1 id="FarPush-介绍"><a href="#FarPush-介绍" class="headerlink" title="FarPush 介绍"></a>FarPush 介绍</h1><p>  这个软件好像有点年头了，不过我是最近才在 BiliBili 上看到，是有点火星了</p>
+<h2 id="应用与项目介绍"><a href="#应用与项目介绍" class="headerlink" title="应用与项目介绍"></a>应用与项目介绍</h2><p>  <a target="_blank" rel="noopener" href="https://www.coolapk.com/apk/com.farplace.farpush">FarPush</a> 为安卓手机端软件，WeChatPush 项目为其的后端，截至本文发布时，FarPush 依然还提供软件内后端，但这个后端我不太清楚是运行在软件内还是其他服务器，我也没找到作者在哪里有说明</p>
+<p>  <a target="_blank" rel="noopener" href="https://github.com/TSIOJeft/WeChatPush">WeChatPush</a> 项目由 Python 驱动，只要有 Python 环境就可以运行，可以说是跨平台后端，需要使用 FarPush 作为推送信息接收器，但内存和后台占用比微信本身小了非常多</p>
+<p>  我在这里会先提供在 Linux 与安卓(依然是用 Termux) 的部署方法，Windows 的话要缓一缓了</p>
+<h1 id="准备部署工作"><a href="#准备部署工作" class="headerlink" title="准备部署工作"></a>准备部署工作</h1><h5 id="此软件并不使用-Web-的微信，不会因为-Web-端被禁止登录无法使用的问题，但会占用微信-PC-端"><a href="#此软件并不使用-Web-的微信，不会因为-Web-端被禁止登录无法使用的问题，但会占用微信-PC-端" class="headerlink" title="此软件并不使用 Web 的微信，不会因为 Web 端被禁止登录无法使用的问题，但会占用微信 PC 端"></a>此软件并不使用 Web 的微信，不会因为 Web 端被禁止登录无法使用的问题，但会占用微信 PC 端</h5><h3 id="需要的东西"><a href="#需要的东西" class="headerlink" title="需要的东西"></a>需要的东西</h3>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">一台拥有 Python 环境的设备，Python 版本至少为 Python3</span><br><span class="line">pip 软件包管理器，作者推荐使用 pip3，但似乎是非强制要求</span><br><span class="line">拥有独立 IP 的服务器或拥有独立 IP 且懂得配置端口转发的家庭网络</span><br><span class="line">上一条条件是需要使用到快速回复功能的要求，部署在局域网或获取推送信息的本机上可以不需要独立 IP</span><br></pre></td></tr></table></figure>
+<h4 id="软件和仓库链接，以及作者的主页"><a href="#软件和仓库链接，以及作者的主页" class="headerlink" title="软件和仓库链接，以及作者的主页"></a>软件和仓库链接，以及作者的主页</h4><p>  FarPush 下载地址: <a target="_blank" rel="noopener" href="https://www.coolapk.com/apk/com.farplace.farpush"><strong>酷安</strong></a><br>  WeChatPush 项目仓库地址: <a target="_blank" rel="noopener" href="https://github.com/TSIOJeft/WeChatPush"><strong>GitHub</strong></a><br>  作者的酷安账号: <a target="_blank" rel="noopener" href="https://www.coolapk.com/u/2838135"><strong>FarPlace</strong></a><br>  BiliBili 用户页: <a target="_blank" rel="noopener" href="https://sapce.bilibili.com/10721579"><strong>远方的重生</strong></a> (不太确定是不是作者本人) </p>
+<h1 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h1><h2 id="在-Android-Termux-上部署-FarPush"><a href="#在-Android-Termux-上部署-FarPush" class="headerlink" title="在 Android (Termux) 上部署 FarPush"></a>在 Android (Termux) 上部署 FarPush</h2>
+        </div>
+
+        
+        <section class="post-tags">
+            <div>
+                <span>标签:</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tag/%E5%BE%AE%E4%BF%A1/"># 微信</a>
+                    
+                        <a href="/tag/%E4%BF%A1%E6%81%AF%E6%8E%A8%E9%80%81/"># 信息推送</a>
+                    
+                        <a href="/tag/FarPush/"># FarPush</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">返回</a>
+                <span>· </span>
+                <a href="/">主页</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2022/05/10/07.phone2adb/">手机使用 ADB 与 Fastboot 给另一台手机执行命令</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>Hubert Chen © 2022 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
