@@ -1,4 +1,3 @@
-.dark-theme .post-content figure,
 .dark-theme .post-content figure.highlight .code pre {
   background-color: $dark-post-blockquote-background-color;
   color: $dark-post-blockquote-border-color;

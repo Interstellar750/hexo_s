@@ -580,12 +580,12 @@ header label {
 }
 .intro .avatar img {
   width: 250px;
-  height: 250px;
+  height: auto;
   display: inline-block;
-  -webkit-border-radius: 0%;
-  border-radius: 15%;
-  -webkit-box-shadow: 0 0 0 0.3618em rgba(0,0,0,0.05);
-  box-shadow: 0 0 0 0.3618em rgba(0,0,0,0.05);
+  -webkit-border-radius: 100%;
+  border-radius: 25%;
+  -webkit-box-shadow: 0 0 0 0.5em rgba(0,0,0,0.05);
+  box-shadow: 0 0 0 0.5em rgba(0,0,0,0.05);
   margin: 0 auto;
   -webkit-transition: all ease 0.4s;
   -moz-transition: all ease 0.4s;
@@ -603,17 +603,17 @@ header label {
   cursor: pointer;
 }
 .nickname {
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: normal;
 }
 .links a {
-  padding: 0 7px;
+  padding: 0 10px;
 }
 .links a:hover {
   background-color: transparent;
 }
 .links .iconfont {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 .post-wrap {
   position: relative;
@@ -737,10 +737,10 @@ header label {
   color: #2d96bd;
 }
 .dark-theme .post-wrap .post-meta a {
-  color: #eee;
+  color: #2d96bd;
 }
 .post-wrap .post-meta a:hover {
-  color: #ef3982;
+  color: #161209;
 }
 .dark-theme .post-wrap .post-meta a:hover {
   color: #fff;
@@ -763,7 +763,7 @@ header label {
   color: #2d96bd;
 }
 .dark-theme .post-content h1::before {
-  color: #eee;
+  color: #2d96bd;
 }
 .post-content h2::before {
   content: "#";
@@ -771,7 +771,7 @@ header label {
   color: #2d96bd;
 }
 .dark-theme .post-content h2::before {
-  color: #eee;
+  color: #2d96bd;
 }
 .post-content h3::before {
   content: "|";
@@ -779,7 +779,7 @@ header label {
   color: #2d96bd;
 }
 .dark-theme .post-content h3::before {
-  color: #eee;
+  color: #2d96bd;
 }
 .post-content h4::before {
   content: "*";
@@ -787,16 +787,16 @@ header label {
   color: #2d96bd;
 }
 .dark-theme .post-content h4::before {
-  color: #eee;
+  color: #2d96bd;
 }
 .post-content a {
   color: #2d96bd;
 }
 .dark-theme .post-content a {
-  color: #eee;
+  color: #2d96bd;
 }
 .post-content a:hover {
-  color: #ef3982;
+  color: #161209;
 }
 .dark-theme .post-content a:hover:hover {
   color: #fff;
@@ -941,10 +941,10 @@ header label {
   color: #2d96bd;
 }
 .dark-theme .post-copyright a {
-  color: #eee;
+  color: #2d96bd;
 }
 .post-copyright a:hover {
-  color: #ef3982;
+  color: #161209;
 }
 .dark-theme .post-copyright a:hover {
   color: #fff;
@@ -970,11 +970,11 @@ header label {
   line-height: 1.7em;
   padding: 3px 5px;
   border-radius: 4px;
-  color: #c7254e;
+  color: #2d96bd;
   background: #f8f5ec;
 }
 .dark-theme .post-content code {
-  color: #dcdcdc;
+  color: #fff;
   background: #787575;
 }
 .post-content h1 code,
@@ -1371,7 +1371,6 @@ header label {
 .post-content pre .javascript .function {
   color: #8959a8;
 }
-.dark-theme .post-content figure,
 .dark-theme .post-content figure.highlight .code pre {
   background-color: #3e3e3e;
   color: #dcdcdc;
