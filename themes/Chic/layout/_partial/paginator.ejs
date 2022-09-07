@@ -1,0 +1,11 @@
+<% if (page.total > 1){ %>
+    <nav class="pagination">
+        <%- paginator({
+            // prev_text: "上一篇 &laquo;",
+            // next_text: "下一篇 &raquo;"
+            prev_next: false,
+            end_size: 1,
+            mid_size: 2,
+        }) %>
+    </nav>
+<% } %>
