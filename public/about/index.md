@@ -198,33 +198,19 @@
 
         <div class="post-content">
             <h2 id="你好，欢迎来到我的博客"><a href="#你好，欢迎来到我的博客" class="headerlink" title="你好，欢迎来到我的博客"></a>你好，欢迎来到我的博客</h2><p>这个博客由我创建于2022年01月24日，起初是想跟网络上的大佬一样搭个自己的博客，不过现在搭好了也不知道写些什么。</p>
-<h2 id="关于我-Hubert-Chen"><a href="#关于我-Hubert-Chen" class="headerlink" title="关于我 (Hubert Chen)"></a>关于我 (Hubert Chen)</h2><h3 id="兴趣爱好"><a href="#兴趣爱好" class="headerlink" title="兴趣爱好"></a>兴趣爱好</h3><p>给手机刷系统，例如 <a target="_blank" rel="noopener" href="https://lineageos.org/">Lineage OS</a> <a target="_blank" rel="noopener" href="https://sailfishos.org/">Sailfish OS</a><br>会些基础的Linux操作<del>，不过十分容易碰见bug</del><br>会画画 (非常非常基础，目前只会描些图)<br>听音乐使用的软件： <a target="_blank" rel="noopener" href="https://spotify.com/">Spotify</a>  <a target="_blank" rel="noopener" href="https://music.163.com/">网易云音乐</a> 偶尔会在网易云音乐里上传一些歌词<br>玩游戏会用的软件： <a target="_blank" rel="noopener" href="https://store.steampowered.com/">Steam</a> <a target="_blank" rel="noopener" href="https://www.ubisoft.com/">Ubisoft</a> <a target="_blank" rel="noopener" href="https://www.xbox.com/">Xbox(云游戏)</a><br>活跃的社交平台：<a target="_blank" rel="noopener" href="https://t.me/trle5">Telegram</a> <a target="_blank" rel="noopener" href="https://twitter.com/interstellar750">Twitter</a> <a target="_blank" rel="noopener" href="https://github.com/Interstellar750/">GitHub</a> 国内的QQ微信也在用，但并不太喜欢，而且放出来可能会泄露个人信息，所以就不公开了</p>
-<h2 id="建站历程："><a href="#建站历程：" class="headerlink" title="建站历程："></a>建站历程：</h2><p>2022&#x2F;01&#x2F;24 初次建立并使用 <a target="_blank" rel="noopener" href="https://github.io/">GitHub Pages</a> 来作为服务器 （其实并不是第一次，前前后后试了好几次，因为碰到了好多bug）</p>
-<p>2022&#x2F;01&#x2F;29 在 <a href="freenom.com">Freenom</a> 上申请了12个月的免费域名 trle5.tk ，但由于不会设置DNS解析，依然用着 <a target="_blank" rel="noopener" href="https://github.io/">GitHub Pages</a> 的默认域名</p>
-<p>2022&#x2F;02&#x2F;26 由于 x10m2 上的 <a target="_blank" rel="noopener" href="https://sailfishos.org/">Sailfish OS</a> 因为未知问题操作很卡，把 hexo 后端备份出来迁移到了s10e，使用 <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.termux">Termux</a> 来继续运维</p>
-<p>2022&#x2F;02&#x2F;27 将域名 DNS 解析托管到 <a href="godaddy.com">GoDaddy</a> ，成功用上了自定义域名</p>
-<p>2022&#x2F;03&#x2F;08 在 <a target="_blank" rel="noopener" href="https://reg.ru/">reg.ru</a> 购买了一年的 <a target="_blank" rel="noopener" href="https://trle5.xyz/">trle5.xyz</a> 域名，用于存放文件，本站可能有一些图片文件会储存在里面</p>
-<p>2022&#x2F;03&#x2F;14 更换为由 <a href="freenom.com">Freenom</a> 提供的 DNS 解析</p>
-<p>2022&#x2F;03&#x2F;15 把 blackbox 的域名从 <a target="_blank" rel="noopener" href="https://trle5.xyz/">trle5.xyz</a> 迁移到 <a target="_blank" rel="noopener" href="https://t5d.trle5.tk/">t5d.trle5.tk</a></p>
-<p>2022&#x2F;05&#x2F;07 从默认的 Landscape 主题更换为 <a target="_blank" rel="noopener" href="https://github.com/Siricee">Siricee</a> 制作的 <a target="_blank" rel="noopener" href="https://github.com/Siricee/hexo-theme-Chic">Chic</a> 主题</p>
-<p>2022&#x2F;05&#x2F;08 使用 <a target="_blank" rel="noopener" href="https://vercel.com/">Vercel</a> 建立了博客镜像站，使用域名 <a target="_blank" rel="noopener" href="https://trle5.xyz/">trle5.xyz</a> ，DNS 解析由 <a target="_blank" rel="noopener" href="https://cloudflare.com/">Cloudflare</a> 提供</p>
-<p>2022&#x2F;06&#x2F;01 在重新配置了博客主题，因为 05&#x2F;15 那天手机数据丢失让博客后端也部分丢失了 （真的丢了好多东西啊😢）</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br>2022&#x2F;07&#x2F;19 重新修正了一篇文章，之前写的文章发现达不到所想的方案所以就暂搁了 <del><strong>懒</strong></del> ，由于之前的丢数据问题，Cloudflare 账号也登不上了，找回有点麻烦<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>2022&#x2F;07&#x2F;19 重新修正了一篇文章，之前写的文章发现达不到所想的方案所以就暂搁了 <del><strong>懒</strong></del> ，由于之前的丢数据问题，Cloudflare 账号也登不上了，找回有点麻烦</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>b5cd87323e3c7e24bd4aaff61eccd33769638bfe</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+<h2 id="关于我-Hubert-Chen"><a href="#关于我-Hubert-Chen" class="headerlink" title="关于我 (Hubert Chen)"></a>关于我 (Hubert Chen)</h2><h3 id="兴趣爱好"><a href="#兴趣爱好" class="headerlink" title="兴趣爱好"></a>兴趣爱好</h3><p>给手机刷系统，例如 <a target="_blank" rel="noopener" href="https://lineageos.org/">Lineage OS</a> <a target="_blank" rel="noopener" href="https://sailfishos.org/">Sailfish OS</a><br>会些基础的Linux操作<del>，不过十分容易碰见bug</del><br>会画画 (非常非常基础，目前只会描些图)<br>听音乐使用的软件： <a target="_blank" rel="noopener" href="https://spotify.com/">Spotify</a>  <a target="_blank" rel="noopener" href="https://music.163.com/">网易云音乐</a> 偶尔会在网易云音乐里上传一些歌词<br>玩游戏会用的软件： <a target="_blank" rel="noopener" href="https://store.steampowered.com/">Steam</a> <a target="_blank" rel="noopener" href="https://www.ubisoft.com/">Ubisoft</a> <a target="_blank" rel="noopener" href="https://www.xbox.com/">Xbox(云游戏)</a><br>活跃的社交平台：<a target="_blank" rel="noopener" href="https://t.me/trle5">Telegram</a> <a target="_blank" rel="noopener" href="https://twitter.com/interstellar750">Twitter</a> <a target="_blank" rel="noopener" href="https://github.com/Interstellar750/">GitHub</a> <a target="_blank" rel="noopener" href="https://matrix.io/#/@trle5:matrix.org">Matrix</a> 国内的QQ微信也在用，但并不太喜欢，而且放出来可能会泄露个人信息，所以就不公开了</p>
+<h2 id="建站历程："><a href="#建站历程：" class="headerlink" title="建站历程："></a>建站历程：</h2><h3 id="2022-x2F-01-x2F-24"><a href="#2022-x2F-01-x2F-24" class="headerlink" title="2022&#x2F;01&#x2F;24"></a>2022&#x2F;01&#x2F;24</h3><p>初次建立并使用 <a target="_blank" rel="noopener" href="https://github.io/">GitHub Pages</a> 来作为服务器 （其实并不是第一次，前前后后试了好几次，因为碰到了好多bug）</p>
+<h3 id="2022-x2F-01-x2F-29"><a href="#2022-x2F-01-x2F-29" class="headerlink" title="2022&#x2F;01&#x2F;29"></a>2022&#x2F;01&#x2F;29</h3><p>在 <a href="freenom.com">Freenom</a> 上申请了12个月的免费域名 trle5.tk ，但由于不会设置DNS解析，依然用着 <a target="_blank" rel="noopener" href="https://github.io/">GitHub Pages</a> 的默认域名</p>
+<h3 id="2022-x2F-02-x2F-26"><a href="#2022-x2F-02-x2F-26" class="headerlink" title="2022&#x2F;02&#x2F;26"></a>2022&#x2F;02&#x2F;26</h3><p>由于 x10m2 上的 <a target="_blank" rel="noopener" href="https://sailfishos.org/">Sailfish OS</a> 因为未知问题操作很卡，把 hexo 后端备份出来迁移到了s10e，使用 <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.termux">Termux</a> 来继续运维</p>
+<h3 id="2022-x2F-02-x2F-27"><a href="#2022-x2F-02-x2F-27" class="headerlink" title="2022&#x2F;02&#x2F;27"></a>2022&#x2F;02&#x2F;27</h3><p>将域名 DNS 解析托管到 <a href="godaddy.com">GoDaddy</a> ，成功用上了自定义域名</p>
+<h3 id="2022-x2F-03-x2F-08"><a href="#2022-x2F-03-x2F-08" class="headerlink" title="2022&#x2F;03&#x2F;08"></a>2022&#x2F;03&#x2F;08</h3><p>在 <a target="_blank" rel="noopener" href="https://reg.ru/">reg.ru</a> 购买了一年的 <a target="_blank" rel="noopener" href="https://trle5.xyz/">trle5.xyz</a> 域名，用于存放文件，本站可能有一些图片文件会储存在里面</p>
+<h3 id="2022-x2F-03-x2F-14"><a href="#2022-x2F-03-x2F-14" class="headerlink" title="2022&#x2F;03&#x2F;14"></a>2022&#x2F;03&#x2F;14</h3><p>更换为由 <a href="freenom.com">Freenom</a> 提供的 DNS 解析</p>
+<h3 id="2022-x2F-03-x2F-15"><a href="#2022-x2F-03-x2F-15" class="headerlink" title="2022&#x2F;03&#x2F;15"></a>2022&#x2F;03&#x2F;15</h3><p>把 blackbox 的域名从 <a target="_blank" rel="noopener" href="https://trle5.xyz/">trle5.xyz</a> 迁移到 <a target="_blank" rel="noopener" href="https://t5d.trle5.tk/">t5d.trle5.tk</a></p>
+<h3 id="2022-x2F-05-x2F-07"><a href="#2022-x2F-05-x2F-07" class="headerlink" title="2022&#x2F;05&#x2F;07"></a>2022&#x2F;05&#x2F;07</h3><p>从默认的 Landscape 主题更换为 <a target="_blank" rel="noopener" href="https://github.com/Siricee">Siricee</a> 制作的 <a target="_blank" rel="noopener" href="https://github.com/Siricee/hexo-theme-Chic">Chic</a> 主题</p>
+<h3 id="2022-x2F-05-x2F-08"><a href="#2022-x2F-05-x2F-08" class="headerlink" title="2022&#x2F;05&#x2F;08"></a>2022&#x2F;05&#x2F;08</h3><p>使用 <a target="_blank" rel="noopener" href="https://vercel.com/">Vercel</a> 建立了博客镜像站，使用域名 <a target="_blank" rel="noopener" href="https://trle5.xyz/">trle5.xyz</a> ，DNS 解析由 <a target="_blank" rel="noopener" href="https://cloudflare.com/">Cloudflare</a> 提供</p>
+<h3 id="2022-x2F-06-x2F-01"><a href="#2022-x2F-06-x2F-01" class="headerlink" title="2022&#x2F;06&#x2F;01"></a>2022&#x2F;06&#x2F;01</h3><p>重新配置了博客主题，因为 05&#x2F;15 那天手机数据丢失让博客后端也部分丢失了 （真的丢了好多东西啊😢）</p>
+<h3 id="2022-x2F-07-x2F-19"><a href="#2022-x2F-07-x2F-19" class="headerlink" title="2022&#x2F;07&#x2F;19"></a>2022&#x2F;07&#x2F;19</h3><p>重新修正了一篇文章，之前写的文章发现达不到所想的方案所以就暂搁了 <del><strong>懒</strong></del> ，由于之前的丢数据问题，Cloudflare 账号也登不上了，找回有点麻烦</p>
+<h3 id="2022-x2F-09-x2F-11"><a href="#2022-x2F-09-x2F-11" class="headerlink" title="2022&#x2F;09&#x2F;11"></a>2022&#x2F;09&#x2F;11</h3><p>给 Cloudflare 客服发邮件，成功拿回了账号的控制权，目前 <a target="_blank" rel="noopener" href="https://trle5.xyz/">trle5.xyz</a> 站点会随时更新，就是代表上面可能会有一些没写完的文章和新东西，文章写完后再推送至 <a href="https://trle5.tk/">trle5.tk</a>，于 6 月 4 日在 <a target="_blank" rel="noopener" href="https://porkbun.com/">Porkbun</a> 白嫖的 <a target="_blank" rel="noopener" href="https://trle5.dev/">trle5.dev</a> 域名还没打算好用来干嘛，两个付费域名以我现在的经济能力压力有点大</p>
 
         </div>
 
