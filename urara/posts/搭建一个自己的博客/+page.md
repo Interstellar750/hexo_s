@@ -11,7 +11,7 @@ summary: '使用 Hexo 后端与 GitHub Pages 服务'
  # 如何搭建自己的博客
  搭建博客并没有那么困难，大部分的时候只需要跟着步骤走就行，当然有时候碰见 bug 会是不可避免的事，这就得看运气了 ~~我是属于运气差的那一类人。~~
  
- 本文里使用的博客框架为 [Hexo](https://github.com/hexojs/hexo) ，服务器使用 [GitHub Pages](github.io)。域名可使用 Github Pages 默认域名或自定义
+ 本文里使用的博客框架为 [Hexo](https://github.com/hexojs/hexo) ，服务器使用 [GitHub Pages](https://github.io/)。域名可使用 Github Pages 默认域名或自定义
  
  ## 那么就正式开始吧，毕竟我也不会写太多介绍
  ### 搭建博客需要准备的东西：
