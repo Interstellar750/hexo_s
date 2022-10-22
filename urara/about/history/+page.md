@@ -43,3 +43,6 @@ summary: '因为提前感觉到这个页面会变得很长很长，就先分离�
 
 ##### 2022/09/11 成功找回 Cloudflare 帐号
 给 Cloudflare 客服发邮件，成功拿回了账号的控制权，目前 [trle5.xyz](https://trle5.xyz/) 站点会随时更新，就是代表上面可能会有一些没写完的文章和新东西，文章写完后再推送至 [trle5.tk](https://trle5.tk/)，于 6 月 4 日在 [Porkbun](https://porkbun.com/) 白嫖的 [trle5.dev](https://trle5.dev/) 域名还没打算好用来干嘛，两个付费域名以我现在的经济能力压力有点大
+
+##### 2022/10/23 切换到 Urara 后端
+花了差不多整个下午的时间一直搞到凌晨两点多，终于把 Urara 后端配置好了，从九月月底在 [Dejivu's Blog](https://t.me/dejavuBlog/2069) 频道看见 Urara 直到今天才完全成功切换到这个后端，配置其实不算太难，我完全没有 svelte 的基础，但看着原文件和 Urara 作者 [藍+85CD](https://kwaa.dev/) 的博客改也勉强可以了，后面估计我还得改不少东西
