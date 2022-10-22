@@ -1,8 +1,9 @@
 ---
 title: '闲谈杂聊'
 created: 2022-04-07 08:06:21
-updated:
+image: /talk/Page4/hero.png 
 tags: ['闲聊']
+summary: '四月不知过的怎么样'
 ---
 
  你好，欢迎来我的博客看文章，祝愿你天天开心
@@ -43,9 +44,9 @@ tags: ['闲聊']
 
 说到五一，五一就到明日方舟三周年了，但从这个学期开始真的很少很少玩了，好像当初停止玩是因为 BOSS 太难打不过去(当时查攻略的话应该是没问题的)
 
-![](/images/post/06/hero.png)
+![](/talk/Page4/hero.png)
 Lineage OS 在 26 号的时候正式更新了 [Lineage OS 19](https://lineageos.org/Changelog-26)，不知道 [Linux4](https://github.com/Linux4) 大佬什么时候让我的 s10e 吃上 Official Lineage OS 🤤
 
-近几年半导体的东西价格都在涨，显卡 内存 硬盘 以及本来是打着廉价开发板的树莓派，现在都涨了，想整块 zero 2 w 当随身 Linux 主机的 😢
+近几年半导体的东西价格都在涨，显卡 内存 硬盘 以及本来是打着廉价开发板名号的树莓派，现在都涨了，还想整块 zero 2w 当随身 Linux 主机的 😢
 
 这篇文章就写到这吧，~~摸到月底发还能算月更博客~~ 🥴

@@ -11,7 +11,7 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'cupcake',
-    text: '🧁 Cupcake'
+    text: '🧁 纸杯蛋糕'
   },
   {
     name: 'bumblebee',
@@ -63,7 +63,7 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'pastel',
-    text: '🌈 彩虹'
+    text: '🌈 七色彩虹'
   },
   {
     name: 'fantasy',
@@ -87,11 +87,11 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'cmyk',
-    text: '🖨️ CMYK'
+    text: '🖨️ CMYK 配色'
   },
   {
     name: 'autumn',
-    text: '🍂 秋天'
+    text: '🍂 Autumn'
   },
   {
     name: 'business',
@@ -115,7 +115,7 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'winter',
-    text: '❄️ 雪花纷飞'
+    text: '❄️ Winter'
   }
 ]
 
@@ -127,13 +127,10 @@ export const header: HeaderConfig = {
       text: '关于我',
       link: '/about'
     },
+    // 这里不要给目录前加 . 号，不然多次点击目录会叠起来
     {
-      text: '文章',
-      link: '/posts'
-    },
-    {
-      text: '闲聊',
-      link: '/talk'
+      text: '建站历程',
+      link: '/about/history'
     }
   ]
 }
@@ -141,7 +138,7 @@ export const header: HeaderConfig = {
 export const footer: FooterConfig = {
   nav: [
     {
-      text: 'Feed',
+      text: 'RSS 订阅',
       link: '/atom.xml'
     },
     {

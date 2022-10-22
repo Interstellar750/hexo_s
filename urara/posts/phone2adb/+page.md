@@ -1,8 +1,9 @@
 ---
 title: '手机使用 ADB 与 Fastboot 给另一台手机执行命令'
 created: 2022-05-10 22:01:50
-updated:
-tags: ['adb', '技术', '救砖', '刷机']
+updated: 2022-10-23
+tags: ['ADB', '技术']
+summary: '未完成，而且好像没找到免 root 执行 fastboot 命令的办法'
 ---
 
   **你好，欢迎来看文章！**~~请问你是手机坏了还是电脑坏了~~

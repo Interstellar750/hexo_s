@@ -23,11 +23,33 @@
         {/each}
         <br />
       {/if}
-      {site.author.name} ©
-       {footerConfig.since && footerConfig.since !== new Date().toJSON().substring(0, 4)
-        ? `${footerConfig.since} - ${new Date().toJSON().substring(0, 4)}`
-        : new Date().toJSON().substring(0, 4)}
-       | Powered by
+      <a
+        rel="noopener external"
+        target="_blank"
+        class="tooltip hover:text-secondary"
+        data-tip="来 GitHub 上看看我？"
+        href="https://github.com/interstellar750/">
+        <b>{site.author.name}</b>
+      </a>
+      <a
+      rel="noopener external"
+        target="_blank"
+        class="tooltip hover:text-secondary"
+        data-tip="CC BY 4.0"
+        href="https://creativecommons.org/licenses/by/4.0/">
+      &copy;
+      </a>
+      <a
+      rel="noopener external"
+        target="_blank"
+        class="tooltip hover:text-secondary"
+        data-tip="今年是何年"
+        href="https://time.is/">
+        <b>{footerConfig.since && footerConfig.since !== new Date().toJSON().substring(0, 4)
+          ? `${footerConfig.since} - ${new Date().toJSON().substring(0, 4)}`
+          : new Date().toJSON().substring(0, 4)} </b>
+      </a>
+      | 由
       <a
         rel="noopener external"
         target="_blank"
@@ -36,6 +58,7 @@
         href="https://github.com/importantimport/urara">
         Urara
       </a>
+      驱动
       {#if footerConfig.html}
         <br />
         {@html footerConfig.html}
