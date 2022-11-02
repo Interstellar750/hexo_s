@@ -1,9 +1,12 @@
 ---
-title: 在 Chrome OS 上为 Linux 虚拟机开启动态磁盘大小
-created: 2022-10-22 23:54
+title: '在 Chrome OS 上为 Linux 虚拟机开启动态磁盘大小'
+created: 2022-10-22
 updated: 2022-10-23
-image: /posts/动态分配crostini/Linux.png
-tags: ['Chrome OS', 'Linux', '小教程']
+image: /post/动态分配crostini/Linux.png
+tags: 
+   - Chrome OS
+   - Linux
+   - 小教程
 summary: '不用再反复给 Linux 虚拟机调整磁盘大小了'
 ---
 

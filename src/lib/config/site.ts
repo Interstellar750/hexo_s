@@ -4,7 +4,7 @@ export const site: SiteConfig = {
   protocol: 'https://',
   domain: import.meta.env.URARA_SITE_DOMAIN ?? 'trle5.xyz',
   title: 'Hubert\u0027s\u0020Blog',
-  subtitle: '',
+  subtitle: '页面有点 Bug',
   lang: 'zh-CN',
   description: 'Powered by SvelteKit/Urara',
   author: {

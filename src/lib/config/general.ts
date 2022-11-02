@@ -15,11 +15,11 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'bumblebee',
-    text: '🐝 Bumblebee'
+    text: '🐝 小 bee 蜂'
   },
   {
     name: 'emerald',
-    text: '✳️ Emerald'
+    text: '✳️ 绿色清新'
   },
   {
     name: 'corporate',
@@ -27,7 +27,7 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'valentine',
-    text: '🌸 Valentine'
+    text: '🌸 情人节'
   },
   {
     name: 'synthwave',
@@ -51,15 +51,15 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'forest',
-    text: '🌲 Forest'
+    text: '🌲 森林'
   },
   {
     name: 'aqua',
-    text: '💦 Aqua'
+    text: '💦 水'
   },
   {
     name: 'lofi',
-    text: '🎶 Lo-Fi'
+    text: '🎶 乐府'
   },
   {
     name: 'pastel',
@@ -67,7 +67,7 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'fantasy',
-    text: '🐣 Fantasy'
+    text: '🐣 新生幻想'
   },
   {
     name: 'wirefream',
@@ -91,7 +91,7 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'autumn',
-    text: '🍂 Autumn'
+    text: '🍂 秋天'
   },
   {
     name: 'business',
@@ -107,7 +107,7 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'night',
-    text: '🌃 Night'
+    text: '🌃 夜光蓝'
   },
   {
     name: 'coffee',
@@ -115,7 +115,7 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'winter',
-    text: '❄️ Winter'
+    text: '❄️ 冬季'
   }
 ]
 
