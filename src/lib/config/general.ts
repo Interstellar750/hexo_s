@@ -59,7 +59,7 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'lofi',
-    text: '🎶 乐府'
+    text: '🎶 乐符'
   },
   {
     name: 'pastel',
