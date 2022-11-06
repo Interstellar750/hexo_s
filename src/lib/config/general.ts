@@ -123,6 +123,28 @@ export const head: HeadConfig = {}
 
 export const header: HeaderConfig = {
   nav: [
+    {
+      text: '关于我',
+      link: '/about'
+    },
+    // 这里不要给目录前加 . 号，不然多次点击目录会叠起来
+    {
+      text: '建站历程',
+      link: '/about/history'
+    },
+	{
+      text: '闲聊',
+      children: [
+        {
+          text: '2022 下半年的总结',
+          link: '/talk/page111'
+        },
+        {
+          text: '闲谈杂聊',
+          link: '/talk/page104'
+        }
+      ]
+    },
   ]
 }
 
