@@ -1,7 +1,7 @@
 ---
 title: '手机使用 ADB 与 Fastboot 给另一台手机执行命令'
 created: 2022-05-10
-updated: 2022-11-02
+updated: 2022-11-06
 tags: 
    - ADB
    - 技术
@@ -40,7 +40,7 @@ summary: '未完成，而且好像没找到免 root 执行 fastboot 命令的办
 
 ```
 pkg update // 更新包
-pkg install android-tools // 安装安卓工具（包含adb工具）
+pkg install android-tools // 安装安卓工具（包含 adb 工具）
 ```
 
 确定安装等进度条跑完后，试着运行 `adb devices` 看看有没有反应，正常情况如下
@@ -50,13 +50,15 @@ pkg install android-tools // 安装安卓工具（包含adb工具）
 * daemon not running; starting now at tcp:5037
 * daemon started successfully
 List of devices attached
-/* 如果有已连接的设备会在此列出 */
+/* 如果有已识别到的设备会在此列出 */
 ```
 
 连接到设备然后看看行不行，安卓机子相互连接大部分时候是不需要什么驱动的
 
 #### 2. 使用 ADB 工具安装器
 
-下载 ADB 工具安装器  [**酷安**](https://www.coolapk.com/apk/crixec.adbtoolkitsinstall)  |  [**Hubert's Box**](https://t5d.trle5.tk/Apk/ADB-tools-3.0.apk)
+下载 ADB 工具安装器  [~~酷安~~](https://www.coolapk.com/apk/crixec.adbtoolkitsinstall) 应用已下架 |  [**Hubert's Box**](https://t5d.trle5.tk/Apk/ADB-tools-3.0.apk)
 
 这个工具可以让你直接运行 adb 命令，但没有 root 权限会导致无法运行 fastboot 命令，也提供了可以把 adb 命令安装到系统里的功能
+
+安装软件后直接在软件内点击 `运行 adb 命令` 按钮即可，但不要点击 `开启 adb 服务` 按钮，这个按钮是用来开启本机无线 adb 调式端口功能的

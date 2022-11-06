@@ -131,7 +131,15 @@ export const header: HeaderConfig = {
     {
       text: '建站历程',
       link: '/about/history'
-    }
+    },
+	{
+		text: 'test1',
+		link: '/post/wechatpush'
+	},
+	{
+		text: 'test2',
+		link: '/post/phone2adb'
+	}
   ]
 }
 

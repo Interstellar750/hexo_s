@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://trle5.xyz/sitemap.xml
