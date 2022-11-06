@@ -2,8 +2,8 @@
 title: '欢迎参观'
 created: 2022-03-01
 updated: 2022-11-02
-tag:
-	
+tags:
+  - test
 ---
 
 # 你好，欢迎来到我的博客
