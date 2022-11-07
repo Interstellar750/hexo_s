@@ -1,7 +1,7 @@
 ---
 title: '在 Chrome OS 上为 Linux 虚拟机开启动态磁盘大小'
 created: 2022-10-22
-updated: 2022-10-23
+updated: 2022-11-08
 image: /post/动态分配crostini/Linux.png
 tags: 
    - Chrome OS
@@ -12,7 +12,7 @@ summary: '不用再反复给 Linux 虚拟机调整磁盘大小了'
 
 好像有段时间没写文章了，这次整一篇挺简单但没什么人知道的小教程
 
-##### 此教程对支持 Linux 容器的 Chrome OS / Chromium OS 同通用，不过都写上就名称太长，就只用 Chrome OS 这个名称了
+**此教程对支持 Linux 容器的 Chrome OS / Chromium OS 同通用，不过都写上就名称太长，就只用 Chrome OS 这个名称了**
 
 ## 关于 Chrome OS 上的 Linux 容器
 
@@ -46,8 +46,8 @@ summary: '不用再反复给 Linux 虚拟机调整磁盘大小了'
 
 ||不要忘记自己把文件放哪去了||
 
-### 成功
+## 成功
 
 还原成功后，再进入设置查看 Linux 开发环境就可以看到磁盘大小为 **动态分配** 了，再打开 Linux 应用测试一下是否正常就可以了
 
-##### 我没碰见什么 bug，之前我还以为需要在 crosh 里使用 vmc 新建一个虚拟机才行，看来是我想多了
+**我没碰见什么 bug，之前我还以为需要在 crosh 里使用 vmc 新建一个虚拟机才行，看来是我想多了**
