@@ -22,3 +22,7 @@ src/routes/**/+page.svelte.md
 src/routes/**/+page.md
 *.config.js
 urara.js
+
+# 不忽略 friends 页面
+
+!sec/routes/friends/+page.sevlte.md
