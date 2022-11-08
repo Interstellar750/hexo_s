@@ -17,7 +17,7 @@
   storedTitle.set('')
 </script>
 
-<Head page={{ title: 'Friends', path: '/friends' }} />
+<Head page={{ title: '朋友', path: '/friends' }} />
 
 <Masonry
   {items}
