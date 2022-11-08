@@ -13,7 +13,7 @@ specifiers:
   '@types/unist': ^2.0.6
   '@typescript-eslint/eslint-plugin': ^5.36.2
   '@typescript-eslint/parser': ^5.36.2
-  adapter: 1.0.0-beta.10
+  adapter: 1.0.0-next.72
   autoprefixer: ^10.4.8
   chalk: ^5.0.1
   chokidar: ^3.5.3
@@ -52,7 +52,7 @@ specifiers:
   workbox-window: ^6.5.4
 
 dependencies:
-  adapter: 1.0.0-beta.10
+  adapter: 1.0.0-next.72
   svelte-bricks: 0.1.7
 
 devDependencies:
@@ -1649,7 +1649,7 @@ packages:
     resolution: {integrity: sha512-Z5Z+QZOav6D0KDeU3ReksGERJg/sX1k5OKWWXyQ11OwGErEEwSXHYRUyjaBmZEPeGzpVVGwwMUK8YWJlG/MKeA==}
     dev: true
 
-  /@sveltejs/adapter-vercel/1.0.0-next.81:
+  /@sveltejs/adapter-vercel/1.0.0-next.72:
     resolution: {integrity: sha512-cuNolQSqabSs97J2hn9bnRDOscihIO+VEYltsc+POLU/ecv7pbUm1qdRakeG3+ehK1mfZ9dub6vEVuLKhm+Qng==}
     dependencies:
       '@vercel/nft': 0.22.1
