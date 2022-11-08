@@ -69,7 +69,7 @@
     "typescript": "^4.8.3",
     "unist-util-visit": "^4.1.1",
     "unocss": "^0.45.18",
-    "vite": "^3.8.0",
+    "vite": "3.8.0",
     "vite-plugin-pwa": "^0.12.7",
     "workbox-window": "^6.5.4"
   },
