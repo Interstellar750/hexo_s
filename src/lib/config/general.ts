@@ -145,6 +145,10 @@ export const header: HeaderConfig = {
         }
       ]
     },
+	{
+	  text: '朋友',
+	  link: '/friends'
+	}
   ]
 }
 
