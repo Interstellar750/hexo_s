@@ -1650,6 +1650,12 @@ packages:
 
   /@sveltejs/adapter-vercel/1.0.0-next.81:
     resolution: {integrity: sha512-cuNolQSqabSs97J2hn9bnRDOscihIO+VEYltsc+POLU/ecv7pbUm1qdRakeG3+ehK1mfZ9dub6vEVuLKhm+Qng==}
+    dependencies:
+      '@vercel/nft': 0.22.1
+      esbuild: 0.15.13
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
     dev: true
 
   /@sveltejs/kit/1.0.0-next.479_svelte@3.50.1+vite@3.1.0:
