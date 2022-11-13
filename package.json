@@ -30,15 +30,12 @@
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/adapter-node": "next",
     "@sveltejs/adapter-static": "next",
-    "@sveltejs/adapter-vercel": "next",
     "@sveltejs/kit": "1.0.0-next.479",
     "@tailwindcss/typography": "^0.5.7",
     "@types/node": "^18.7.16",
     "@types/unist": "^2.0.6",
-    "@types/workbox-build": "^5.0.1",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
-    "@vite-pwa/sveltekit": "^0.0.1",
     "autoprefixer": "^10.4.8",
     "chalk": "^5.0.1",
     "chokidar": "^3.5.3",
@@ -61,7 +58,6 @@
     "rehype-external-links": "^1.0.1",
     "rehype-slug": "^5.0.1",
     "remark": "^14.0.2",
-    "remark-fff": "0.4.0-alpha.0",
     "remark-footnotes": "~2.0.0",
     "shiki-twoslash": "^3.1.0",
     "svelte": "^3.50.1",
@@ -76,7 +72,7 @@
     "vite-plugin-pwa": "^0.12.7",
     "workbox-window": "^6.5.4"
   },
-  "dependencies": {
+    "dependencies": {
     "svelte-bricks": "^0.1.7"
   }
 }

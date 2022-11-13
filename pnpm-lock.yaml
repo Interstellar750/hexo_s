@@ -6,15 +6,12 @@ specifiers:
   '@sveltejs/adapter-auto': next
   '@sveltejs/adapter-node': next
   '@sveltejs/adapter-static': next
-  "@sveltejs/adapter-vercel": next
   '@sveltejs/kit': 1.0.0-next.479
   '@tailwindcss/typography': ^0.5.7
   '@types/node': ^18.7.16
   '@types/unist': ^2.0.6
-  '@types/workbox-build': ^5.0.1
   '@typescript-eslint/eslint-plugin': ^5.36.2
   '@typescript-eslint/parser': ^5.36.2
-  '@vite-pwa/sveltekit': ^0.0.1
   autoprefixer: ^10.4.8
   chalk: ^5.0.1
   chokidar: ^3.5.3
@@ -37,7 +34,6 @@ specifiers:
   rehype-external-links: ^1.0.1
   rehype-slug: ^5.0.1
   remark: ^14.0.2
-  remark-fff: 0.4.0-alpha.0
   remark-footnotes: ~2.0.0
   shiki-twoslash: ^3.1.0
   svelte: ^3.50.1
@@ -62,15 +58,12 @@ devDependencies:
   '@sveltejs/adapter-auto': 1.0.0-next.87
   '@sveltejs/adapter-node': 1.0.0-next.100
   '@sveltejs/adapter-static': 1.0.0-next.48
-  "@sveltejs/adapter-vercel": 1.0.0-next.81
   '@sveltejs/kit': 1.0.0-next.479_svelte@3.50.1+vite@3.1.0
   '@tailwindcss/typography': 0.5.7_tailwindcss@3.1.8
   '@types/node': 18.7.16
   '@types/unist': 2.0.6
-  '@types/workbox-build': 5.0.1
   '@typescript-eslint/eslint-plugin': 5.36.2_2l2r3i3lm6jysqd4ac3ql4n2mm
   '@typescript-eslint/parser': 5.36.2_itqs5654cmlnjraw6gjzqacppi
-  '@vite-pwa/sveltekit': 0.0.1_joxcrbjtzkpktmorkosdiq7ndm
   autoprefixer: 10.4.8_postcss@8.4.16
   chalk: 5.0.1
   chokidar: 3.5.3
@@ -93,7 +86,6 @@ devDependencies:
   rehype-external-links: 1.0.1
   rehype-slug: 5.0.1
   remark: 14.0.2
-  remark-fff: 0.4.0-alpha.0
   remark-footnotes: 2.0.0
   shiki-twoslash: 3.1.0
   svelte: 3.50.1
@@ -1797,16 +1789,6 @@ packages:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
     dev: true
 
-  /@types/workbox-build/5.0.1:
-    resolution: {integrity: sha512-lJrGzEHX/QT3E4F5ABBNvCb8ObOr2LfHNAqAGfRuBPncWlU/d3iIUorECKNXmnZnLbLsgpgvhJWPMgByzR+L+A==}
-    dependencies:
-      '@types/workbox-routing': 4.3.1
-    dev: true
-
-  /@types/workbox-routing/4.3.1:
-    resolution: {integrity: sha512-2TYTiMcF6lMdMU36zUZPyQurpM8xso3Ad6XnFDdlSZowukoFy6pwZV+oT27z/jU1eaa+QgtPkdYFrS5KsJDMOQ==}
-    dev: true
-
   /@typescript-eslint/eslint-plugin/5.36.2_2l2r3i3lm6jysqd4ac3ql4n2mm:
     resolution: {integrity: sha512-OwwR8LRwSnI98tdc2z7mJYgY60gf7I9ZfGjN5EjCwwns9bdTuQfAXcsjSB2wSQ/TVNYSGKf4kzVXbNGaZvwiXw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -2129,17 +2111,6 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
-    dev: true
-
-  /@vite-pwa/sveltekit/0.0.1_joxcrbjtzkpktmorkosdiq7ndm:
-    resolution: {integrity: sha512-ybdYNM9Qq21RwvMiYflBfwm5QaT8SRyh1e5HwBEcZEfglIjPGhY3p7TCPHKtZMpbjLtwLcTJcrJiQjfu3jn1gg==}
-    engines: {node: '>=16.14'}
-    peerDependencies:
-      '@types/workbox-build': ^5.0.1
-      vite-plugin-pwa: ^0.12.7
-    dependencies:
-      '@types/workbox-build': 5.0.1
-      vite-plugin-pwa: 0.12.7_zp7t6aa2r77waajuyr5zt63phe
     dev: true
 
   /abbrev/1.1.1:
@@ -4087,7 +4058,7 @@ packages:
   /is-reference/1.2.1:
     resolution: {integrity: sha512-U82MsXXiFIrjCK4otLT+o2NA2Cd2g5MLoOVXUZjIOhLurrRxpEXzI8O0KZHr3IjLvlAH1kTPYSuqer5T9ZVBKQ==}
     dependencies:
-      '@types/estree': 1.0.0
+      '@types/estree': 0.0.39
     dev: true
 
   /is-regex/1.1.4:
@@ -5503,10 +5474,6 @@ packages:
       hast-util-to-string: 2.0.0
       unified: 10.1.2
       unist-util-visit: 4.1.1
-    dev: true
-
-  /remark-fff/0.4.0-alpha.0:
-    resolution: {integrity: sha512-L2qikKfDaAtoxYOdgk2+RR79XBNZlHWYf9GgSbT39zYYSSH7j7h2hIcBauDHTxFInj9jCL35YZshLEZfJaDTuQ==}
     dev: true
 
   /remark-footnotes/2.0.0:

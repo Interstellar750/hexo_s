@@ -6,7 +6,7 @@ export const site: SiteConfig = {
   title: 'Hubert\u0027s\u0020Blog',
   subtitle: '',
   lang: 'zh-CN',
-  description: 'Powered by SvelteKit/Urara',
+  description: '',
   author: {
     name: 'Hubert\u0020Chen',
     avatar: '/assets/images/avatar/70455873_p3_master1200.jpg',
