@@ -6,6 +6,7 @@ specifiers:
   '@sveltejs/adapter-auto': next
   '@sveltejs/adapter-node': next
   '@sveltejs/adapter-static': next
+  "@sveltejs/adapter-vercel": "1.0.0-next.81",
   '@sveltejs/kit': 1.0.0-next.479
   '@tailwindcss/typography': ^0.5.7
   '@types/node': ^18.7.16
