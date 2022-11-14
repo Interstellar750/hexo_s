@@ -1,7 +1,7 @@
 ---
 title: '2022 下半年的总结'
 created: 2022-11-06
-updated: 2022-11-08
+updated: 2022-11-14
 image: /talk/page111/flowers.jpg
 tags: 
    - 闲聊
@@ -63,3 +63,19 @@ summary: '总结一下暑假开始到现在的生活情况'
 在这之前，我经常时不时收到官方 [Spam Info Bot](https://t.me/SpamBot) 的信息，显示我这边给机器人发送了 `/start` 命令，我还以为是机器人抽风了呢
 
 后续改密码下线设备，意识到可能是之前爆出的一个漏洞，来源我找不到了，是 **Telegram Desktop** 的漏洞，如果未设置应用密码，帐号登录凭证就会被木马盗取，具体表现为别人直接使用此凭证可以登录你的账号，但你不会看到你的登录设备列表多出任何设备
+
+## 学校生活
+
+不好评价，不好受
+
+### 博客
+
+事实上博客是从最近才有更新，之前一直没时间管，直到更换了 [Urara](https://github.com/importantimport/urara) 后端才在更新，近几周的 commit 全是关于博客的，以至于 C 语言的学习都搁置了几周，目前博客还是有小问题，估计那么勤更新还是因为这个博客后端没那么好搞，接下来可能会有一篇关于 Urara 的教程，摸了快一个月也知道那里有坑要避开了 😴
+
+我注册了三个域名，本来 [trle5.tk](https://trle5.tk/) 是博客的主要域名，[trle5.xyz](https://trle5.xyz/) 是镜像站，包含了没写完的文章， [trle5.dev](https://trle5.dev/) 是从 [Porkbun](https://porkbun.com/) 免费领的域名，目前借给别人用了
+
+至于现在 [trle5.tk](https://trle5.tk/) 就直接弃用了，如果条件允许的话，我想用这个域名搭建一个 [Matrix](https://matrix.org/) 服务器，因为 .tk 后缀有 talk 的意思，而且 .tk 域名是可以免费注册的，滥用较多，很多搜索引擎就不收录这个域名的内容，就完全没人看文章了
+
+之前还在 GitHub 上建了一个仓库用来放文件，并部署了 GitHub Pages 服务来让我可以从上面下载文件，以前的域名是 [t5d.trle5.tk](https://t5d.trle5.tk/)，现在还能用，不过以后可能也要转到 .xyz 的域名下，部署平台换成了 [Vercel](https://vercel.com/)，可以选择服务器位置，我选了香港，测了侧速度比 GitHub Pages 的 128KB/s 左右快不少，最快能有 4MB/s，挺快
+
+
