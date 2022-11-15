@@ -78,4 +78,12 @@ summary: '总结一下暑假开始到现在的生活情况'
 
 之前还在 GitHub 上建了一个仓库用来放文件，并部署了 GitHub Pages 服务来让我可以从上面下载文件，以前的域名是 [t5d.trle5.tk](https://t5d.trle5.tk/)，现在还能用，不过以后可能也要转到 .xyz 的域名下，部署平台换成了 [Vercel](https://vercel.com/)，可以选择服务器位置，我选了香港，测了侧速度比 GitHub Pages 的 128KB/s 左右快不少，最快能有 4MB/s，挺快
 
+### HomeKit on esp8266
 
+esp8266 这块开发板还是在三月初看网上 WIFI 杀手的视频买的，结果发现好像刷了几次就直接扔旁边吃灰了，直到几周前看到 [创客尹白猿](https://space.bilibili.com/298146460) 的 [这个](https://www.bilibili.com/video/BV1V3411376C/) 视频，才发现 8266 这个模块竟然也可以接入苹果的 HomeKit，于是我就在周末拿它刷了 HomeKit 固件
+
+第一次是按照 [ESP8266控制继电器（支持HOMEKIT）](https://blog.csdn.net/TWTF1998/article/details/86419559) 这个教程刷入了 [RavenSystem](https://github.com/RavenSystem/) 的 [esp-homekit-devices](https://github.com/RavenSystem/esp-homekit-devices) 固件，然后在配置 wifi 的时候等了很久连不上，后面使用 [ESP8266 Loader](https://play.google.com/store/apps/details?id=com.bluino.esploader) 这个软件看了看 log，发现好像是兼容性问题，我买的这个板子并不是 esp826-01s 型号的板子
+
+然后我又找到了 [自制 HomeKit 智能开关](https://www.jianshu.com/p/9cf083830edf) 这篇教程，这篇教程使用的是 [RavenSystem](https://github.com/RavenSystem/) 的另一个项目 [Home Accessory Architect](https://github.com/RavenSystem/haa/)，成功安装，不过这个也有点坑，刷写后需要进入网页端配置，要手动输入 json 文件，配置过程还需要连接 GitHub 来下载资源文件，且后面需要修改 WIFI 网络只能清除重新刷入再重新配置
+
+这个部分后面也是会出一份单独的教程，感觉这里写的又有点多了
