@@ -18,7 +18,7 @@ tags:
 
 给手机刷系统，例如 [Lineage OS](https://lineageos.org/) [Sailfish OS](https://sailfishos.org/) [Kaleidoscope OS](https://github.com/Project-Kaleidoscope)
 
-现在能刷机的 [s10e](https://baike.baidu.com/item/三星Galaxy%20S10e/23298784) 换到 [iPhone SE 2020](https://zh.m.wikipedia.org/zh-hans/IPhone_SE_(第二代)) 了，[Xperia 1](https://zh.m.wikipedia.org/wiki/Sony_Xperia_1) 还没有解 [BL 锁](https://source.android.com/docs/core/architecture/bootloader/locking_unlocking)，估计也没什么机会刷机了
+现在能刷机的 [s10e](https://baike.baidu.com/item/三星Galaxy%20S10e/23298784) 换到 [iPhone SE 2020](https://zh.m.wikipedia.org/zh-hans/IPhone_SE_(第二代)) 了，[Xperia 1](https://www.sony-asia.com/electronics/smartphones/xperia-1) 还没有解 [BL 锁](https://source.android.com/docs/core/architecture/bootloader/locking_unlocking)，估计也没什么机会刷机了
 
 会用 Linux  ~~不过十分容易碰见bug~~
 
