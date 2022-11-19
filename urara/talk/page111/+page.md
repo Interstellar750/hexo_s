@@ -1,7 +1,7 @@
 ---
 title: '2022 下半年的总结'
 created: 2022-11-06
-updated: 2022-11-16
+updated: 2022-11-19
 image: /talk/page111/flowers.jpg
 tags: 
    - 闲聊
@@ -82,7 +82,7 @@ summary: '总结一下暑假开始到现在的生活情况'
 
 esp8266 这块开发板还是在三月初看网上 WIFI 杀手的视频买的，结果发现好像刷了几次就直接扔旁边吃灰了，直到几周前看到 [创客尹白猿](https://space.bilibili.com/298146460) 的 [这个](https://www.bilibili.com/video/BV1V3411376C/) 视频，才发现 8266 这个模块竟然也可以接入苹果的 HomeKit，于是我就在周末拿它刷了 HomeKit 固件
 
-第一次是按照 [ESP8266控制继电器（支持HOMEKIT）](https://blog.csdn.net/TWTF1998/article/details/86419559) 这个教程刷入了 [RavenSystem](https://github.com/RavenSystem/) 的 [esp-homekit-devices](https://github.com/RavenSystem/esp-homekit-devices) 固件，然后在配置 wifi 的时候等了很久连不上，后面使用 [ESP8266 Loader](https://play.google.com/store/apps/details?id=com.bluino.esploader) 这个软件看了看 log，发现好像是兼容性问题，我买的这个板子并不是 esp826-01s 型号的板子
+第一次是按照 [ESP8266控制继电器（支持HOMEKIT）](https://blog.csdn.net/TWTF1998/article/details/86419559) 这个教程刷入了 [RavenSystem](https://github.com/RavenSystem/) 的 [esp-homekit-devices](https://github.com/RavenSystem/esp-homekit-devices) 固件，然后在配置 wifi 的时候等了很久连不上，后面使用 [ESP8266 Loader](https://play.google.com/store/apps/details?id=com.bluino.esploader) 这个软件看了看 log，发现好像是兼容性问题，我买的这个板子并不是 esp8266-01s 型号的板子
 
 然后我又找到了 [自制 HomeKit 智能开关](https://www.jianshu.com/p/9cf083830edf) 这篇教程，这篇教程使用的是 [RavenSystem](https://github.com/RavenSystem/) 的另一个项目 [Home Accessory Architect](https://github.com/RavenSystem/haa/)，成功安装，不过这个也有点坑，刷写后需要进入网页端配置，要手动输入 json 文件，配置过程还需要连接 GitHub 来下载资源文件，且后面需要修改 WIFI 网络只能清除重新刷入再重新配置
 
@@ -96,16 +96,56 @@ esp8266 这块开发板还是在三月初看网上 WIFI 杀手的视频买的，
 
 便携设备从搭载 [Windows](https://www.microsoft.com/windows/) 的 [YogaBook](https://www.lenovo.com/il/yoga-book/) 换到搭载 [Chrome OS](https://www.google.com/chromebook/chrome-os/) 的 [Chromebook Duet](https://www.lenovo.com/il/laptops/lenovo/student-chromebooks/Lenovo-CT-X636/)，上面也说过了，就不再重复了，内闪存配置没变，体验是好了那么一些
 
-#### 手机
+### 手机
 
 手机在这段时间内换的可多了，从入学我爸给钱我买的 [s10e](https://baike.baidu.com/item/三星Galaxy%20S10e/23298784)，再到 s10e 刷 [Lineage OS](https://lineageos.org/) 导致没信号又求我爸给钱买了台港版的 [x10m2](https://www.sony-asia.com/electronics/smartphones/xperia-10m2)，虽然这都已经是去年的事了
 
 后面在圣诞节的时候 [Sailfish OS](https://sailfishos.org/) 开启了买一送一活动，差不多等于打半价，于是我又与一位 [Jolla-Sailfish OS 中文交流群] 的网友合伙买了 Sailfish OS 的安卓支持，折腾一段时间后发现可以日用，但是使用起来并不舒服，就又找了 [Sjll](https://forum.xda-developers.com/m/sjll.8321130/) 的 [Unofficial Lineages OS](https://forum.xda-developers.com/t/rom-unofficial-lineageos-18-1-for-xperia-10-ii-gcam-performance.4219081/) 刷着用了，虽说后面索尼也给这台机子推送了 Android 12 固件，但依然改变不了索尼低端机子难用的事实 😥
 
-后面 x10m2 就直接被我挂咸鱼了，不过等了许久并没有人接盘，但有一位日版 x1 卖家有意向与我换机，想了想就换了，665 换 855 不亏
+后面 x10m2 就直接被我挂咸鱼了，不过等了许久并没有人接盘，但有一位日版 Xperia 1 卖家有意向与我换机，想了想就换了，665 换 855 不亏
 
 其实仔细想想还是要感谢这位卖家，甚至当时还是一块钱互拍换的机，要是卖家突然反水我机子也就没了
 
-后续拿到了 x1 用，给我的第一个感觉就是 **大** 和 **清晰**，当时的 s10e 算小号机，5.8 寸 1080P 的屏幕一下子换到 6.5 寸 4k 屏幕，那个震撼感没有体验过的人绝对不知道是什么感觉，从稍微靠近一点就能看到像素到用放大镜才能看见像素的体验，真的...
+后续拿到了 Xperia 1 用，给我的第一个感觉就是 **大** 和 **清晰**，当时的 s10e 算小号机，5.8 寸 1080P 的屏幕一下子换到 6.5 寸 4k 屏幕，那个震撼感没有体验过的人绝对不知道是什么感觉，从稍微靠近一点就能看到像素到用放大镜才能看见像素的体验，真的...
 
 ||好吧有点吹过头了||
+
+至于后面主力机又变到了 Xperia 1，考虑出掉的机子变成了 s10e，就把它也挂上咸鱼了，考虑再三，想着折腾那么久安卓，为了兼顾流畅和能收到信息，还自己去 [搭建推送服务](https://trle5.xyz/post/wechatpush)，观望了下苹果的二手市场，就打算换台 se2，价格便宜性能强大，顺便就加上一句 se2 美版可换机(因为按市场价我这台机子也就只能换个美版)，就一直等着了
+
+后续也有点超乎我意料，有一位国行 se2 机主有与我换机的意向，看了看机子有些不影响使用的小问题，例如~~钢铁直男~~不需要的前置模组（一定程度上还保护了隐私？），后摄模糊，不太清楚是镜头问题还是装的 iPhone 8 镜头（听网上说 se2 装了 8 的镜头是有远处不对焦的问题），看了看没事就愉快的换机了，虽说有些小插曲，但卖家很诚实，第一次入二手 iPhone 没进坑里
+
+**目前主力设备也是成功过渡到 se2 了，至于从全面屏机子过度到传统 16:9 的手机是什么体验？**
+
+首先聊的是性能，从捡了两三年洋垃圾的我，用过了 [820](https://www.qualcomm.com/products/application/smartphones/snapdragon-8-series-mobile-platforms/snapdragon-820-mobile-platform) [9820](https://semiconductor.samsung.com/processor/mobile-processor/exynos-9-series-9820/) [855](https://www.qualcomm.com/products/application/smartphones/snapdragon-8-series-mobile-platforms/snapdragon-855-mobile-platform) 三种旗舰定位处理器，上手苹果 A13 的第一感觉，就是凉快，~~当然也不排除三台机子两台烫的原因~~，除了充电使用，日用几乎没有让我感觉到机子有什么温度，尤其是性能和功耗差距，让我感觉安卓阵营的 soc 与 iPhone 的差距真的巨大
+
+其次是操作习惯，很早就听说了 iOS 没有像安卓那样的侧滑返回手势，但整体来看还是 iOS 体验更好，安卓这边从左右侧都可以侧滑然后松开触发返回动作，但获得的反馈只有一个漂浮在边缘的小图标，当然也是有一些软件支持像 iOS 这种在滑动的同时还能看到前一个页面在显示什么的 UI 设计，不过已经不可以用少来形容了，而是几乎没有，而且还会跟返回手势冲突，就不一定能体验得到这个效果，Telegram、微信和酷安还保留此特性，其中只有 Telegram 效果最好，QQ 也有个类似的特性，具体效果跟系统那个手势差别不大...
+
+除开系统方面，机身重量和尺寸对我实际上没有什么影响，因为用过 150 克的 s10e，尺寸也差不多，尽管用过一段时间 Xpria 1 也没有影响，反而是有时候拿起 Xperia 1 的时候大拇指不由自主的把大拇指往下巴的方向靠 🫥
+
+**还有就是 iOS 的推送优势与号召能力**
+
+例如大部分支付环节都可以直接调用系统指纹来进行，对于用惯了国内手机的人来说这可能是必不可少的，在之前这个功能可都是要我自己去安装指纹支付插件才能有的功能
+
+推送服务也不言而喻了，只要能连上网就不会错过应有的消息通知，也支持在通知卡片直接回复，无需进入应用，这种功能在安卓上也可以由厂商适配现有的 api，但不喜欢类原生特性的国内定制安卓也找到了新的替代方法：小窗，不能说这是一个不好的方法，只能说这有点像国内应用，给一个基础的软件加上很多不必要的附加功能，从某种意义上来说是方便了，但从类原生的 [对话泡](https://developer.android.com/guide/topics/ui/bubbles?hl=zh-cn) 来看，喜欢造轮子似乎已经是常态了 😴
+
+号召能力也不用多说了吧，毕竟不按照规矩来不能上架 App Store，虽然苹果也有用这种权利干坏事的时候，不过整体来看，对于用户来说似乎并不是件坏事
+
+||没错，说的就是微信，QQ 的推送都接入 vivo、oppo、华为和小米的推送了，它在国际版上的 fcm 推送还是被砍过的||
+
+## 总结
+
+这大半年过去了，说充实自己感觉也不是怎么勤奋，搞博客写文章直到写完这篇文章，半个月没碰 C 了，不知后面再捡起来会不会稍显吃力
+
+想学画画的想法也被现实生活的洪流冲碎了，没有安静的环境不用说画画了，先保证自己不心情低落 🎱，过的开心是首要，不开心总有些坏想法干扰自己，绘画板会在家等着我的，就不清楚它要等多长时间了
+
+对于新奇事物非常好奇的我又买了套 8266 继电器，何况没有预言的能力，家那边封了，人也只能待在学校回不去了，等等等等 🫠
+
+不清楚写的文章会有多少人能看到，尝试把网页地图提交到了一些搜索引擎，虽然本站没有什么统计数据的插件，不过访问量还是能在 Cloudflare 看到个一二，自然是希望写的文章能帮到一些人的，也能在以后需要的时候翻翻看看之前写的东西能不能够帮到自己
+
+还有个就是本人的文笔并不好，可能还会出现错别字和病句，例如 **的得地** 分不清楚，这里要感谢一位朋友，不是他的话我都不知道自己有这个问题
+
+后续可能会考虑加个评论区，就是不太清楚这种静态博客能不能加评论区哦
+
+那么这篇文章就写到这里吧，顺带还给自己挖了两篇文章的坑
+
+**拜拜👋**

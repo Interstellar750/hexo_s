@@ -132,7 +132,7 @@ export const header: HeaderConfig = {
       text: '建站历程',
       link: '/about/history'
     },
-	{
+    {
       text: '闲聊',
       children: [
         {
@@ -145,10 +145,10 @@ export const header: HeaderConfig = {
         }
       ]
     },
-	{
-	  text: '朋友们',
-	  link: '/friends'
-	}
+    {
+      text: '朋友们',
+      link: '/friends'
+    }
   ]
 }
 
@@ -161,6 +161,10 @@ export const footer: FooterConfig = {
     {
       text: 'Sitemap',
       link: '/sitemap.xml'
+    },
+    {
+      text: 'Source',
+      link: 'https://github.com/interstellar750/hexo_s'
     }
   ]
 }
