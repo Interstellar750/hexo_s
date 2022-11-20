@@ -1,7 +1,7 @@
 ---
 title: '搭建一个自己的博客'
 created: 2022-03-05
-updated: 2022-11-02
+updated: 2022-11-20
 image: /post/搭建一个自己的博客/banner.jpg
 tags: 
    - 技术
@@ -9,9 +9,9 @@ tags:
 summary: '使用 Hexo 后端与 GitHub Pages 服务'
 ---
 
-###### 你好！这里是 Hubert ，欢迎来我的博客看文章！
+题图来自 hexo 默认主题 [landscape](https://github.com/hexojs/hexo-theme-landscape)
 
-这个文章还有一些小遗漏需要修改
+**你好！这里是 Hubert ，欢迎来我的博客看文章！**
 
 ## 如何搭建自己的博客
 
@@ -254,19 +254,25 @@ Password for 'https://<username>@github.com':<yourpasswd>
 2. 点击 **Generate new token**
 3. 验证密码 ，然后输入一个名称，以及选择过期时间，为了安全，推荐不要设置成不过期，做好定期更换
 4. 在下方选择该令牌的权限，不懂可以全选，也可以自定义
-5. 点击 Generate token，生成令牌
+5. 点击 **Generate token**，生成令牌
 
 生成的令牌格式为 `ghp_1234567890abcdefghijklmnopqrst` ，也就是`ghp_` 加上`0-9` `a-z` `A-Z` 的随机生成数，一般也记不住，但也不要为方便直接保存在明文文件里
 
+**也可以给机子设定 ssh 权限，手动配置会有点麻烦，不然可以试试安装 `gh` 软件包**
+
+`gh` 为 GitHub 的 Cli 工具，可见 [GitHub CLI](https://github.com/cli/cli/) 项目，不过一些源里可能没有，也可以从 [Releases](https://github.com/cli/cli/releases/) 下载编译好的工具包
+
+安装好后执行 `gh auth login` 并根据提示操作，在浏览器登陆并输入设备配对码后即可配对成功
+
 **后面就可以继续博客的部署了，接下来说说博客自定义域名与 DNS 解析如何设置的问题**
 
-如果需要自定义域名，请在 hexo 的 `public` 和 `.deploy_git` 文件夹里都新建一个 `CNAME` 文件，用文本编辑器打开，里面填上你希望使用的域名，也可以在 GitHub 项目的设置里找到 Pages ，再找到 Custom domain ，填入域名，但你不在 hexo 里放的话，每更新 `(hexo d)` 一次你就得重新进这个页面设置一次，很麻烦
+如果需要自定义域名，请在 hexo 的 `public` 和 `.deploy_git` 文件夹里都新建一个 `CNAME` 文件，用文本编辑器打开，里面填上你希望使用的域名，也可以在 GitHub 项目的设置里找到 Pages ，再找到 Custom domain ，填入域名，但你不在 hexo 里放的话，每更新 `hexo d` 一次你就得重新进这个页面设置一次，很麻烦
 
 ### 自定义域名的 DNS 设置
 
 这个我也摸索了很久，但现在碰壁多了也就会了
 
-按照 [Github 的 DNS 解析设置](https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)，需要创建四条 `A` 记录，并分别定向到：
+按照 [GitHub 的 DNS 解析设置](https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)，需要创建四条 `A` 记录，并分别定向到：
 
 ```
 name: @ # 全都要使用 @ 号 (有些服务商的设置方法是留空)
@@ -307,7 +313,7 @@ name: www
 | AAAA | @ | 2606:50c0:8003::153 |
 | CNAME | www | username.github.io. |
 
-设置完成点击保存，然后等个十来分钟应该就可以访问自定义域名了，如果访问出现 GitHub Pages 页面，但没有定位到你的博客，那可能是你 GiHhub 仓库的 `CNAME` 文件被顶掉了
+设置完成点击保存，然后等个十来分钟应该就可以访问自定义域名了，如果访问出现 GitHub Pages 页面，但没有定位到你的博客，那可能是你 GitHub 仓库的 `CNAME` 文件被顶掉了
 
 ### 到这里你的博客就搭建完成了，写文章的教程我会在后面再发一篇教程
 
