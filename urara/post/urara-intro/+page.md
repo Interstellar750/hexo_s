@@ -99,7 +99,7 @@ pnpm i // 根据文件夹内的 package.json 和 pnpm-lock.yaml 按照需要的�
 pnpm dev
 ```
 
-运行命令后静候一段时间，当然这个要看设备，直到屏幕被清屏，输出以下内容
+运行命令后静候一段时间，打开你设备上的浏览器，在地址栏输入 `127.0.0.1:5173` 并按下回车，当然这个时间长短要看设备，直到屏幕被清屏，输出以下内容
 
 ```
   VITE v3.2.4  ready in 147 ms
@@ -111,7 +111,7 @@ pnpm dev
   ✔︎ Including:  base, components, themes[29], utilities
 ```
 
-之后，打开你设备上的浏览器，在地址栏输入 `127.0.0.1:5173` 并按下回车，加载完成后即可看到 Urara 的 demo 已经在你的本地设备上跑起来了 🎉
+加载完成后即可看到 Urara 的 demo 已经在你的本地设备上跑起来了 🎉
 
 注意请使用较新的浏览器，使用过时的浏览器可能会导致渲染错误以及一些其他 bug
 
@@ -133,7 +133,7 @@ Urara 的后端结构大致为 `src` 与 `urara` 文件夹，其中 `src` 文件
 
 至于它们是什么关系嘛，`+page.svelte.md` 为启用了 svelte 特性的 Markdown 文档，而 `+page.md` 则是常规的 Markdown 文档，我不太懂 svelte，就不介绍了 😥
 
-看到这里不知道你有没有看出来，这里的 Markdown 文档除了 `+page.svelte.md` 就是 `+page.md`，这其实也是 Urara 的文档要求，这个与 Hexo 的逻辑有些差别，需要适应
+看到这里不知道你有没有看出来，这里的 Markdown 文档除了名为 `+page.svelte.md` 就是名为 `+page.md`，这其实也是 Urara 的命名要求，这个与 Hexo 的逻辑有些差别，需要适应
 
 那怎么把文章放在对应的目录呢，其实看看文件浏览器的地址栏就知道了
 
@@ -172,8 +172,62 @@ created: 2000-01-01 // 创建时间
 ---
 ```
 
-其实你想的话创建时间也能忽略掉，不过就排版会乱掉
+其实你想的话创建时间也能忽略掉，不过排版就会乱掉
 
 ## 博客风格自定义
 
 接下来就是修改例如个人资料、标题和页脚之类的东西了，对于没什么代码知识的人可能会觉得非常难搞，加油 😇
+
+### 博客标题以及个人资料卡片
+
+也就是博客的名称和主页左边那块，我们需要修改 `src/lib/config/site.ts` 文件，依然是使用本站的文件作为示例
+
+```
+import type { SiteConfig } from '$lib/types/site'
+
+export const site: SiteConfig = {
+  protocol: 'https://', // 选择博客传输协议，http 或 https
+  domain: import.meta.env.URARA_SITE_DOMAIN ?? 'trle5.xyz', // 把 trle5.xyz 替换成你的域名，点击文章内的用户名称就会访问这个域名
+  title: 'Hubert\u0027s\u0020Blog', // 博客标题，这里使用了 Unicode 代码来显示一些符号
+  subtitle: '', // 副标题，会显示在浏览器标签栏内的博客标题后面
+  lang: 'zh-CN', // 更改语言，目前不清楚会影响到哪里 
+  description: '你好呀👋', // 站点描述，适用于有链接预览的应用，可以看后面配图
+  author: {
+    name: 'Hubert\u0020Chen', // 个人资料卡片的用户名，这里同样使用了 Unicode 代码
+    avatar: '/assets/images/avatar/70455873_p3_master1200.jpg', // 头像
+    status: '😉', // 状态，也可以用文字，不过超过一个字符的话就会溢出边框
+    bio: '你好呀👋' // 简介
+  },
+  themeColor: '#E0DE94' // 一个 16 进制色值，我也不太清楚是用来干嘛的
+}
+
+```
+
+这里放一张链接预览的效果图 ![](/post/urara-intro/telegram-preview.webp)
+
+### 顶栏菜单、博客页脚与主题配色
+
+**其实博客页脚分了两部分，第二部分修改起来会直接涉及源码，这个会放到下一部分**
+
+首先找到并打开 `src/lib/config/general.ts` 文件，首先映入眼帘的是各种主题
+
+```
+export const theme: ThemeConfig = [
+  { // 默认情况下排在第一个的主题将会成为默认主题
+    name: 'light', // 主题名字，不可以修改，但可以替换
+    text: '🌕 亮色模式' // 主题显示文字，可任意修改，但整体宽度推荐不要超过 10 个英文字符或 6 个中文字符
+  },
+  {
+    name: 'dark', 
+    text: '🌑 深色模式'
+  }, // 注意两个主题之间有英文逗号间隔
+  {
+    name: 'cupcake',
+    text: '🧁 纸杯蛋糕'
+  }
+]
+```
+
+由于全拉出来就太长了，这里只截取三了个主题，如果有不需要的主题直接删除就行
+
+**注意主题显示名字需使用两个 ' 号围起来，也要注意两个主题之间的英文逗号**

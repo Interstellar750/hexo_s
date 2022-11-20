@@ -23,7 +23,7 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'corporate',
-    text: '🏢 Corporate'
+    text: '🏢 公司'
   },
   {
     name: 'valentine',
@@ -31,11 +31,11 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'synthwave',
-    text: '🌃 Synthwave'
+    text: '🌃 合成器'
   },
   {
     name: 'retro',
-    text: '🌇 Retro'
+    text: '🌇 复古情怀'
   },
   {
     name: 'cyberpunk',
@@ -47,11 +47,11 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'garden',
-    text: '🏡 Garden'
+    text: '🏡 花园'
   },
   {
     name: 'forest',
-    text: '🌲 森林'
+    text: '🌲 夜色森林'
   },
   {
     name: 'aqua',
@@ -59,7 +59,7 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'lofi',
-    text: '🎶 乐符'
+    text: '🎶 钢琴乐符'
   },
   {
     name: 'pastel',
@@ -71,19 +71,19 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'wirefream',
-    text: '📱 Wireframe'
+    text: '📱 线程'
   },
   {
     name: 'black',
-    text: '🖤 Black'
+    text: '🖤 纯黑'
   },
   {
     name: 'luxury',
-    text: '💰 Luxury'
+    text: '💰 金色奢华'
   },
   {
     name: 'dracula',
-    text: '🧛 Dracula'
+    text: '🧛 德古拉'
   },
   {
     name: 'cmyk',
@@ -95,15 +95,15 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'business',
-    text: '🗄️ Business'
+    text: '🗄️ 商务'
   },
   {
     name: 'acid',
-    text: '🌧️ Acid'
+    text: '🌧️ 酸雨'
   },
   {
     name: 'lemonade',
-    text: '🍋 Lemonade'
+    text: '🍋 酸涩柠檬'
   },
   {
     name: 'night',
@@ -115,7 +115,7 @@ export const theme: ThemeConfig = [
   },
   {
     name: 'winter',
-    text: '❄️ 冬季'
+    text: '❄️ 冬季白'
   }
 ]
 
