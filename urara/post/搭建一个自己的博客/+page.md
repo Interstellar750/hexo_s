@@ -4,6 +4,7 @@ created: 2022-03-05
 updated: 2022-11-20
 image: /post/搭建一个自己的博客/banner.jpg
 tags: 
+   - Hexo
    - 技术
    - 博客
 summary: '使用 Hexo 后端与 GitHub Pages 服务'
@@ -21,7 +22,7 @@ summary: '使用 Hexo 后端与 GitHub Pages 服务'
 
 **那么就正式开始吧，毕竟我也不会写太多介绍**
 
-# 搭建博客需要准备的东西：
+## 搭建博客需要准备的东西：
 
 ```
 1. 可正常使用且没有被限制的 GitHub 账户
@@ -45,13 +46,13 @@ summary: '使用 Hexo 后端与 GitHub Pages 服务'
 
 到这里 GitHub 的设置基本就完成了，接下来就应该开始配置 Hexo 客户端了
 
-# 配置 Hexo 客户端
+## 配置 Hexo 客户端
 
 一旦配置完 Hexo 客户端，博客控制文件是全平台通用的，所以这里只说明如何在各个客户端配置，搭建以及部署后面统一讲
 
 ------------
 
-## 在 Windows 设备上配置 Hexo 客户端
+### 在 Windows 设备上配置 Hexo 客户端
 
 首先要安装 Windows 版 [Node.js](https://nodejs.org/en/download/) ，选择 **Windows Installer**
 
@@ -86,7 +87,7 @@ hexo init
 
 ------------
 
-## 在 Linux 设备上配置 Hexo 客户端
+### 在 Linux 设备上配置 Hexo 客户端
 
 相比于 Windows ，Linux 上的 Hexo 安装更为简单，只用在命令行运行几个命令
 
@@ -110,7 +111,7 @@ $ hexo init # 此步如果有报错，请使用 sudo 执行或清空部署文件
 
 ------------
 
-##  在 Android 设备上配置 Hexo 客户端
+###  在 Android 设备上配置 Hexo 客户端
 
 **由于考虑到一些手机品牌的不可获取 root 性，本文章使用 Termux 来运行命令**
 
@@ -120,7 +121,7 @@ $ hexo init # 此步如果有报错，请使用 sudo 执行或清空部署文件
 
 不然也可以尝试在手机上安装完整 Linux 虚拟机
 
-#### 安装配置 Termux 
+**安装配置 Termux**
 
 下载链接 [~~Play Store~~](https://play.google.com/store/apps/details?id=com.termux) 不推荐，已经很久没更新了 | [F-Droid](https://f-droid.org/repo/com.termux_118.apk) | [Hubert's Box](https://t5d.trle5.tk/Apk/com.termux_118_f-droid.apk) (下载速度有点堪忧)
 
@@ -171,7 +172,7 @@ $ hexo init
 
 走完进度条也就部署完成了
 
-# 在三个平台的部署都完成了，接下来要尝试让它在本地服务器上运行
+## 在三个平台的部署都完成了，接下来要尝试让它在本地服务器上运行
 
 **下面的 `hexo generate`  `hexo server` 和后面要讲的 `hexo deploy`，都可以使用 `hexo g` `hexo s` `hexo d`来代替，作用是一样的，也就是 **g**enerate **s**erver **d**eploy 三个单词的首字母**
 
@@ -220,7 +221,7 @@ git config --global user.mail "<username@github.com>"
 # 可以不用加 "" 号，只是因为用户名有空格的话可能会造成 git 只记录下前一半
 ```
 
-##### 关于 git config 中的邮箱设定
+### 关于 git config 中的邮箱设定
 
 git config 中的邮箱地址不能直接填写注册 GitHub 的邮箱（其实我也不太清楚能不能，因为我设定的是邮箱不公开），不然并不会算到你的贡献里，当然不在乎的话也可以随便填
 
@@ -315,7 +316,7 @@ name: www
 
 设置完成点击保存，然后等个十来分钟应该就可以访问自定义域名了，如果访问出现 GitHub Pages 页面，但没有定位到你的博客，那可能是你 GitHub 仓库的 `CNAME` 文件被顶掉了
 
-### 到这里你的博客就搭建完成了，写文章的教程我会在后面再发一篇教程
+## 到这里你的博客就搭建完成了，写文章的教程我会在后面再发一篇教程
 
 参考文章:
 
