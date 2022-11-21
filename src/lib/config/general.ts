@@ -70,8 +70,8 @@ export const theme: ThemeConfig = [
     text: '🐣 新生幻想'
   },
   {
-    name: 'wirefream',
-    text: '📱 线程'
+    name: 'wireframe',
+    text: '📱 线框'
   },
   {
     name: 'black',
@@ -127,7 +127,7 @@ export const header: HeaderConfig = {
       text: '关于我',
       link: '/about'
     },
-    // 这里不要给目录前加 . 号，不然多次点击目录会叠起来
+    // 注意这里不要给目录前加 . 号，不然多次点击目录会叠起来
     {
       text: '建站历程',
       link: '/about/history'

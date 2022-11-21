@@ -98,7 +98,7 @@ pnpm i // 根据文件夹内的 package.json 和 pnpm-lock.yaml 按照需要的�
 pnpm dev
 ```
 
-运行命令后静候一段时间，当然这个时间长短要看设备，直到屏幕被清屏，输出以下内容
+运行命令后静候一段时间，当然这个时间长短要看设备，打开你设备上的浏览器，在地址栏输入 `127.0.0.1:5173` 并按下回车，直到屏幕被清屏，输出以下内容
 
 ```
   VITE v3.2.4  ready in 147 ms
@@ -110,11 +110,13 @@ pnpm dev
   ✔︎ Including:  base, components, themes[29], utilities
 ```
 
-打开你设备上的浏览器，在地址栏内输入 `127.0.0.1:5173` 并按下回车键，加载完成后即可看到 Urara 的 demo 已经在你的本地设备上跑起来了 🎉
+等待加载完成后即可看到 Urara 的 demo 已经在你的本地设备上跑起来了 🎉
 
 注意请使用较新的浏览器，使用过时的浏览器可能会导致渲染错误以及一些其他 bug
 
 **搭建完成后，接下来就是根据你自己的想法来修改博客了**
+
+与 Hexo 相同，您可以在运行本地测试服务器的同时修改源文件以查看变化，不过并不是所有源文件的修改都可以事实相应，如果没有变化，可以试试重新开启测试服务器
 
 ## 自定义博客
 
@@ -206,7 +208,7 @@ export const site: SiteConfig = {
 
 这里放一张链接预览的效果图 ![](/post/urara-intro/telegram-preview.webp)
 
-#### 顶栏菜单、博客页脚与主题配色
+#### 主题配色、顶栏菜单与博客页脚
 
 **其实博客页脚分了两部分，第二部分修改起来会直接涉及源码，这个会放到下一部分**
 
@@ -232,3 +234,118 @@ export const theme: ThemeConfig = [
 由于全拉出来就太长了，这里只截取三了个主题，如果有不需要的主题直接删除就行
 
 **注意主题显示名字需使用两个 ' 号围起来，也要注意两个主题之间的英文逗号**
+
+**接下来往下看，你会看到一些 link 与 text，这对应着博客的顶栏**
+
+```
+export const header: HeaderConfig = {
+  nav: [
+    {
+      text: '关于我', // 此为显示在顶栏按钮的文字，长度没有限制
+      link: '/about' // 此为点击按钮后会访问的地址，也可填其他网站
+    },
+    // 注意这里不要给目录前加 . 号，不然多次点击目录会叠起来
+    {
+      text: '闲聊', // 这个有点特殊，为折叠内容，这里的文字会显示为展开按钮的菜单名称
+      children: [ // 折叠项，可多次叠加，与外部的按钮没什么差别
+        {
+          text: '2022 下半年的总结',
+          link: '/talk/page111'
+        },
+        {
+          text: '闲谈杂聊',
+          link: '/talk/page104'
+        }
+      ]
+    }
+  ]
+}
+```
+
+这里也是省略掉了一部分，想要看完整的可以在页脚的 Source 按钮查看本博客的源码
+
+
+**继续往下看，就到了第一层页脚设置，其实也是与标题栏大同小异，但不可以放折叠项**
+
+```
+export const footer: FooterConfig = {
+  nav: [
+    {
+      text: 'RSS 订阅', // 第一层页脚链接文字
+      link: '/atom.xml' // 对应的地址，这里是自带的 RSS 订阅，与下面的 Sitemap 站点地图一样，可以保留或删除	
+    },
+    {
+      text: 'Sitemap',
+      link: '/sitemap.xml'
+    },
+    {
+      text: 'Source', // 这里放了一个我博客的源码仓库
+      link: 'https://github.com/interstellar750/hexo_s' // 在 GitHub 上的仓库
+    }
+  ]
+}
+```
+
+**还有一个是格式设置，可以调整文章日期的语言和格式**
+
+```
+export const date: DateConfig = {
+  locales: 'zh-CN', // 这里可修改语言，使用 IETF 语言标签的格式 
+  options: { // 下面的日期格式我也不会改 🥲
+    year: '2-digit',
+    weekday: 'long',
+    month: 'short',
+    day: 'numeric'
+  }
+}
+```
+
+#### 第二部分的页脚
+
+要修改这部分的页脚，我们需要换个源文件，它在 `src/lib/components/footer.svelte` 这里
+
+**注意：这部分对于没有计算机知识的人并不好修改，记得常常备份**
+
+这里先看 Urara demo 里的文件，我的也修改了不少
+
+```
+// 省略了前 9 行
+<footer
+  id="footer"
+  class="footer footer-center bg-base-300 text-base-content shadow-inner p-8 {rounded
+    ? 'rounded-box'
+    : 'md:rounded-box'} {sticky ? 'sticky bottom-0 z-0 md:static' : ''} {className ?? ''}">
+  <div class="prose">
+    <p>
+      {#if footerConfig.nav}
+        {#each footerConfig.nav as { text, link }, i}
+          <a href={link} rel="noopener external" target="_blank">{text}</a>
+          {#if i + 1 < footerConfig.nav.length}
+            <span class="mr-1">·</span>
+          {/if}
+        {/each}
+        <br />
+      {/if}
+      Copyright © {footerConfig.since && footerConfig.since !== new Date().toJSON().substring(0, 4)
+        ? `${footerConfig.since} - ${new Date().toJSON().substring(0, 4)}`
+        : new Date().toJSON().substring(0, 4)}
+      {site.author.name}
+      <br />
+      Powered by
+      <a
+        rel="noopener external"
+        target="_blank"
+        class="tooltip tooltip-secondary hover:text-secondary"
+        data-tip="🌸 [δ] - Based on MDsveX & SvelteKit 🌸"
+        href="https://github.com/importantimport/urara">
+        Urara
+      </a>
+      {#if footerConfig.html}
+        <br />
+        {@html footerConfig.html}
+      {/if}
+    </p>
+  </div>
+</footer>
+
+```
