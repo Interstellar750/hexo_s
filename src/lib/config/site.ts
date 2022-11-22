@@ -9,7 +9,7 @@ export const site: SiteConfig = {
   description: '你好呀👋',
   author: {
     name: 'Hubert\u0020Chen',
-    avatar: '/assets/images/avatar/70455873_p3_master1200.jpg',
+    avatar: '/assets/images/avatar/70455873_p3.webp',
     status: '😉',
     bio: '你好呀👋'
   },

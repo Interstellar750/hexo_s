@@ -1,7 +1,7 @@
 ---
 title: 'Urara 入门教程'
 created: 2022-11-20
-updated: 2022-11-20
+updated: 2022-11-22
 image: /post/urara-intro/urara.webp
 tags: 
    - Urara
@@ -10,7 +10,7 @@ tags:
 summary: '力所能及写的搭建教程'
 ---
 
-题图来自 [Urara demo](https://urara-demo.netlify.app/)
+题图来自 [Urara demo](https://urara-demo.netlify.app/) 并进行过圆角填充
 
 **填坑写文章咯 😇** 
 
@@ -32,7 +32,7 @@ summary: '力所能及写的搭建教程'
 
 ### 配置环境
 
-**首先我们需要安装 nodejs**
+**首先我们需要安装 Node.js**
 
 **node 与 nodejs 是同一个东西，我也不清楚为什么会这样，我现在虚拟机中 node 的版本号为 `v12.22.12`，nodejs 为 `v16.18.0`**
 
@@ -130,7 +130,7 @@ Urara 的后端结构大致分为 `src` 与 `urara` 文件夹，其中 `src` 文
 
 打开其中的 `urara` 目录，你会看到两个文件夹与一张图片，第一个文件夹 `assets` 中也有几张图片，它们是 demo 自带的资源，我也不清楚哪里会用的到，自己琢磨要不要删除吧
 
-![](/post/urara-intro/urara-folder.png)
+![](/post/urara-intro/urara-folder.webp)
 
 还有另一个 `hello-world` 文件夹，点进去可以看到两个文件夹、一张图片和一个名为 `+page.svelte.md` 的文件，再打开其中的 `toc-disabled` 文件夹，能看到另一个名为 `+page.md` 的文件
 
@@ -197,7 +197,7 @@ export const site: SiteConfig = {
   description: '你好呀👋', // 站点描述，适用于有链接预览的应用，可以看后面配图
   author: {
     name: 'Hubert\u0020Chen', // 个人资料卡片的用户名，这里同样使用了 Unicode 代码
-    avatar: '/assets/images/avatar/70455873_p3_master1200.jpg', // 头像
+    avatar: '/assets/images/avatar/70455873_p3.webp', // 头像
     status: '😉', // 状态，也可以用文字，不过超过一个字符的话就会溢出边框
     bio: '你好呀👋' // 简介
   },
@@ -302,11 +302,11 @@ export const date: DateConfig = {
 
 #### 第二部分的页脚
 
-要修改这部分的页脚，我们需要换个源文件，它在 `src/lib/components/footer.svelte` 这里
+要修改这部分的页脚，我们需要找到另一个源文件，它在 `src/lib/components/footer.svelte` 这里
 
 **注意：这部分对于没有计算机知识的人并不好修改，记得常常备份**
 
-这里先看 Urara demo 里的文件，我的也修改了不少
+先看 Urara demo 里的演示文件
 
 ```
 // 省略了前 9 行
@@ -349,3 +349,89 @@ export const date: DateConfig = {
 </footer>
 
 ```
+
+**看上去很乱对吧，我也这么觉得 🥲**
+
+我们尝试拆分一下，先看 demo 的页脚
+
+![](/post/urara-intro/footer.webp)
+
+可以看到第二部分的页脚分为两行，第一行为 **Copyright © 2022 John Doe**
+
+再看源文件 `26` 至 `29` 行的内容
+
+```
+Copyright © {footerConfig.since && footerConfig.since !== new Date().toJSON().substring(0, 4)
+  ? `${footerConfig.since} - ${new Date().toJSON().substring(0, 4)}`
+  : new Date().toJSON().substring(0, 4)}
+{site.author.name}
+```
+
+是不是看懂了一些？ **Copyright © 2022 John Doe** 中的 **Copyright ©** 是按照人类可读形式写在文件里的，这说明我们可以随意修改，例如我们把 **Copyright** 改为 **版权** ，保存后等待测试服务器读取到更改或手动重启，再进入网站就发现 **Copyright** 已经变为了 **版权**
+
+![](/post/urara-intro/footer-2.webp)
+
+中间的日期就是自动生成的，原理应该是获取网络时间吧，我不清楚
+
+末尾的用户名会跟随 `src/lib/config/site.ts` 文件中的设置，一般不需要手动修改
+
+下一行的 **Powered by Urara** 实现方法也跟上一行差不多，不过这句话的 **Urara** 可以点击，可跳转且把指针放到上面会弹出一个信息框，这个效果也可以通过复制替换实现
+
+或许你会好奇为什么第二部分的页脚有两行，因为两句话中间有个换行符 `<br />`，如果不喜欢可以删掉它
+
+继续看 **Powered by Urara** 部分
+
+```
+Powered by
+<a
+  rel="noopener external"
+  target="_blank"
+  class="tooltip tooltip-secondary hover:text-secondary"
+  data-tip="🌸 [δ] - Based on MDsveX & SvelteKit 🌸"
+  href="https://github.com/importantimport/urara">
+  Urara  // 注意 Urara 藏在这里
+  </a>
+```
+
+同样，**Powered by** 为可读形式，后面的 **Urara** 藏在 `<a ... >` 和 `</a>` 的中间，说明 Urara 这个词依然是可读形式，只是被 `<a ... > </a>` 添加了可互动元素，我们再仔细分析一下
+
+```
+Powered by // 可读文字
+<a
+  rel="noopener external"
+  target="_blank"
+  class="tooltip tooltip-secondary hover:text-secondary" // 一些类选项
+  data-tip="🌸 [δ] - Based on MDsveX & SvelteKit 🌸" // 可以看出，这是把指针放到 Urara 上后弹出的文字
+  href="https://github.com/importantimport/urara"> // 这是点击 Urara 后访问的地址
+  Urara  // 注意 Urara 藏在这里
+  </a>
+```
+
+能不能看懂？毕竟我也不是很懂这语法，只能这样理解了 🫠
+
+要重点讲一下的是 `class="tooltip tooltip-secondary hover:text-secondary"` 这行，其中的 `tooltip-secondary` 表示的是信息框背景色使用 **daisy UI** 主题的第二个主要色，`hover:text-secondary` 似乎是主题文字的第二个主要色，具体的颜色值需要去参考 [daisy UI](https://github.com/saadeghi/daisyui/) 了
+
+演示一下不同主题下加了 `tooltip-secondary` 的信息框颜色差别，同样也只截取了部分主题
+
+![](/post/urara-intro/footer-custom.webp)
+
+方便添加这种样式，这里就放一个默认提示框的示例，复制修改一下写进文件里自己测试吧
+
+```
+<a
+  rel="noopener external"
+  target="_blank"
+  class="tooltip hover:text-secondary"
+  data-tip="这里是弹出的文字"
+  href="https://github.com/">
+  这里是文字
+ </a>
+```
+
+效果图
+
+![](/post/urara-intro/footer-test.webp)
+
+接下来也就没有其他要修改的地方了，那么这篇文章就正式结束了吧，当然如果后续发现错漏时，依然是会来修正的
+
+拜拜 👋

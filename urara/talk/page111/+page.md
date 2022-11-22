@@ -2,7 +2,7 @@
 title: '2022 下半年的总结'
 created: 2022-11-06
 updated: 2022-11-19
-image: /talk/page111/flowers.jpg
+image: /talk/page111/flowers.webp
 tags: 
    - 闲聊
 summary: '总结一下暑假开始到现在的生活情况'

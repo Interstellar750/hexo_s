@@ -2,7 +2,7 @@
 title: '使用 FarPush 搭建微信消息推送服务'
 created: 2022-09-01
 updated: 2022-11-03
-image: /post/wechatpush/farpush-hms.jpg
+image: /post/wechatpush/farpush-hms.webp
 tags: 
    - FarPush
    - 推送服务

@@ -33,7 +33,7 @@ export const friends: Friend[] = [
     name: 'Katari',
     link: 'https://katari_v.t.me',
     descr: '',
-    avatar: '/assets/friends_avatar/katari.png'
+    avatar: '/assets/friends_avatar/katari.webp'
   },
   {
     id: 'linger',
@@ -78,7 +78,7 @@ export const friends: Friend[] = [
     name: '12d',
     link: 'https://t.me/diversesystem',
     descr: '您在看胡伯特的网页',
-    avatar: '/assets/friends_avatar/aeciane.jpg'
+    avatar: '/assets/friends_avatar/aeciane.webp'
   },
   {
     id: 'iii90909',
@@ -87,7 +87,7 @@ export const friends: Friend[] = [
     name: 'iii90909',
     link: 'https://t.me/thr7ee',
     descr: '',
-    avatar: '/assets/friends_avatar/iii90909.jpg'
+    avatar: '/assets/friends_avatar/iii90909.webp'
   }
 /*  {
     id: '',

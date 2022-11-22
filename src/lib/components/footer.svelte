@@ -40,7 +40,7 @@
       &copy;
       </a>
       <a
-      rel="noopener external"
+      	rel="noopener external"
         target="_blank"
         class="tooltip hover:text-secondary"
         data-tip="今年是何年"

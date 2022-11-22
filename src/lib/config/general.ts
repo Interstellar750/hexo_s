@@ -148,7 +148,11 @@ export const header: HeaderConfig = {
     {
       text: '朋友们',
       link: '/friends'
-    }
+    },
+	{
+	  text: '📁',
+	  link: 'https://t5d.trle5.xyz'
+	}
   ]
 }
 
