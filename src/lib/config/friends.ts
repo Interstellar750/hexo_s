@@ -81,13 +81,13 @@ export const friends: Friend[] = [
     avatar: '/assets/friends_avatar/aeciane.webp'
   },
   {
-    id: 'iii90909',
+    id: 'iiii90909',
     rel: 'friend',
     title: '',
-    name: 'iii90909',
+    name: 'iiii90909',
     link: 'https://t.me/thr7ee',
     descr: '',
-    avatar: '/assets/friends_avatar/iii90909.webp'
+    avatar: '/assets/friends_avatar/iiii90909.webp'
   }
 /*  {
     id: '',
