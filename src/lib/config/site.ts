@@ -11,7 +11,7 @@ export const site: SiteConfig = {
     name: 'Hubert\u0020Chen',
     avatar: '/assets/images/avatar/70455873_p3.webp',
     status: '😉',
-    bio: '你好呀👋'
+    bio: '你好呀 👋<br \>今天过还得好吗？'
   },
   themeColor: '#E0DE94'
 }

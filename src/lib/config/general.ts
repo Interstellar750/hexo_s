@@ -129,8 +129,17 @@ export const header: HeaderConfig = {
     },
     // 注意这里不要给目录前加 . 号，不然多次点击目录会叠起来
     {
-      text: '建站历程',
-      link: '/about/history'
+      text: '站点相关',
+      children: [
+        {
+          text: '建站历程',
+		  link: '/about/history'
+        },
+        {
+          text: '待办事项',
+          link: '/about/todolist'
+        }
+      ]
     },
     {
       text: '闲聊',
@@ -177,7 +186,7 @@ export const date: DateConfig = {
   locales: 'zh-CN',
   options: {
     year: '2-digit',
-    weekday: 'long',
+    weekday: 'short',
     month: 'short',
     day: 'numeric'
   }
