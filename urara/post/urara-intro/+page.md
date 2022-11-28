@@ -154,7 +154,7 @@ Urara 的后端结构大致分为 `src` 与 `urara` 文件夹，其中 `src` 文
 
 首先我在这里放一个普通的文档头（其实就本文的）
 
-```
+```ts
 ---
 title: 'Urara 入门教程' // 此为文章的标题
 created: 2022-11-20 // 文章创建时间，可在博客主页文章标题上方看到
@@ -170,7 +170,7 @@ summary: '力所能及写的搭建教程' // @ 概括语句，会显示在主页
 
 上面里面以 @ 开头的注释表示这个部分并非必须内容，为演示，下面再放一个最简单的文档头
 
-```
+```ts
 ---
 title: '测试页面' // 标题
 created: 2000-01-01 // 创建时间
@@ -187,7 +187,7 @@ created: 2000-01-01 // 创建时间
 
 也就是博客的名称和主页左边那块，我们需要修改 `src/lib/config/site.ts` 文件，依然是使用本站的文件作为示例
 
-```
+```ts
 import type { SiteConfig } from '$lib/types/site'
 
 export const site: SiteConfig = {
@@ -216,7 +216,7 @@ export const site: SiteConfig = {
 
 首先找到并打开 `src/lib/config/general.ts` 文件，首先映入眼帘的是各种主题
 
-```
+```ts
 export const theme: ThemeConfig = [
   { // 默认情况下排在第一个的主题将会成为默认主题
     name: 'light', // 主题名字，不可以修改，但可以替换
@@ -239,7 +239,7 @@ export const theme: ThemeConfig = [
 
 **接下来往下看，你会看到一些 link 与 text，这对应着博客的顶栏**
 
-```
+```ts
 export const header: HeaderConfig = {
   nav: [
     {
@@ -269,7 +269,7 @@ export const header: HeaderConfig = {
 
 **继续往下看，就到了第一层页脚设置，其实也是与标题栏大同小异，但不可以放折叠项**
 
-```
+```ts
 export const footer: FooterConfig = {
   nav: [
     {
@@ -294,7 +294,7 @@ export const footer: FooterConfig = {
 
 日期格式知道有哪些选项了，这就写
 
-```
+```ts
 export const date: DateConfig = {
   locales: 'zh-CN', // 这里可修改语言，使用 IETF 语言标签的格式 
   options: {
@@ -317,7 +317,7 @@ export const date: DateConfig = {
 
 先看 Urara demo 里的演示文件
 
-```
+```ts
 // 省略了前 9 行
 <footer
   id="footer"
@@ -369,7 +369,7 @@ export const date: DateConfig = {
 
 再看源文件 `26` 至 `29` 行的内容
 
-```
+```ts
 Copyright © {footerConfig.since && footerConfig.since !== new Date().toJSON().substring(0, 4)
   ? `${footerConfig.since} - ${new Date().toJSON().substring(0, 4)}`
   : new Date().toJSON().substring(0, 4)}
@@ -390,7 +390,7 @@ Copyright © {footerConfig.since && footerConfig.since !== new Date().toJSON().s
 
 继续看 **Powered by Urara** 部分
 
-```
+```ts
 Powered by
 <a
   rel="noopener external"
@@ -404,7 +404,7 @@ Powered by
 
 同样，**Powered by** 为可读形式，后面的 **Urara** 藏在 `<a ... >` 和 `</a>` 的中间，说明 Urara 这个词依然是可读形式，只是被 `<a ... > </a>` 添加了可互动元素，我们再仔细分析一下
 
-```
+```ts
 Powered by // 可读文字
 <a
   rel="noopener external"
@@ -426,7 +426,7 @@ Powered by // 可读文字
 
 方便添加这种样式，这里就放一个默认提示框的示例，复制修改一下写进文件里自己测试吧
 
-```
+```ts
 <a
   rel="noopener external"
   target="_blank"

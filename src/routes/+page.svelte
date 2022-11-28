@@ -76,13 +76,14 @@
           class="bg-base-300 text-base-content shadow-inner text-center md:rounded-box p-10 -mb-2 md:mb-0 relative z-10">
           <div class="prose items-center">
             <h2>
-              Not found: [{#each tags as tag, i}
+              未找到符合: [{#each tags as tag, i}
                 '{tag}'{#if i + 1 < tags.length},{/if}
               {/each}]
+              标签的文章
             </h2>
             <button on:click={() => (tags = [])} class="btn btn-secondary">
               <span class="i-heroicons-outline-trash mr-2" />
-              tags = []
+              清空标签
             </button>
           </div>
         </div>
