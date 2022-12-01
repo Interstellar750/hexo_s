@@ -1,7 +1,7 @@
 ---
 title: '待办事项'
 created: 2022-11-23
-updated: 2022-11-30
+updated: 2022-12-01
 # image: /about/todolist/
 tags: 
    - 关于
@@ -28,7 +28,7 @@ summary: '有时候也得记一下自己要干嘛'
 
 ### 其他
 
-- 给博客加个评论系统 | 目前的想法是加个 [giscus](https://giscus.app/zh-CN)，得自己摸索摸索
+- [x] ~~给博客加个评论系统 | 目前的想法是加个 [giscus](https://giscus.app/zh-CN)，得自己摸索摸索~~
 
 - Sitemap 不可用，需要修
 

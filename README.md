@@ -2,7 +2,9 @@
 
 本博客由 [Urara](https://github.com/importantimport/urara/) 驱动
 
-在此感谢 [Urara](https://github.com/importantimport/urara/) 的 [贡献者们](https://github.com/importantimport/urara/graphs/contributors)
+评论功能由 [Giscus](https://github.com/giscus/giscus) 驱动
+
+在此感谢 [Urara](https://github.com/importantimport/urara/) 的 [贡献者们](https://github.com/importantimport/urara/graphs/contributors)，以及 [Giscus](https://github.com/giscus/giscus) 的 [贡献者们](https://github.com/giscus/giscus/graphs/contributors)
 
 #### 为什么项目名是 `hexo_s`？
 
