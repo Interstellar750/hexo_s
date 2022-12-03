@@ -39,7 +39,7 @@ summary: '在不保留微信后台的前提下正常收到通知推送'
 
 **需要的东西**
 
-```
+```text
 一台拥有 Python 环境的设备，Python 版本至少为 Python3
 pip 软件包管理器，作者推荐使用 pip3，不过我自己试了试，不是强制要求
 拥有独立 IP 的服务器或拥有独立 IP 且懂得配置端口转发的家庭网络
@@ -68,10 +68,10 @@ BiliBili 用户页: [__远方的重生__](https://sapce.bilibili.com/10721579) (
 
 **获取更新与升级软件，安装必要软件包**
 
-```
+```bash
 pkg update
 pkg upgrade
-// 安装过程可能会询问一些包的设置，可全部按回车
+# 安装过程可能会询问一些包的设置，可全部按回车
 apt install git vim python3 pip
 ```
 
@@ -89,17 +89,17 @@ apt install git vim python3 pip
 
 **更新源并升级软件，安装软件**
 
-```
+```bash
 sudo apt update
 sudo apt upgrade
-// 中途有停顿也可以根据个人喜好选择
+# 中途有停顿也可以根据个人喜好选择
 ```
 
-```
+```bash
 sudo apt install git vim python3 python3-pip
 ```
 
-|| 提一句：作者好像喜欢用 nano，使用 nano 以支持作者 (不是我)  ||
+||提一句：作者好像喜欢用 nano，~~使用 nano 以支持作者 (不是我)||
 
 ------------
 
@@ -109,7 +109,7 @@ sudo apt install git vim python3 python3-pip
 
 ### 克隆仓库与配置消息转发
 
-```
+```bash
 git clone https://github.com/TSIOJeft/WeChatPush
 ```
 
@@ -119,16 +119,16 @@ git clone https://github.com/TSIOJeft/WeChatPush
 
 FarPush 推送特征码可见应用内`左上角菜单` > `转接设备` > `右下角按钮`，可根据手机支持的推送服务复制对应的推送特征码(截至 22.11.03 ，fcm 推送渠道并未支持)，然后编辑项目内的 `WeChatPush/itchat/config.py` 文件
 
-```
+```bash
 cd WeChatPush/itchat/ 
-// 切换到项目的 itchat 目录内
+# 切换到项目的 itchat 目录内
 vi config.py
-// 编辑配置文件
+# 编辑配置文件
 ```
 
 当你执行完上面两行命令时，你会进入到 vim 的操作界面，按方向键把光标移到最下面，你会看见这一段文本
 
-```
+```python
 # if show self send mes // 翻译过来就是在程序运行中是否显示自己发送出去的信息，改下一行
 SELF_MES = False 
 PUSH_REGID = '删掉此段文字，替换为你在手机上得到的推送特征码'
@@ -141,7 +141,9 @@ MES_THROUGH = 1 // 改为 1 可使用快捷回复信息
 
 根据提示填入推送特征码和根据需求调整选项，vim 使用方法可到网上找找，如果有图形编辑器那就更方便了
 
-**注意 Termux 的 `home` 目录在手机根目录的 `/data/data/com.termux/` 内，没有 root 权限可能无法访问和编辑**
+~~注意 Termux 的 `home` 目录在手机根目录的 `/data/data/com.termux/` 内，没有 root 权限可能无法访问和编辑~~
+
+**可以在 Android 自带的文件管理器的侧边栏访问**
 
 ## 开启推送服务
 
@@ -149,16 +151,16 @@ MES_THROUGH = 1 // 改为 1 可使用快捷回复信息
 
 确保你目前的工作目录在项目的根目录，然后使用 pip 来安装需要的程序包和依赖
 
-```
+```bash
 pip install -r requirements.txt
-// 如果使用 Linux， 也可以用 pip3 代替 pip
+# 如果使用 Linux， 也可以用 pip3 代替 pip
 ```
 
 当安装完所需的软件后，就可以运行推送服务了
 
 **需要注意，如果终端缩放过小，可能会导致二维码生成不完整或错乱，在 Termux 界面里可使用双指缩放来调整大小**
 
-```
+```bash
 python3 main.py
 ```
 

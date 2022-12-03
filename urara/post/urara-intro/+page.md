@@ -38,19 +38,19 @@ summary: '力所能及写的搭建教程'
 
 Urara 需要 `nodejs` v16.x 以上版本，但在我的 Linux 虚拟机中使用 `apt` 安装 `node` 只能安装到 `12.22.12` 版本，想升级的话需要通过 `npm` 安装 `n` 软件包（名字就是一个 n ），如果你的 Linux 发行版能直接装到 16.x 版本的话，可以跳过这一步了
 
-```
-sudo apt install nodejs // 如果提示找不到包可以试试替换为 node
-// nodejs 可能会附带安装 npm，如果有的话可以跳过下面那句命令
+```bash
+sudo apt install nodejs # 如果提示找不到包可以试试替换为 node
+# nodejs 可能会附带安装 npm，如果有的话可以跳过下面那句命令
 sudo apt install npm
-nodejs -v ; npm -v // 查看它们的版本号
+nodejs -v ; npm -v # 查看它们的版本号
 ```
 
 如果执行上面命令最后一句后第一行显示出的版本号低于 v16 的话，就需要进行升级了
 
 ```
-npm install -g n // 安装 n 软件包
-n stable // 使用 n 程序把 nodejs 升级到 stable 渠道
-npm install npm@latest -g // 升级 `npm` 包管理器（可选）
+npm install -g n # 安装 n 软件包
+n stable # 使用 n 程序把 nodejs 升级到 stable 渠道
+npm install npm@latest -g # 升级 `npm` 包管理器（可选）
 ```
 
 安装完再测试一下版本号，正常的话就可以安装其他需要的软件了
@@ -59,24 +59,24 @@ npm install npm@latest -g // 升级 `npm` 包管理器（可选）
 
 Urara 使用 [pnpm](https://pnpm.io/) 包管理器进行组件安装，~~所以这个软件包是必须安装的~~，非必要，如果你有其他的方法安装组件和运行开发服务器的话
 
-```
-npx pnpm add -g pnpm // 这个是官方文档里的安装办法
+```bash
+npx pnpm add -g pnpm # 这个是官方文档里的安装办法
 ```
 
 安装完成后，运行 `pnpm -v` 看看版本号，截至到文章修改日期，pnpm 最新版本号为 `7.17.0`
 
 **接下来就是克隆仓库，可以使用 `git` 或按照官方教程使用 `degit`**
 
-```
-sudo apt install git // 已经安装过 git 的话就不要重新安装了
+```bash
+sudo apt install git # 已经安装过 git 的话就不要重新安装了
 git clone https://github.com/importantimport/urara
 ```
 
 另一个办法
 
-```
+```bash
 npx degit importantimport/urara urara
-// 新建一个名为 urara 的文件夹并把项目克隆到里面去
+# 新建一个名为 urara 的文件夹并把项目克隆到里面去
 ```
 
 这两种方法的差别就是用 `git` 克隆会保留原本的 git 信息和一些其他许可证文件，而使用 `degit` 并不会保留这些信息
@@ -87,20 +87,20 @@ npx degit importantimport/urara urara
 
 首先，切换到目录并安装拓展
 
-```
-cd urara // 也可根据你的项目名
-pnpm i // 根据文件夹内的 package.json 和 pnpm-lock.yaml 按照需要的拓展
+```bash
+cd urara # 也可根据你的项目名
+pnpm i # 根据文件夹内的 package.json 和 pnpm-lock.yaml 按照需要的拓展
 ```
 
 如果没有意外，那么安装过程会顺利的跑完，~~网络条件可不算意外~~，接下来就可以完成最后一步了
 
-```
+```bash
 pnpm dev
 ```
 
 运行命令后静候一段时间，当然这个时间长短要看设备，打开你设备上的浏览器，在地址栏输入 `127.0.0.1:5173` 并按下回车，直到屏幕被清屏，输出以下内容
 
-```
+```bash
   VITE v3.2.4  ready in 147 ms
 
   ➜  Local:   http://127.0.0.1:5173/
@@ -154,7 +154,7 @@ Urara 的后端结构大致分为 `src` 与 `urara` 文件夹，其中 `src` 文
 
 首先我在这里放一个普通的文档头（其实就本文的）
 
-```ts
+```markdown
 ---
 title: 'Urara 入门教程' // 此为文章的标题
 created: 2022-11-20 // 文章创建时间，可在博客主页文章标题上方看到
@@ -170,14 +170,16 @@ summary: '力所能及写的搭建教程' // @ 概括语句，会显示在主页
 
 上面里面以 @ 开头的注释表示这个部分并非必须内容，为演示，下面再放一个最简单的文档头
 
-```ts
+```markdown
 ---
 title: '测试页面' // 标题
 created: 2000-01-01 // 创建时间
 ---
 ```
 
-其实你想的话创建时间也能忽略掉，不过排版就会乱掉
+其实你想的话全部都能忽略掉，文章目录会代替标题中的文章名，时间线也会乱
+
+**如果不留日期，似乎还可以达成置顶文章的效果？**
 
 ### 博客风格自定义
 

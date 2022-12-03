@@ -1,7 +1,7 @@
 ---
 title: '搭建一个自己的博客'
 created: 2022-03-05
-updated: 2022-11-20
+updated: 2022-12-04
 image: /post/搭建一个自己的博客/banner.webp
 tags: 
    - Hexo
@@ -16,7 +16,7 @@ summary: '使用 Hexo 后端与 GitHub Pages 服务'
 
 ## 如何搭建自己的博客
 
-搭建博客并没有那么困难，大部分的时候只需要跟着步骤走就行，当然有时候碰见 bug 会是不可避免的事，这就得看运气了 ~~我是属于运气差的那一类人。~~
+搭建博客并没有那么困难，大部分的时候只需要跟着步骤走就行，当然有时候碰见 bug 会是不可避免的事，这就得看运气了 ~~我是属于运气差的那一类人~~
 
 本文里使用的博客框架为 [Hexo](https://github.com/hexojs/hexo/) ，服务器使用 [GitHub Pages](https://github.io/)。域名可使用 Github Pages 默认域名或自定义
 
@@ -24,15 +24,15 @@ summary: '使用 Hexo 后端与 GitHub Pages 服务'
 
 ## 搭建博客需要准备的东西：
 
-```
+```text
 1. 可正常使用且没有被限制的 GitHub 账户
 2. 搭载 Windows、Linux 或 Android 的设备
 3. 良好的网络环境（我不知道啊你不要问我）
 ```
 
-首先创建 GitHub 账户，因为我们搭建博客要用到 GitHub Pages ，注册过程我就不多阐述了，看不懂可以打开浏览器的翻译功能，也可以在搜索引擎寻找对应的教程。
+首先创建 GitHub 账户，因为我们搭建博客要用到 GitHub Pages ，注册过程我就不多阐述了，看不懂可以打开浏览器的翻译功能，也可以在搜索引擎寻找对应的教程
 
-创建完了 GitHub 账户，需要创建一个仓库（Repositories）用于存放博客文件和启用 GitHub Pages 。
+创建完了 GitHub 账户，需要创建一个仓库（Repositories）用于存放博客文件和启用 GitHub Pages
 
 登录到 GitHub 网页版后，可以看见左上角的 **Recent Repositories** 旁有个 **New** 按钮，点击它来新建仓库
 
@@ -42,7 +42,7 @@ summary: '使用 Hexo 后端与 GitHub Pages 服务'
 
 ![](/post/搭建一个自己的博客/github-repo.webp)
 
-创建仓库需要设定仓库名与仓库类型（公开或私密），如果你希望使用 Github Pages 给的二级域名，你需要把仓库名设为 `<你的 GitHub 用户名>.github.io` ，否则你的 Github Pages 网页会变成 `<你的 GitHub 用户名>.github.io/<创建的仓库名>`，但如果你使用自定义域名的话随便设置都没问题，仓库类型推荐使用公开，因为似乎只有 Github 付费用户才能在私密的仓库中开启 Github Pages 功能。
+创建仓库需要设定仓库名与仓库类型（公开或私密），如果你希望使用 GitHub Pages 给的二级域名，你需要把仓库名设为 `<你的 GitHub 用户名>.github.io` ，否则你的 GitHub Pages 网页会变成 `<你的 GitHub 用户名>.github.io/<创建的仓库名>`，但如果你使用自定义域名的话随便设置都没问题，仓库类型推荐使用公开，因为似乎只有 Github 付费用户才能在私密的仓库中开启 GitHub Pages 功能
 
 到这里 GitHub 的设置基本就完成了，接下来就应该开始配置 Hexo 客户端了
 
@@ -58,40 +58,40 @@ summary: '使用 Hexo 后端与 GitHub Pages 服务'
 
 安装完成后测试是否正常
 
-```
+```bash
 node -v
 npm -v
 ```
 
-都能正常提示版本号的话，那就可以直接安装 Hexo 客户端
+都能正常提示版本号的话，那就可以直接安装 `Hexo` 服务端
 
-```
+```bash
 npm install -g hexo-cli
 hexo version  # 检查 hexo 是否正常
 ```
 
-然后还需要安装一下 Git , 方法有两个。
+然后还需要安装一下 `Git` , 方法有两个
 
 1. 进入 [Git 官网](https://git-scm.com/) 下载常规安装包
 2. 使用 winget `winget install --id Git.Git -e --source winget`
 
-这时候就可以部署 Hexo 了，创建一个放博客的文件夹比较好，推荐在用户文件夹下创建一个 hexo 文件夹给它，当然如果你已经在其他平台配置过了，也可以 cd 到那个文件夹直接进去继续操作。
+这时候就可以部署 `Hexo` 了，创建一个放博客的文件夹比较好，推荐在用户文件夹下创建一个 hexo 文件夹给它，当然如果你已经在其他平台配置过了，也可以 `cd` 到那个文件夹直接进去继续操作。
 
-```
+```bash
 cd C:/Users/<你的用户名>/hexo/
 cd /d <目录>  # CMD 用户使用这条命令来切换目录
 hexo init
 ```
 
-到这里的 Windwos上的 hexo 已经部署完成了
+到这里的 Windows 上的 hexo 已经部署完成了
 
 ------------
 
 ### 在 Linux 设备上配置 Hexo 客户端
 
-相比于 Windows ，Linux 上的 Hexo 安装更为简单，只用在命令行运行几个命令
+相比于 Windows，Linux 上的 Hexo 安装更为简单，只用在命令行运行几个命令
 
-```
+```bash
 $ sudo apt update
 $ sudo apt install nodejs
 $ sudo apt install git # 如果已经安装了 git 可以跳过这一步
@@ -101,7 +101,7 @@ $ hexo version
 
 挺简单的，接着在`~/`下创建一个`hexo`文件夹再部署就行
 
-```
+```bash
 $ mkdir hexo
 $ cd hexo
 $ hexo init # 此步如果有报错，请使用 sudo 执行或清空部署文件夹
@@ -115,21 +115,23 @@ $ hexo init # 此步如果有报错，请使用 sudo 执行或清空部署文件
 
 **由于考虑到一些手机品牌的不可获取 root 性，本文章使用 Termux 来运行命令**
 
-**注意**
+~~注意~~
 
-**由于 Termux 的默认用户文件夹是在 `/data/data/com.ternux/files/home/` 下，没有 root 权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到 GitHub Pages 上，但后端控制文件可能得找其他办法传输出来**
+~~由于 Termux 的默认用户文件夹是在 `/data/data/com.ternux/files/home/` 下，没有 root 权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到 GitHub Pages 上，但后端控制文件可能得找其他办法传输出来~~
 
-不然也可以尝试在手机上安装完整 Linux 虚拟机
+**这个问题是我没发现，在 Android 自带的文件应用里的侧边栏，可以看到下方有个 Termux 选项，点击进去既可访问它的 Home 目录**
+
+当然也可以尝试在手机上安装完整 Linux 虚拟机
 
 **安装配置 Termux**
 
-下载链接 [~~Play Store~~](https://play.google.com/store/apps/details?id=com.termux) 不推荐，已经很久没更新了 | [F-Droid](https://f-droid.org/repo/com.termux_118.apk) | [Hubert's Box](https://t5d.trle5.tk/Apk/com.termux_118_f-droid.apk) (下载速度有点堪忧)
+下载链接 [~~Play Store~~](https://play.google.com/store/apps/details?id=com.termux) 不推荐，已经很久没更新了 | [F-Droid](https://f-droid.org/repo/com.termux_118.apk) | [Hubert's Box](https://t5d.trle5.xyz/Apk/com.termux_118_f-droid.apk)
 
 安装并打开，等待下载需要的配置文件
 
 更新源与升级
 
-```
+```bash
 $ pkg update
 $ pkg upgrade
 # 如果以上命令不可用，可以试试把 pkg 改成 apt，即 apt update
@@ -138,21 +140,21 @@ upgrade 中途可能有选择停顿，可根据个人喜好选择
 
 安装 Termux root 工具
 
-```
+```bash
 $ pkg install tsu # 手机有 root 权限选择这个
 $ pkg install proot # 手机没有 root 权限选择这个
 ```
 
 切换到 root
 
-```
+```bash
 $ tsu # tsu 使用这条命令，执行后会向手机索要 root 权限
 $ termux-chroot # proot 使用这条命令，运行后 ~$ 没有变化 ，但权限有变
 ```
 
 安装 nodejs 和 git 以及 hexo-cli 
 
-```
+```bash
 $ pkg install nodejs
 $ node -v && npm -v # 查看 nodejs 与 npm 的版本
 $ pkg install git # 已安装 git 可以忽略此行
@@ -164,7 +166,7 @@ $ hexo version
 
 Termux 的默认文件夹在安卓系统的 `/data/data/com.termux/files/home/` ，最好也是在 home 下创建一个 hexo 文件夹部署进去
 
-```
+```bash
 $ mkdir hexo # 如果是用的系统 su ，记得观察路径是不是在 Termux 的 home 文件夹下( termux-chroot 显示为 ~$ )，以免破坏 Android 系统
 $ cd hexo
 $ hexo init
@@ -176,7 +178,7 @@ $ hexo init
 
 **下面的 `hexo generate`  `hexo server` 和后面要讲的 `hexo deploy`，都可以使用 `hexo g` `hexo s` `hexo d`来代替，作用是一样的，也就是 **g**enerate **s**erver **d**eploy 三个单词的首字母**
 
-```
+```bash
 hexo generate # 初始化博客并生成初始页面，后期每写一篇新文章也需要再执行一次
 hexo server # 运行本地服务器，一般用来测试和在推送前检查是否有问题
 ```
@@ -189,7 +191,7 @@ hexo server # 运行本地服务器，一般用来测试和在推送前检查是
 
 下面放一些正常的设置类型
 
-```
+```yaml
 title: Hexo # 博客主标题
 subtitle:   # 博客副标题
 author: John Doe # 博客著名者
@@ -200,7 +202,7 @@ url: http://example.com # 网站链接，影响到点击主副标题的跳转，
 
 接下来是部署设置，配置文件也是在 `_config.yml` 文件里编辑
 
-```
+```yaml
 # https://hexo.io/docs/one-command-deployment 查看 hexo 部署帮助文档
 deploy: # 此处不用填写，留空
   type: git # 填 git 或 heroku ，根据你的部署位置来
@@ -214,7 +216,7 @@ deploy: # 此处不用填写，留空
 
 也可以手动编辑，Windows 的 .gitconfig 文件在用户文件夹目录，Linux 在用户文件夹下，Termux 在 home 文件夹下
 
-```
+```bash
 git config --global user.name "<username>" 
 git config --global user.mail "<username@github.com>"
 # 可能需要使用 root 权限执行
@@ -223,20 +225,22 @@ git config --global user.mail "<username@github.com>"
 
 ### 关于 git config 中的邮箱设定
 
-git config 中的邮箱地址不能直接填写注册 GitHub 的邮箱（其实我也不太清楚能不能，因为我设定的是邮箱不公开），不然并不会算到你的贡献里，当然不在乎的话也可以随便填
+如果你的 GitHub 帐号邮箱地址为公开状态，那么 git config 中的邮箱地址可以填写注册 GitHub 的邮箱地址
+
+**设定了不公开邮箱地址？**
 
 前往 [邮箱设定](https://github.com/settings/emails) ，找到你的邮箱地址，旁边会有一个提示符号 ，把鼠标放上去或点击它，就会显示一段话和一个格式为 `<number>+<username>@users.noreply.github.com` 的邮箱地址，复制它然后粘贴到终端里即可![](/post/搭建一个自己的博客/github-email.webp)
 
 呃，还得安装一下 Hexo 提供的一键部署工具
 
-```
+```bash
 cd hexo  # 需要在博客文件夹里执行
 npm install hexo-deployer-git --save
 ```
 
 ## 到这里基本上就完成了，来部署吧！
 
-```
+```bash
 hexo clean # 慎重操作，会清除所有数据，但不会删除 _config.yml 文件，非必要选项
 hexo g # 重新生成默认博客，source 文件夹里有新文章时会生成新的页面
 hexo d # 复制 public 文件夹里的文件到 .depoly_git 文件夹里，然后根据 _config.yml 里的设置开始部署
@@ -244,7 +248,7 @@ hexo d # 复制 public 文件夹里的文件到 .depoly_git 文件夹里，然�
 
 接下来 git 会向你请求设定的部署网站的用户名与密钥，这里以 GitHub 作为演示
 
-```
+```bash
 Username for 'https://github.com':<username>
 Password for 'https://<username>@github.com':<yourpasswd>
 ```
@@ -275,7 +279,7 @@ Password for 'https://<username>@github.com':<yourpasswd>
 
 按照 [GitHub 的 DNS 解析设置](https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)，需要创建四条 `A` 记录，并分别定向到：
 
-```
+```text
 name: @ # 全都要使用 @ 号 (有些服务商的设置方法是留空)
 185.199.108.153
 185.199.109.153
@@ -285,7 +289,7 @@ name: @ # 全都要使用 @ 号 (有些服务商的设置方法是留空)
 
 还有四条 `AAAA` 记录，也得分别定向到：
 
-```
+```text
 name: @ # 全都要使用 @ 号 (有些服务商的设置方法是留空)
 2606:50c0:8000::153
 2606:50c0:8001::153
@@ -295,7 +299,7 @@ name: @ # 全都要使用 @ 号 (有些服务商的设置方法是留空)
 
 以及一条 `CNAME` 记录
 
-```
+```text
 name: www 
 <username>.github.io. # 也就是 GitHub Pages 的默认页面
 ```
