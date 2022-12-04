@@ -83,7 +83,7 @@ apt install git vim python3 pip
 
 ### 在 Linux 上部署
 
-**提一句架构问题，见过好多软件因为处理器架构的问题跑不起来，目前我在 arm64 与 x86-64 价格的 Linux 上尝试过搭建 WeChatPush，未见兼容性问题，其他架构的需要自己试试了**
+**提一句架构问题，见过好多软件因为处理器架构的问题跑不起来，目前我在 arm64 与 x86-64 架构的 Linux 上尝试过搭建 WeChatPush，未见兼容性问题，其他架构的需要自己试试了**
 
 好像之前都没有说关于 Linux 版本的问题，没有特殊说明的话一般都是用 Debian 系，apt 包管理器
 
@@ -99,7 +99,7 @@ sudo apt upgrade
 sudo apt install git vim python3 python3-pip
 ```
 
-||提一句：作者好像喜欢用 nano，~~使用 nano 以支持作者 (不是我)||
+|| 提一句：作者好像喜欢用 nano，使用 nano 以支持作者(不是我) ||
 
 ------------
 
