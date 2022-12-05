@@ -446,3 +446,140 @@ Powered by // 可读文字
 接下来也就没有其他要修改的地方了，那么这篇文章就正式结束了吧，当然如果后续发现错漏时，依然是会来修正的
 
 拜拜 👋
+
+### 拓展
+
+近期加了 Giscus 后发现还有很多拓展可以加，下面也附上部分配置的教程
+
+#### Friends 页面
+
+这个来说相对简单，复制几个文件再照着改就行
+
+首先下载 [friend.svelte](https://raw.githubusercontent.com/kwaa/blog/main/src/lib/components/extra/friend.svelte) 文件，放进 `src/lib/components/extra/` 文件夹内
+
+再下载 [+page.svelte](https://raw.githubusercontent.com/kwaa/blog/main/src/routes/friends/%2Bpage.svelte) 文件，放进 `src/routes/friends/` 文件夹内，`src/routes/` 里默认是没有 `friends` 文件夹的，请手动创建并将文件放入其中
+
+接下来是最重要的一步，在 `src/lib/config/` 文件夹中，创建一个名为 `friends.ts` 的文件，再复制以下内容粘贴保存，样式来自 [./kwaa.dev](https://kwaa.dev/about) 博客的 [GitHub 仓库](https://github.com/kwaa/blog/blob/main/src/lib/config/friends.ts)
+
+```ts
+export interface FriendOld {
+  // hCard+XFN
+  id: string // HTML id
+  rel?: string // XFN, contact / acquaintance / friend
+  link?: string // URL
+  html?: string // HTML
+  title?: string // 标题
+  descr?: string // 描述
+  avatar?: string // 头像
+  name?: string // backwards compatibility
+}
+
+export type Friend = {
+  id: string // HTML id
+  rel?: string // XHTML Friends Network
+  link?: string // URL
+  html?: string // Custom HTML
+
+  title?: string // 标题
+  name?: string // 人名
+  avatar?: string // 头像
+  descr?: string // 描述
+  class?: {
+    avatar?: string // 头像类名
+    img?: string // 图片类名
+  }
+}
+
+export const friends: Friend[] = [
+   {
+   id: 'kwaa',
+   rel: 'friend',
+   link: 'https://kwaa.dev',
+   html: `<div class="card w-screen max-w-[24rem] bg-base-100 bg-gradient-to-tr from-primary to-accent text-primary-content shadow-lg transition-shadow duration-500 hover:shadow-2xl">
+     <div class="absolute top-4 rotate-6 text-4xl font-bold leading-tight opacity-10">藍+85CD<br />./kwaa.dev</div>
+     <div class="card-body p-4">
+       <div class="flex items-center gap-4">
+         <div class="avatar mb-auto w-20 shrink-0">
+           <img class="rounded-xl" style="image-rendering:pixelated" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAVFBMVEUAAADW29T///+5wcc4ODjz8OZVVVX/7MkVFRXtrpqTJiVHKxPZOjr/+/QICz3/07d1TCNErbkaSXtgERn59vb//OPSzMzuuwKZne20srL0mIyWGwWygNgKAAAAAXRSTlMAQObYZgAAAOtJREFUKM9djwuSwyAMQ2vsBDBJyK/tfu5/z5W6aYZUMB7QQwZuhwIkwnq7KIgqTFQJV3/USQX+OoE0fqfLIh0kCtKC31VGEEGqBezdydixfAARnNeRKZDmClE4mFE/gAKpTjFOcgEde01fa4wrDjRAlGNf7vdF5QKEzSJUCRpftmFwrbW6vEGYXwEzHzi2BvCF1ve9/7hvDSgqBJYQeHxrA4oqAskA9ocpwUkIkrvbnppvlNnMUkn+9B4r+CdAAACVM5yJnBnA9U+8wCzncPgRynP6V+WGIQZyzMWspwzrTEASSi4F/kHCy/4DaDYJuEU/v5oAAAAASUVORK5CYII=" alt="藍#+85CD" />
+         </div>
+         <div class="card-title flex-1 flex-col items-end gap-0">
+           <span class="p-name text-right">藍+85CD</span>
+           <span class="text-right opacity-50">./kwaa.dev</span>
+         </div>
+       </div>
+       <div class="p-note prose opacity-70">ゴミ溜めで埋もれたまま、星空を眺めてるよ</div>
+     </div>
+   </div>`
+ },
+ {
+   id: 'test',
+   title: 'testtest',
+   link: 'https://kwaa.dev',
+   descr: 'testtqsatsatsartsa',
+   avatar: 'https://kwaa.dev/assets/any@512.webp'
+ },
+ {
+   id: 'test2',
+   title: 'testtest',
+   link: 'https://kwaa.dev',
+   descr: 'testtqsatsatsartsa',
+   avatar: 'https://kwaa.dev/assets/any@512.webp'
+ },
+ {
+   id: 'test3',
+   title: 'testtest',
+   link: 'https://kwaa.dev',
+   descr: 'testtqsatsatsartsa',
+   avatar: 'https://kwaa.dev/assets/any@512.webp'
+ },
+ {
+   id: 'test4',
+   name: ':hatsunemiku: 藍 :hatsunemiku:',
+   title: '~/kwaa.moe',
+   link: 'https://kwaa.moe/@kwa',
+   descr: 'ゴミ溜めで埋もれたまま、星空を眺めてるよ',
+   avatar: 'https://kwaa.moe/media/975fc04911e242147be77b60b93839b6dd1a317112717562944e3c7aef1f0203.png'
+ },
+ {
+   id: 'test5',
+   name: '藍',
+   title: '藍藍藍藍藍',
+   link: 'https://kwaa.dev',
+   descr: 'without avatar'
+ },
+ {
+   id: 'test6',
+   title: 'Test6',
+   name: 'test6'
+ }
+]
+```
+
+演示图
+
+![](/post/urara-intro/urara-friends.webp)
+
+可以看到，这个好友卡片有两种样式（页脚不算），看源文件也能看出来，有渐变底的那个卡片里有 HTML 格式的代码，我不会改，如果你有能力可以试着自己改，[kwaa](https://kwaa.dev/) 大佬提供了一个 [Tailwind Play](https://play.tailwindcss.com/0AHHfFWTgL) 用于参考与修改
+
+**这里我们主要讲默认样式如何修改**
+
+依然是放一个卡片样式模板用于修改，这里是我的个人卡片 😝
+
+```ts
+export const friends: Friend[] = [
+  {
+    id: 'trle5', // HTML ID，不会显示在卡片上
+    rel: 'friend', // 联系人类型，可选 contact / acquaintance / friend，目前不太清楚有什么用
+    title: 'Hubert\u0027s Blog', // 标题，显示在昵称下方，这里使用了 Unicode 码
+    name: 'Hubert Chen', // 昵称
+    link: 'https://trle5.xyz/', // 点击卡片后访问的页面
+    descr: '你好呀 👋', // 头像下方的网站描述
+    avatar: 'https://trle5.xyz/assets/avatar/70455873_p3.webp' // 头像，也可调用其他网页的图片
+  }
+```
+
+效果图
+
+![](/post/urara-intro/urara-friends-me.webp)
+
+也可以随时找我申请友链，在 [关于我](/about) 页面使用任意方式联系我即可 [^游戏平台除外]
