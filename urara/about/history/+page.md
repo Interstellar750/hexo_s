@@ -87,6 +87,6 @@ tags:
 
 **2022/12/01 开通 Giscus**
 
-成功开通了 Giscus 讨论功能，比想象中的要简单好多，不过看 [＃47](https://github.com/importantimport/urara/issues/47) 这个议题好像说会有 bug 导致登不上 Giscus，但我自己试了试没问题，有点奇怪
+成功开通了 Giscus 讨论功能，比想象中的要简单好多，不过看 [#47](https://github.com/importantimport/urara/issues/47) 这个议题好像说会有 bug 导致登不上 Giscus，但我自己试了试没问题，有点奇怪
 
 修了，但似乎只修了 Giscus 的登录问题，sitemap 还是没法使用

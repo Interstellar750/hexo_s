@@ -44,6 +44,6 @@ summary: '有时候也得记一下自己要干嘛'
 
 - Sitemap 不可用，需要修
 
-  - 目前近在本地开发服务器可用，我就复制本地的一份到 [t5d](https://t5d.trle5.xyz/Blog/sitemap.xml) 里用了
+  - 目前仅在本地开发服务器可用，我就复制本地的一份到 [t5d](https://t5d.trle5.xyz/Blog/sitemap.xml) 里用了
 
 - 还没有想法...
