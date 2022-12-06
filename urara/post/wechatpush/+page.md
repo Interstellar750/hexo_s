@@ -54,7 +54,7 @@ WeChatPush 项目仓库地址: [__GitHub__](https://github.com/TSIOJeft/WeChatPu
 
 作者的酷安账号: [__FarPlace__](https://www.coolapk.com/u/2838135)
 
-BiliBili 用户页: [__远方的重生__](https://sapce.bilibili.com/10721579) (不太确定是不是作者本人) 
+BiliBili 用户页: [__远方的重生__](https://sapce.bilibili.com/10721579)
 
 ## 开始搭建
 

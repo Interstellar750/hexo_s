@@ -14,7 +14,7 @@ summary: '未完成，而且好像没找到免 root 执行 fastboot 命令的办
 
 **这次就不说什么前言了，adb 不会用我也难教**
 
-## 准备工作
+# 准备工作
 
 **首先确定这篇教程是干嘛的，使用一台手机给另一台手机运行 adb 与 fastboot 命令**
 
@@ -23,7 +23,7 @@ summary: '未完成，而且好像没找到免 root 执行 fastboot 命令的办
 **需要的东西**
 
 ```text
-连接两台设备(手机)的数据线，也可以用一条线加 OTG 的方法
+连接两台设 备(手机)的数据线，也可以用一条线加 OTG 的方法
 如果是进行非救砖操作，也可以通过网络 adb 进行命令
 至少有一台设备(手机)能正常运行，可访问网络
 ```
@@ -57,7 +57,7 @@ List of devices attached
 
 #### 2. 使用 ADB 工具安装器
 
-下载 ADB 工具安装器  [~~酷安~~](https://www.coolapk.com/apk/crixec.adbtoolkitsinstall) 应用已下架 |  [**Hubert's Box**](https://t5d.trle5.xyz/Apk/ADB-tools-3.0.apk)
+下载 ADB 工具安装器  [~~酷安~~](https://www.coolapk.com/apk/crixec.adbtoolkitsinstall) 应用已下架 | [__Hubert's Box__](https://t5d.trle5.xyz/Apk/ADB-tools-3.0.apk)
 
 这个工具可以让你直接运行 adb 命令，但没有 root 权限会导致无法运行 fastboot 命令，也提供了可以把 adb 命令安装到系统里的功能
 
