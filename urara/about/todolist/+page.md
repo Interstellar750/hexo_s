@@ -38,8 +38,12 @@ summary: '有时候也得记一下自己要干嘛'
 
   - ~~目前的想法是加个~~ [~~Giscus~~](https://giscus.app/zh-CN)~~，得自己摸索摸索~~
 
-  - 还是有点登录问题
+  - ~~还是有点登录问题~~
+
+  - 已于 [284d74b](https://github.com/importantimport/urara/commit/1ad522ad6929293f33ed678a904c26b4642cb6aa) 被修复
 
 - Sitemap 不可用，需要修
+
+  - 目前近在本地开发服务器可用，我就复制本地的一份到 [t5d](https://t5d.trle5.xyz/Blog/sitemap.xml) 里用了
 
 - 还没有想法...

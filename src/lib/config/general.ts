@@ -173,7 +173,7 @@ export const footer: FooterConfig = {
     },
     {
       text: 'Sitemap',
-      link: '/sitemap.xml'
+      link: 'https://t5d.trle5.xyz/Blog/sitemap.xml'
     },
     {
       text: 'Source',

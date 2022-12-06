@@ -45,7 +45,7 @@ export default defineConfig({
       manifest: false,
       scope: '/',
       workbox: {
-        globPatterns: ['posts.json', '**/*.{js,css,html,xml,svg,ico,jpg,png,webp,avif}'],
+        globPatterns: ['posts.json', '**/*.{js,css,html,svg,ico,png,webp,avif}'],
         globIgnores: ['**/sw*', '**/workbox-*']
       }
     })
