@@ -88,7 +88,16 @@ export const friends: Friend[] = [
     link: 'https://t.me/thr7ee',
     descr: '',
     avatar: '/assets/friends_avatar/iiii90909.webp'
-  }
+  },
+  {
+    id: 'nekopara6',
+    rel: 'acquaintance',
+    title: '0606',
+    name: '那里有5块钱',
+    link: 'https://t.me/wdnmd23333',
+    descr: '想和你晚上一起看星星捏',
+    avatar: 'https://avatars.githubusercontent.com/u/120037547'
+  },
 /*  {
     id: '',
     rel: 'friend',
