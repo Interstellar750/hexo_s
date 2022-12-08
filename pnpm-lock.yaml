@@ -94,6 +94,7 @@ devDependencies:
   remark-footnotes: 2.0.0
   shiki-twoslash: 3.1.0
   svelte: 3.51.0
+  svelte-bricks: 0.1.7
   svelte-check: 2.9.2_nknulvovjd6slpuktpdvul5hne
   svelte-preprocess: 4.10.7_2pxlindevwwyesz7n7ax52bqx4
   tailwindcss: 3.2.4_postcss@8.4.19
@@ -5445,7 +5446,7 @@ packages:
 
   /svelte-bricks/0.1.7:
     resolution: {integrity: sha512-2wJseuhlVYVRoCKJGQuwCySTMsvBVS4dchah6Ecz9RNng0zufx6NxToXc7iGf0QOHjo9wwAsOczRI+Ou2q4gEg==}
-    dev: false
+    dev: true
 
   /svelte-check/2.9.2_nknulvovjd6slpuktpdvul5hne:
     resolution: {integrity: sha512-DRi8HhnCiqiGR2YF9ervPGvtoYrheE09cXieCTEqeTPOTJzfoa54Py8rovIBv4bH4n5HgZYIyTQ3DDLHQLl2uQ==}
