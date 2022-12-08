@@ -191,7 +191,7 @@ hexo server # 运行本地服务器，一般用来测试和在推送前检查是
 
 下面放一些正常的设置类型
 
-```yaml
+```yaml title="_config.yml"
 title: Hexo # 博客主标题
 subtitle:   # 博客副标题
 author: John Doe # 博客著名者
@@ -202,7 +202,7 @@ url: http://example.com # 网站链接，影响到点击主副标题的跳转，
 
 接下来是部署设置，配置文件也是在 `_config.yml` 文件里编辑
 
-```yaml
+```yaml title="_config.yml"
 # https://hexo.io/docs/one-command-deployment 查看 hexo 部署帮助文档
 deploy: # 此处不用填写，留空
   type: git # 填 git 或 heroku ，根据你的部署位置来
@@ -216,7 +216,7 @@ deploy: # 此处不用填写，留空
 
 也可以手动编辑，Windows 的 .gitconfig 文件在用户文件夹目录，Linux 在用户文件夹下，Termux 在 home 文件夹下
 
-```bash
+```bash title=".gitconfig"
 git config --global user.name "<username>" 
 git config --global user.mail "<username@github.com>"
 # 可能需要使用 root 权限执行

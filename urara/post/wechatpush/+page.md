@@ -128,7 +128,7 @@ vi config.py
 
 当你执行完上面两行命令时，你会进入到 vim 的操作界面，按方向键把光标移到最下面，你会看见这一段文本
 
-```python
+```python title="itchat/config.py"
 # if show self send mes // 翻译过来就是在程序运行中是否显示自己发送出去的信息，改下一行
 SELF_MES = False 
 PUSH_REGID = '删掉此段文字，替换为你在手机上得到的推送特征码'
