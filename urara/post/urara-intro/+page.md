@@ -1,7 +1,7 @@
 ---
 title: 'Urara 入门教程'
 created: 2022-11-20
-updated: 2022-11-23
+updated: 2022-12-09
 image: /post/urara-intro/urara.webp
 tags: 
    - Urara
