@@ -36,7 +36,7 @@ summary: '可接入 HomeKit 来控制开关'
 
 - esp8266 继电器
 
-分别是组合起来和分开的图（线懒得拆，直接拍照了[^还是拆了]）
+分别是组合起来和分开的图（线懒得拆，直接拍照了[^虽然后面还是拆了]）
 
 ![](/post/8266-switch/8266-relay.webp)
 
@@ -103,7 +103,7 @@ HAA 固件我推荐选择只需使用一个文件的 `fullhaaboot.bin` 二进制
 
 没有问题的话，你的浏览器会加载出一个橘黄色的网页，如下图所示 ![](/post/8266-switch/setup_orange.webp)
 
-图片来源: [Setup Mode - RavenSystem/esp-homekit-devices](https://github.com/RavenSystem/esp-homekit-devices/wiki/Setup-Mode)
+图片来源: [Setup Mode - RavenSystem/esp-homekit-devices](https://github.com/RavenSystem/esp-homekit-devices/wiki/Setup-Mode) 进行过透明像素调整以适合比例
 
 此时上可以看到标题下面有个 **MEPLHAA Script** 输入框，不用着急，先点击下方的 **Search WiFi**，找到你家里用的网络，选中并输入密码，再回到上方填写 `json` 脚本
 
