@@ -53,9 +53,6 @@ specifiers:
   vite-plugin-pwa: ^0.13.3
   workbox-window: ^6.5.4
 
-dependencies:
-  svelte-bricks: 0.1.7
-
 devDependencies:
   '@iconify-json/heroicons-outline': 1.1.4
   '@iconify-json/heroicons-solid': 1.1.5
