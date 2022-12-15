@@ -38,11 +38,14 @@
           <span class="opacity-50 text-right">{friend.title}</span>
         </div>
       </div>
-      {#if friend.descr}
-        <div class="prose opacity-70 p-note">
-          {friend.descr}
+      {#if friend.social}
+        <div class="prose opacity-70 p-note"> {friend.descr ?? ''}
+          <img class="{friend.class?.img ?? 'rounded-full'} w-6" align="right" src={friend.social} alt={friend.id} />
         </div>
-      {/if}
+      {:else}
+        <div class="prose opacity-70 p-note"> {friend.descr ?? ''}
+          </div>
+        {/if}
     </div>
   </a>
 {/if}
