@@ -20,7 +20,7 @@ export type Friend = {
   name?: string // 人名
   avatar?: string // 头像
   descr?: string // 描述
-  socia?: string // 社交软件图标
+  social?: string // 社交软件图标
   class?: {
     avatar?: string // 头像类名
     img?: string // 图片类名
