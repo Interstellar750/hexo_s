@@ -1,7 +1,7 @@
 <script lang="ts">
   import { site } from '$lib/config/site'
-  import { src, width, height } from '/static/assets/maskable@512.png?width=384&format=webp&metadata'
-  import srcset from '/static/assets/maskable@512.png?w=48;96;192&avif&srcset'
+  // import { src, width, height } from '/static/assets/maskable@512.png?width=384&format=webp&metadata'
+  // import srcset from '/static/assets/maskable@512.png?w=48;96;192&avif&srcset'
 </script>
 
 <div
@@ -9,12 +9,14 @@
   <a href={site.protocol + site.domain} class="hidden u-url u-uid">{site.author.name}</a>
   <figure class="relative mx-auto group">
     <picture>
-      <source {srcset} type="image/avif" />
+      <source 
+	  	src={site.author.avatar}
+		type="image/avif" />
       <img
         class="u-photo rounded-full shadow-xl hover:shadow-2xl transition-shadow z-10 w-24 h-24 md:w-32 md:h-32"
-        {src}
-        {width}
-        {height}
+        src={site.author.avatar}
+        width=384
+		    height=384
         alt={site.author.name} />
     </picture>
     {#if site.author.status}
