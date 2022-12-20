@@ -16,7 +16,7 @@
     <p>
       {#if footerConfig.nav}
         {#each footerConfig.nav as { text, link }, i}
-          <a href={link} rel="noopener external" target="_blank">{text}</a>
+          <a href={link} rel="noopener external noreferrer" target="_blank">{text}</a>
           {#if i + 1 < footerConfig.nav.length}
             <span class="mr-1">·</span>
           {/if}
@@ -24,7 +24,7 @@
         <br />
       {/if}
       <a
-        rel="noopener external"
+        rel="noopener external noreferrer"
         target="_blank"
         class="tooltip hover:text-secondary"
         data-tip="来 GitHub 上看看我？"
@@ -32,7 +32,7 @@
         <b>{site.author.name}</b>
       </a>
       <a
-      rel="noopener external"
+      rel="noopener external noreferrer"
         target="_blank"
         class="tooltip hover:text-secondary"
         data-tip="CC BY 4.0"
@@ -40,7 +40,7 @@
       &copy;
       </a>
       <a
-      	rel="noopener external"
+      	rel="noopener external noreferrer"
         target="_blank"
         class="tooltip hover:text-secondary"
         data-tip="今年是何年"
@@ -51,7 +51,7 @@
       </a>
       | 由
       <a
-        rel="noopener external"
+        rel="noopener external noreferrer"
         target="_blank"
         class="tooltip tooltip-secondary hover:text-secondary"
         data-tip="🌸 [δ] - Based on MDsveX & SvelteKit 🌸"

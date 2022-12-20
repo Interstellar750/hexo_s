@@ -29,7 +29,7 @@
         {:else}
           <div class="avatar {friend.class?.avatar} placeholder mb-auto">
             <div class="{friend.class?.img ?? 'bg-neutral-focus text-neutral-content shadow-inner rounded-xl'} w-16">
-              <span class="text-3xl">{(friend.name ?? friend.title).charAt(0)}</span>
+              <span class="text-3xl">{(friend.name ?? friend.title ?? '').charAt(0)}</span>
             </div>
           </div>
         {/if}
