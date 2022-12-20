@@ -14,6 +14,4 @@
 
 #### 在本地查看网页
 
-切换到工作目录并运行 `pnpm i && pnpm build && pnpm preview`
-
-**不要使用 `pnpm dev`，因为有未知问题会导致跑不起来**
+切换到工作目录并运行 `pnpm i && pnpm dev` 或 `pnpm i && pnpm build && pnpm preview`
