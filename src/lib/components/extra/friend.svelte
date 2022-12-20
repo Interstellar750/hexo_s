@@ -29,7 +29,7 @@
         {:else}
           <div class="avatar {friend.class?.avatar} placeholder mb-auto">
             <div class="{friend.class?.img ?? 'bg-neutral-focus text-neutral-content shadow-inner rounded-xl'} w-16">
-              <span class="text-3xl">{(friend.name ?? friend.title).charAt(0)}</span>
+              <span class="text-3xl">{(friend.name ?? friend.title ?? '').charAt(0)}</span>
             </div>
           </div>
         {/if}
@@ -40,7 +40,7 @@
       </div>
       {#if friend.social}
         <div class="prose opacity-70 p-note"> {friend.descr ?? ''}
-          <img class="{friend.class?.img ?? 'rounded-full'} w-6" align="right" src={friend.social} alt={friend.id} />
+          <img class="{friend.class?.img ?? 'rounded-full'} w-6 opacity-100" align="right" src={friend.social} alt={friend.id} />
         </div>
       {:else}
         <div class="prose opacity-70 p-note"> {friend.descr ?? ''}
