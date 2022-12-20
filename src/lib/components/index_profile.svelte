@@ -10,13 +10,13 @@
   <figure class="relative mx-auto group">
     <picture>
       <source 
-	  	src={site.author.avatar}
-		type="image/avif" />
+        src={site.author.avatar}
+        type="image/avif" />
       <img
         class="u-photo rounded-full shadow-xl hover:shadow-2xl transition-shadow z-10 w-24 h-24 md:w-32 md:h-32"
         src={site.author.avatar}
         width=384
-		    height=384
+        height=384
         alt={site.author.name} />
     </picture>
     {#if site.author.status}
