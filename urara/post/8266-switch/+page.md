@@ -1,7 +1,7 @@
 ---
 title: '做一个简单的网络继电器'
 created: 2022-12-04
-updated: 2022-12-09
+updated: 2022-12-21
 image: /post/8266-switch/relay.webp
 tags: 
    - Homekit
@@ -82,7 +82,7 @@ summary: '可接入 HomeKit 来控制开关'
 
 ESP8266 Loader: [**Play Store**](https://play.google.com/store/apps/details?id=com.bluino.esploader) | [**Hubert's Box**](https://t5d.trle5.xyz/Apk/esp8266loader.apk)
 
-HAA 固件: [**Home Accessory Architect**](https://github.com/RavenSystem/haa/releases/latest)
+HAA 固件: [**Home Accessory Architect**](https://github.com/RavenSystem/haa/releases/latest) | [**Hubert's Box**](https://t5d.trle5.xyz/haa_updates/)
 
 HAA 固件我推荐选择只需使用一个文件的 `fullhaaboot.bin` 二进制固件，因为 **ESP8266 Loader** 只能一次性刷入一个二进制固件
 
@@ -130,7 +130,7 @@ HAA 固件我推荐选择只需使用一个文件的 `fullhaaboot.bin` 二进制
 
 **⚠️ 注意：HAA 安装过程需要连接到 GitHub 进行 OTA 升级，请确保你的家庭网络足够通畅，也可以按照** [__Using a custom server for OTA updates__](https://github.com/RavenSystem/esp-homekit-devices/wiki/Installation#using-a-custom-server-for-ota-updates) **教程来自行配置 OTA 服务器**
 
-我按照教程在 [**t5d**](https://t5d.trle5.xyz) 上建了一个自定义 OTA 文件夹，文件托管在 Vercel 的 HK 服务器上，理论可用，但我还没有测试过：[**t5d.trle5.xyz/haa_updates**](https://t5d.trle5.xyz/haa_updates)，有更新或出错请在下方发评论告诉我
+我按照教程在 [**t5d**](https://t5d.trle5.xyz) 上建了一个自定义 OTA 文件夹，文件托管在 Vercel 的 HK 服务器上，理论可用，~~但我还没有测试过~~ 已测试，可用：[**t5d.trle5.xyz/haa_updates**](https://t5d.trle5.xyz/haa_updates)，需要修改端口号为 `443` 并勾选 HTTPS 复选框
 
 接下来就是等待 OTA 完成，理想情况下大致十分钟左右就可以配置完成并开始等待配对，不确定它安装成功没有的话，可以进入 **ESP8266 Loader**，点击右上角的 **Serial Monitor** 按钮[^菜单旁边那个]查看它的 log 以排查是哪里出了问题
 
