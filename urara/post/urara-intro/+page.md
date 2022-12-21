@@ -130,7 +130,7 @@ Urara 的后端结构大致分为 `src` 与 `urara` 文件夹，其中 `src` 文
 
 打开其中的 `urara` 目录，你会看到两个文件夹与一张图片，第一个文件夹 `assets` 中也有几张图片，它们是 demo 自带的资源，我也不清楚哪里会用的到，自己琢磨要不要删除吧
 
-![](/post/urara-intro/urara-folder.webp)
+![三个项目，两个文件夹和一个樱花图标图片](/post/urara-intro/urara-folder.webp)
 
 还有另一个 `hello-world` 文件夹，点进去可以看到两个文件夹、一张图片和一个名为 `+page.svelte.md` 的文件，再打开其中的 `toc-disabled` 文件夹，能看到另一个名为 `+page.md` 的文件
 
@@ -210,7 +210,7 @@ export const site: SiteConfig = {
 
 ```
 
-这里放一张链接预览的效果图 ![](/post/urara-intro/telegram-preview.webp)
+这里放一张链接预览的效果图 ![Telegram 的链接预览，展示了网站名、作者名称、简介和设定的图片](/post/urara-intro/telegram-preview.webp)
 
 #### 主题配色、顶栏菜单与博客页脚
 
@@ -365,7 +365,7 @@ export const date: DateConfig = {
 
 我们尝试拆分一下，先看 demo 的页脚
 
-![](/post/urara-intro/footer.webp)
+![网站页脚，分三行，有订阅链接按钮、年份、版权和作者名称，还有由 Urara 驱动的文字](/post/urara-intro/footer.webp)
 
 可以看到第二部分的页脚分为两行，第一行为 **Copyright © 2022 John Doe**
 
@@ -380,7 +380,7 @@ Copyright © {footerConfig.since && footerConfig.since !== new Date().toJSON().s
 
 是不是看懂了一些？ **Copyright © 2022 John Doe** 中的 **Copyright ©** 是按照人类可读形式写在文件里的，这说明我们可以随意修改，例如我们把 **Copyright** 改为 **版权** ，保存后等待测试服务器读取到更改或手动重启，再进入网站就发现 **Copyright** 已经变为了 **版权**
 
-![](/post/urara-intro/footer-2.webp)
+![同样是网站页脚，其中的 Copyright 被替换成了版权](/post/urara-intro/footer-2.webp)
 
 中间的日期就是自动生成的，原理应该是获取网络时间吧，我不清楚
 
@@ -424,7 +424,7 @@ Powered by // 可读文字
 
 演示一下不同主题下加了 `tooltip-secondary` 的信息框颜色差别，同样也只截取了部分主题
 
-![](/post/urara-intro/footer-custom.webp)
+![三个 Daisy UI 主题，分别为 AQUA、LO-FI 和 PASTEL，还有对应的信息框配色](/post/urara-intro/footer-custom.webp)
 
 方便添加这种样式，这里就放一个默认提示框的示例，复制修改一下写进文件里自己测试吧
 
@@ -441,7 +441,7 @@ Powered by // 可读文字
 
 效果图
 
-![](/post/urara-intro/footer-test.webp)
+![网站页脚，名为“这里是文字”的超链接弹出了信息框，显示 “这里是弹出的文字”](/post/urara-intro/footer-test.webp)
 
 接下来也就没有其他要修改的地方了，那么这篇文章就正式结束了吧，当然如果后续发现错漏时，依然是会来修正的
 
