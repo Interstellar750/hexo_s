@@ -451,7 +451,7 @@ Powered by // 可读文字
 
 ### 部署
 
-Urara 现在拥有一键部署到 GitHub Pages 的 GitHub Actions 脚本，这部分的使用教程过段时间我会更新到官方文档里面去，就不在这里写了
+Urara 现在拥有一键部署到 GitHub Pages 的 [GitHub Actions](https://github.com/features/actions) 脚本，这部分的使用教程过段时间我会更新到官方文档里面去，就不在这里写了
 
 #### 使用 Vercel 部署
 
@@ -461,15 +461,15 @@ Urara 现在拥有一键部署到 GitHub Pages 的 GitHub Actions 脚本，这�
 
 Vercel 可以使用 GitHub 直接注册帐号并登录，也有其他注册的方式，任意选择一种既可
 
-注册完成登录后，在主页面点击右上角 **+Add New**，选择 **Project**，导入你 GitHub 的博客仓库或其他平台的 git 仓库后，点击 `Import`
+注册完成登录后，在主页面点击右上角 **+Add New**，选择 **Project**，导入你 GitHub 的博客仓库或其他平台的 git 仓库后，点击 **Import**
 
-之后可以设定项目名和预设框架，随便设置其实都没问题，主要是改一下下面的 **Build and Output Settings**，勾选右侧 `OVERRIDE` 既可填写
+之后可以设定项目名和预设框架，随便设置其实都没问题，主要是改一下下面的 **Build and Output Settings**，勾选右侧 **OVERRIDE** 既可填写
 
 **Build Command:** `pnpm build`
 
-**Output Directory** `build`
+**Output Directory:** `build`
 
-**Install Command** `pnpm i`
+**Install Command:** `pnpm i`
 
 至于下面的 **Environment Variables** 不用填，留空就行，然后点击 **Deploy** 按钮，等待下方的部署过程，成功后会有烟花庆祝 🎉
 
