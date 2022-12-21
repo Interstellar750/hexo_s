@@ -56,7 +56,7 @@
         class="tooltip tooltip-secondary hover:text-secondary"
         data-tip="🌸 [δ] - Based on MDsveX & SvelteKit 🌸"
         href="https://github.com/importantimport/urara">
-        Urara
+        <b>Urara</b>
       </a>
       驱动
       {#if footerConfig.html}
