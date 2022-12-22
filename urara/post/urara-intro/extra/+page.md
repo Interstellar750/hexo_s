@@ -20,7 +20,7 @@ summary: 'Urara 可用拓展插件使用教程'
 
 再下载 [+page.svelte](https://raw.githubusercontent.com/kwaa/blog/main/src/routes/friends/%2Bpage.svelte) 文件，放进 `src/routes/friends/` 文件夹内，`src/routes/` 里默认是没有 `friends` 文件夹的，请手动创建并将文件放入其中
 
-对了，还需要在 `pnpm-lock.yaml` 文件里添加 `svelte-bricks` 依赖
+对了，还需要在 `pnpm-lock.yaml` 与 `package.json` 文件里添加 `svelte-bricks` 依赖
 
 ```yaml title="pnpm-lock.yaml" {2}
 specifiers:
@@ -29,7 +29,17 @@ specifiers:
   svelte-check: ^2.9.2
 ```
 
-添加方法就是把上面代码块的高亮行加进对应的位置，大致没有排序限制吧，添加后记得运行一下 `pnpm i` 再进行开发服务器测试
+```json title="package.json" {3}
+{
+  "devDependencies": {
+    "svelte": "3.51.0",
+    "svelte-bricks": "^0.1.7",
+    "svelte-check": "^2.9.2",
+  }
+}
+```
+
+添加方法就是把上面两个代码块的高亮行加进对应的位置就行，大致没有排序限制吧，添加后记得运行一下 `pnpm i` 再进行开发服务器测试
 
 接下来是最重要的一步，在 `src/lib/config/` 文件夹中，创建一个名为 `friends.ts` 的文件，再复制以下内容粘贴保存，样式来自 [./kwaa.dev](https://kwaa.dev/about) 博客的 [GitHub 仓库](https://github.com/kwaa/blog/blob/main/src/lib/config/friends.ts) (太长了，删掉了一些)
 
