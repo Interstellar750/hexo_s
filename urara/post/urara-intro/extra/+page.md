@@ -163,7 +163,7 @@ export const friends: Friend[] = [
         data-repo-id="R_kgDOHTJG_w"
         data-category="General"
         data-category-id="DIC_kwDOHTJG_84CS2Mz"
-        data-mapping="og:title"
+        data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
@@ -214,7 +214,7 @@ export type UtterancesConfig = {
 ⬇65
 ```
 
-如果您需要修改 **页面 ↔️ discussion 映射关系** 的话，您需要修改 `src/lib/components/comments/giscus.svelte` 文件里的内容，可能以后也会移至 `post.ts` 里吧
+如果您需要修改 **页面 ↔️ discussion 映射关系** 的话，您需要修改 `src/lib/components/comments/giscus.svelte` ~~文件里的内容，可能以后也会移至 `post.ts` 里吧~~ 大概不会了
 
 ```ts title="src/lib/components/comments/giscus.svelte" {9}
 ⬆6
@@ -226,7 +226,7 @@ export type UtterancesConfig = {
       'data-repo-id': config.repoID,
       'data-category': config.category ?? '',
       'data-category-id': config.categoryID,
-      'data-mapping': 'og:title',
+      'data-mapping': 'pathname',
       'data-reactions-enabled': config.reactionsEnabled === false ? '0' : '1',
       'data-input-position': config.inputPosition ?? 'bottom',
 ⬇18
@@ -234,4 +234,4 @@ export type UtterancesConfig = {
 
 根据前面说到的有时候会串评论的问题，~~我这里就把 `data-mapping` 改成了 `og:title`，其实有没有效果我自己都有点不清楚~~
 
-现在还有串评论的问题就改回来了，得测试一下还会不会出错
+现在还有串评论的问题就改回来了，留着 pathname 似乎是比较好的选项，不过依然有个小问题，例如我的 [关于我](/about) 目录下还有三个文章，当 about/ 这个页面没有单独开一个讨论时，子目录里有其他页面已经开了讨论页面，那么里面的评论就会串到父文章来，不过也有解决方法，进入对应仓库的 Discussions 按照 giscus app 的格式开一个新讨论就行
