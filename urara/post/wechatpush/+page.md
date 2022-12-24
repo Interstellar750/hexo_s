@@ -115,7 +115,7 @@ git clone https://github.com/TSIOJeft/WeChatPush
 
 克隆项目仓库到当前目录，如果发现在自己不熟悉的目录，可使用 `cd ~` 切换当前工作目录到用户根目录
 
-克隆完成后需要在手机上安装 FarPush 获取推送特征码，Farpush 下载链接可见[之前部分](/post/wechatpush/#准备部署工作)
+克隆完成后需要在手机上安装 FarPush 获取推送特征码，Farpush 下载链接可见[之前部分](#准备部署工作)
 
 FarPush 推送特征码可见应用内`左上角菜单` > `转接设备` > `右下角按钮`，可根据手机支持的推送服务复制对应的推送特征码(截至 22.11.03 ，fcm 推送渠道并未支持)，然后编辑项目内的 `WeChatPush/itchat/config.py` 文件
 
