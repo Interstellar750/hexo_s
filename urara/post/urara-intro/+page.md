@@ -451,7 +451,19 @@ Powered by // 可读文字
 
 ### 部署
 
-Urara 现在拥有一键部署到 GitHub Pages 的 [GitHub Actions](https://github.com/features/actions) 脚本，这部分的使用教程过段时间我会更新到官方文档里面去，就不在这里写了
+Urara 现在拥有一键预构建网页的 [GitHub Actions](https://github.com/features/actions) 脚本，这部分的使用教程过段时间我会更新到官方文档里面去，~~就不在这里写了~~ 官方文档写不了太详细和可能会遇到的坑，还是在这写一份吧
+
+#### 使用 GitHub Pages 部署
+
+GitHub 的免费网页托管服务，可以存放静态网页，例如 `.html` 文件，也可以在上面存放 `.md` 文件，会自动转换为可访问的网页
+
+**需要注意：GitHub Pages 在私有仓库开启需要订阅 GitHub Pro，如果不想开放博客后端请使用 Vercel 或 Netlifly 部署**
+
+同上，只要你在仓库内启用了 GitHub Actions 且没有多余的分支时（一个存放博客的分支，另一个由 Actions 自动生成的 `gh-pages` 分支），每次进行提交时，Actions 都会对仓库进行一次预构建，然后推送到 `gh—pages` 分支<sup>存在即覆盖，没有就生成</sup>，如果没有自动运行，那就自己进到 **Actions** 选项卡选择 **Deploy to GitHub Pages**，再选择你博客的分支运行就行
+
+需要使用时，只需进入仓库设置，选择 **Pages** 选项卡，然后把 **Branch** 设置为 `gh—pages` 分支，路径选择根目录既可，如果没有看到这些选项，那请看一下 **Source** 是不是选到 **GitHub Actions** 了，这里要选择 **Deploy from a branch**
+
+如果不想使用这个功能，可以把 `.github/workflows` 这个文件夹删掉，或在 **Actions** 选项卡里点击 **Deploy to GitHub Pages**，再到右上角点击 **Disable workflow** 来将其禁用掉
 
 #### 使用 Vercel 部署
 
