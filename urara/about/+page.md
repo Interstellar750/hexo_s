@@ -66,6 +66,8 @@ tags:
 
 **Twitter:** [@interstellar750](https://twitter.com/interstellar750) 请谨慎关注，可能会有 NSFW 内容
 
+**Mastodon:** [trle5@kwaa.moe](https://kwaa.moe/@trle5) 在 [kwaa](https://kwaa.moe/@kwa) 大佬的实例上注册的
+
 **GitHub:** [Hubert Chen](https://github.com/interstellar750) (好像并不能联系到人...)
 
 ### 玩游戏
