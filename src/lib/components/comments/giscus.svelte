@@ -12,7 +12,7 @@
       'data-repo-id': config.repoID,
       'data-category': config.category ?? '',
       'data-category-id': config.categoryID,
-      'data-mapping': 'og:title',
+      'data-mapping': 'pathname',
       'data-reactions-enabled': config.reactionsEnabled === false ? '0' : '1',
       'data-input-position': config.inputPosition ?? 'bottom',
       'data-theme': config.theme ?? 'preferred_color_scheme',
