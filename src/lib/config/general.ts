@@ -119,7 +119,17 @@ export const theme: ThemeConfig = [
   }
 ]
 
-export const head: HeadConfig = {}
+export const head: HeadConfig = {
+  custom: ({ dev, post, page }) =>
+    dev
+      ? []
+      : [
+          // IndieAuth
+          '<link rel="authorization_endpoint" href="https://indieauth.com/auth">',
+          '<link rel="token_endpoint" href="https://tokens.indieauth.com/token">',
+        ],
+  me: ['https://github.com/Interstellar750']
+}
 
 export const header: HeaderConfig = {
   nav: [
