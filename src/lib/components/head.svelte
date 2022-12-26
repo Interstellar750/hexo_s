@@ -10,7 +10,7 @@
 
 <svelte:head>
   <meta name="author" content={site.author?.name} />
-  inject
+  inject()
   {#if post}
     <link rel="canonical" href={site.protocol + site.domain + post.path} />
     {#if post.type === 'article'}
