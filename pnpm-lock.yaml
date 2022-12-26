@@ -14,7 +14,6 @@ specifiers:
   '@types/workbox-build': ^5.0.1
   '@typescript-eslint/eslint-plugin': ^5.46.1
   '@typescript-eslint/parser': ^5.46.1
-  '@vercel/analytics': ^0.1.6
   '@vite-pwa/sveltekit': ^0.0.1
   autoprefixer: ^10.4.13
   chalk: ^5.2.0
@@ -74,7 +73,6 @@ devDependencies:
   '@types/workbox-build': 5.0.1
   '@typescript-eslint/eslint-plugin': 5.46.1_imrg37k3svwu377c6q7gkarwmi
   '@typescript-eslint/parser': 5.46.1_ha6vam6werchizxrnqvarmz2zu
-  '@vercel/analytics': 0.1.6
   '@vite-pwa/sveltekit': 0.0.1_n46hanechhcb4seycmn3d5vts4
   autoprefixer: 10.4.13_postcss@8.4.20
   chalk: 5.2.0
@@ -2279,12 +2277,6 @@ packages:
       vite: 4.0.1_@types+node@18.11.15
     transitivePeerDependencies:
       - rollup
-    dev: true
-
-  /@vercel/analytics/0.1.6:
-    resolution: {integrity: sha512-zNd5pj3iDvq8IMBQHa1YRcIteiw6ZiPB8AsONHd8ieFXlNpLqhXfIYnf4WvTfZ7S1NSJ++mIM14aJnNac/VMXQ==}
-    peerDependencies:
-      react: ^16.8||^17||^18
     dev: true
 
   /@vite-pwa/sveltekit/0.0.1_n46hanechhcb4seycmn3d5vts4:
