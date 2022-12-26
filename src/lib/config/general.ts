@@ -182,8 +182,8 @@ export const footer: FooterConfig = {
       link: '/atom.xml'
     },
     {
-      text: 'Sitemap',
-      link: 'https://t5d.trle5.xyz/Blog/sitemap.xml'
+      text: 'Privacy',
+      link: '/about/privacy'
     },
     {
       text: 'Source',
