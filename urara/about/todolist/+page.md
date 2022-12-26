@@ -1,7 +1,7 @@
 ---
 title: '待办事项'
 created: 2022-11-23
-updated: 2022-12-24
+updated: 2022-12-27
 summary: '有时候也得记一下自己要干嘛'
 flags:
   - unlisted
@@ -21,6 +21,7 @@ flags:
   - 感冒请假回家，就捣鼓一段时间写完了
 
 - 2022 年度总结
+  - 在写了(New Folder)
 
 - 补上一篇关于 ssh 设定的小教程
 
@@ -30,7 +31,7 @@ flags:
   - 完成 🤤
 
 - [x] [~~Urara 教程~~](/post/urara-intro) ~~或许还应该加个部署部分~~
-  - 还有没加完的拓展使用教程
+  - 还有没加完的拓展使用教程（[文档](https://urara-docs.netlify.app/zh-hans/)刚写完，缓一缓）
   - 根据 [FFF](https://fff.js.org/) 来重新调整一下文件头的教程
 
 ### 其他
@@ -42,5 +43,7 @@ flags:
 
 - Sitemap 不可用，需要修
   - 目前仅在本地开发服务器可用，我就复制本地的一份到 [t5d](https://t5d.trle5.xyz/Blog/sitemap.xml) 里用了
+
+- Webmentions 似乎用不了，暂时搞不懂是什么原因...
 
 - 还没有想法...
