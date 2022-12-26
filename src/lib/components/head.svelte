@@ -3,14 +3,13 @@
   import { head } from '$lib/config/general'
   import { site } from '$lib/config/site'
   import OpenGraph from '$lib/components/head_opengraph.svelte'
-  import { inject } from '@vercel/analytics'
   export let post: Urara.Post | undefined = undefined
   export let page: Urara.Page | undefined = undefined
 </script>
 
 <svelte:head>
   <meta name="author" content={site.author?.name} />
-  inject()
+  <script defer src="/_vercel/insights/script.js"></script>
   {#if post}
     <link rel="canonical" href={site.protocol + site.domain + post.path} />
     {#if post.type === 'article'}
