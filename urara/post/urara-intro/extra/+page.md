@@ -16,9 +16,9 @@ summary: 'Urara 可用拓展插件使用教程'
 
 这个来说相对简单，复制几个文件再照着改就行
 
-首先下载 [friend.svelte](https://raw.githubusercontent.com/kwaa/blog/main/src/lib/components/extra/friend.svelte) 文件，放进 `src/lib/components/extra/` 文件夹内
+首先下载 [friend.svelte](https://github.com/importantimport/urara-docs/raw/master/public/extension/friend/friend.svelte) 文件，放进 `src/lib/components/extra/` 文件夹内
 
-再下载 [+page.svelte](https://raw.githubusercontent.com/kwaa/blog/main/src/routes/friends/%2Bpage.svelte) 文件，放进 `src/routes/friends/` 文件夹内，`src/routes/` 里默认是没有 `friends` 文件夹的，请手动创建并将文件放入其中
+再下载 [+page.svelte](https://github.com/importantimport/urara-docs/raw/master/public/extension/friend/%2Bpage.svelte) 文件，放进 `src/routes/friends/` 文件夹内，`src/routes/` 里默认是没有 `friends` 文件夹的，请手动创建并将文件放入其中
 
 对了，还需要在 `pnpm-lock.yaml` 与 `package.json` 文件里添加 `svelte-bricks` 依赖
 
