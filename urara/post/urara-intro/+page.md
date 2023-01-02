@@ -60,7 +60,7 @@ npm install npm@latest -g # 升级 `npm` 包管理器（可选）
 Urara 使用 [pnpm](https://pnpm.io/) 包管理器进行组件安装，~~所以这个软件包是必须安装的~~，非必要，如果你有其他的方法安装组件和运行开发服务器的话
 
 ```bash
-npx pnpm add -g pnpm # 这个是官方文档里的安装办法
+npm i -g pnpm # 这个是官方文档里的安装办法
 ```
 
 安装完成后，运行 `pnpm -v` 看看版本号，截至到文章修改日期，pnpm 最新版本号为 `7.17.0`
