@@ -1,18 +1,30 @@
 ---
 title: 'Urara 拓展插件'
 created: 2022-12-21
-updated: 2022-12-21
+updated: 2023-01-03
 tags: 
    - Urara
    - 拓展
 summary: 'Urara 可用拓展插件使用教程'
 ---
 
-## 网页拓展
+<script>
+  import Alert from '$lib/components/extra/alert.svelte'
+</script>
 
 近期加了 Giscus 后发现还有很多拓展可以加，下面也附上部分配置的教程
 
+<Alert status="success" title="本文包含的大多数拓展已包含在官方文档内"/>
+
+查看官方拓展文档：[**拓展 | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html)
+
+## 网页拓展
+
+此分类可以拓充博客页面
+
 ### Friends 页面
+
+此教程在官方文档里也有：[**友链 | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#友链)
 
 这个来说相对简单，复制几个文件再照着改就行
 
@@ -130,9 +142,36 @@ export const friends: Friend[] = [
 
 也可以随时找我申请友链，在 [关于我](/about) 页面使用任意方式联系我即可
 
+<big><b>朋友卡片的社交平台图标</b></big>
+
+应该有些人发现在我的 [朋友页面](/friends)，点进卡片时，有些并不是博客链接，而是社交平台的链接，于是我就在朋友卡片右下角加了个社交软件的图标
+
+嗯，这个功能是我魔改出来的，其实本来还[打算再加个社交平台的名称](https://t.me/Riocoolapk/946539)，最后只做成这个样子，没有前端知识，只会照着模板改
+
+如果你有加这个小图标的想法，可以看看我博客仓库的 [BE5D947](https://github.com/Interstellar750/hexo_s/commit/be5d9479583c7a2bb5fd8f42a731de6078ae9805) 这个提交中对 `friend.svelte` 和 `friends.ts` 的修改，至于图标我是从 [ICONS8](https://icons8.com/) 上下载的
+
+这个图标与朋友描述占同一行，它们可以同时存在，也可以单独出现一个，社交平台图标路径的使用方法类似头像，贴上图标路径加上就行
+
+```ts title="src/lib/config/friends.ts" {8}
+export const friends: Friend[] = [
+  {
+    id: 'HTML ID',
+    rel: 'firend',
+    title: '标题',
+    name: '昵称',
+    link: '链接',
+    descr: '描述',
+    social: '<社交平台图标路径>',
+    avatar: '<头像路径>'
+  }
+]
+```
+
 ## 评论功能
 
 ### Giscus 评论系统
+
+此教程在官方文档里也有：[**Giscus | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#giscus)
 
 本站就在用，依赖于 GitHub 项目仓库的 Discussions 功能，注定了对于国内的网络有点难访问，有时候可能会串评论，需要手动刷新
 
