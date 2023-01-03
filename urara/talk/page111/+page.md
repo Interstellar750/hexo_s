@@ -72,6 +72,8 @@ summary: '总结一下暑假开始到现在的生活情况'
 
 事实上博客是从最近才有更新，之前一直没时间管，直到更换了 [Urara](https://github.com/importantimport/urara) 后端才在更新，近几周的 commit 全是关于博客的，以至于 C 语言的学习都搁置了几周，目前博客还是有小问题，估计那么勤更新还是因为这个博客后端没那么好搞，接下来可能会有一篇关于 Urara 的教程，摸了快一个月也知道那里有坑要避开了 😴
 
+教程写好了，就是插件还缺一些：[Urara 入门教程](/post/urara-intro)  [Urara 拓展插件](/post/urara-intro/extra)
+
 我注册了三个域名，本来 [trle5.tk](https://trle5.tk/) 是博客的主要域名，[trle5.xyz](https://trle5.xyz/) 是镜像站，包含了没写完的文章， [trle5.dev](https://trle5.dev/) 是从 [Porkbun](https://porkbun.com/) 免费领的域名，目前借给别人用了
 
 至于现在 [trle5.tk](https://trle5.tk/) 就直接弃用了，如果条件允许的话，我想用这个域名搭建一个 [Matrix](https://matrix.org/) 服务器，因为 .tk 后缀有 talk 的意思，而且 .tk 域名是可以免费注册的，滥用较多，很多搜索引擎就不收录这个域名的内容，就完全没人看文章了
@@ -87,6 +89,8 @@ esp8266 这块开发板还是在三月初看网上 WIFI 杀手的视频买的，
 然后我又找到了 [自制 HomeKit 智能开关](https://www.jianshu.com/p/9cf083830edf) 这篇教程，这篇教程使用的是 [RavenSystem](https://github.com/RavenSystem/) 的另一个项目 [Home Accessory Architect](https://github.com/RavenSystem/haa/)，成功安装，不过这个也有点坑，刷写后需要进入网页端配置，要手动输入 json 文件，配置过程还需要连接 GitHub 来下载资源文件，且后面需要修改 WIFI 网络只能清除重新刷入再重新配置
 
 这个部分后面也是会出一份单独的教程，感觉这里写的又有点多了
+
+继电器的教程也写好了，就是没具体讲接线：[做一个简单的网络继电器](/post/8266-switch/)
 
 ### 电子设备
 
