@@ -1,7 +1,7 @@
 ---
 title: '2022 年度总结'
 created: 2022-12-28
-updated: 2023-01-04
+updated: 2023-01-05
 image: /talk/page112/2023.webp
 tags:
    - 年度总结
@@ -10,6 +10,8 @@ summary: '又是一年，今年做了什么呢'
 
 <script>
   import GitHub from '$lib/components/extra/github.svelte'
+  import Spotify from '$lib/components/extra/spotify.svelte'
+
 </script>
 
 嗯... 又一年...
@@ -189,13 +191,13 @@ Spoftiy 的听歌排行，有 101 首，最近发现好像有些歌莫名奇妙�
 
 不知道我喜欢的音乐人 [**Daxten**](https://open.spotify.com/artist/1uwGIdDsv9rhyzuqgYhOuS) 怎么不出新歌了，最后的音乐更新停在 2021 年...
 
-||Spotify 竟然也可以像网易云一样在网页嵌入专辑了，试一试||
+||Spotify 竟然也可以像网易云一样在网页嵌入专辑了，试一试，现在换成根据组件改的 Urara 插件了，体验应该没差别||
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/730DV2yB8G1svAKIvD4pdh?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<Spotify type="album" id="730DV2yB8G1svAKIvD4pdh" compact="true" />
 
 很喜欢的一部纯音乐专辑，很轻快的感觉
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0vXB2JFdOphGK7ybYLXSRI?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<Spotify type="album" id="0vXB2JFdOphGK7ybYLXSRI" compact="true" />
 
 **Daxten** 的第二部专辑，目前也就只有两部专辑，这个专辑是有 Epidemic Sound 唱片公司的其他歌手合作制作的
 
