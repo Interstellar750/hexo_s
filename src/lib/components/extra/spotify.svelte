@@ -13,7 +13,7 @@
 <div>
   <iframe
     style="border-radius:12px"
-    title="Spofity music player"
+    title="Spotify music player"
     {src}
     {width}
     {height}

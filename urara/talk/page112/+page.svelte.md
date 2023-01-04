@@ -184,10 +184,10 @@ Apex 的手游版，感觉还原的也是可以，没怎么玩过，是大逃杀
 
 ## 音乐
 
-主要在 Spofity 听音乐，虽说网易云也在用，不过我用国内软件都不会去更新，算了
+主要在 Spotify 听音乐，虽说网易云也在用，不过我用国内软件都不会去更新，算了
 
 [**Hubert Chen 的 2022 年听歌排行**](https://open.spotify.com/playlist/37i9dQZF1F0sijgNaJdgit) <br>
-Spoftiy 的听歌排行，有 101 首，最近发现好像有些歌莫名奇妙被移出收藏歌曲了，奇怪
+Spotify 的听歌排行，有 101 首，最近发现好像有些歌莫名奇妙被移出收藏歌曲了，奇怪
 
 不知道我喜欢的音乐人 [**Daxten**](https://open.spotify.com/artist/1uwGIdDsv9rhyzuqgYhOuS) 怎么不出新歌了，最后的音乐更新停在 2021 年...
 
