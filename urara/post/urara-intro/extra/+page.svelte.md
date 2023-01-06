@@ -125,7 +125,7 @@ Urara 默认包含这个拓展，使用方法只需要在文档内导入一下�
 
 **type** 是 ID 的类型，有 `artist` `album` `track` 三个选项，从 Spotify 分享链接可以看到
 
-**compact** 是卡片布局，默认为 `false` 紧凑布局，改为 `compact"true"`
+**compact** 是卡片布局，默认定义为 `false` 常规布局，改为 `compact"true"` 为紧凑布局
 
 **theme** 为组件背景，默认为 `true`，若改为 `theme=""` 就会让背景变为默认的灰色
 
