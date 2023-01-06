@@ -1,7 +1,7 @@
 ---
 title: 'Urara 拓展插件'
 created: 2022-12-21
-updated: 2023-01-03
+updated: 2023-01-06
 tags: 
    - Urara
    - 拓展
@@ -17,6 +17,121 @@ summary: 'Urara 可用拓展插件使用教程'
 <Alert status="success" title="本文包含的大多数拓展已包含在官方文档内"/>
 
 查看官方拓展文档：[**拓展 | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html)
+
+## 文章组件
+
+在文章里用的组件，可以像 HTML 代码一样直接插入到文章内
+
+### YouTube 视频
+
+此教程在官方文档里也有：[**YouTube | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#youtube)
+
+Urara 默认包含这个拓展，使用方法只需要在文档内导入一下就可以用了
+
+```ts
+<script>
+  import YouTube from '$lib/components/extra/youtube.svelte'
+  // 若有其他拓展组件就往这里加
+</script>
+```
+
+使用的时候点进一个 YouTube 视频，看到地址栏有类似 `watch?v=WysuxO4yR04` 的部分时，复制其中的 `WysuxO4yR04` 视频 ID 既可
+
+然后在文章内添加一行
+
+```ts
+<YouTube id="WysuxO4yR04" />
+```
+
+再把 `WysuxO4yR04` 替换成你想要展示的 YouTube 视频既可
+
+### 资料卡片
+
+此教程在官方文档里也有：[**资料卡片 | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#资料卡片)
+
+首先要去下载 [**profile.svelte**](https://github.com/importantimport/urara-docs/raw/master/public/extension/profile/profile.svelte)，下载完成之后放进 `src/lib/components/extra/` 目录里
+
+像上面一样，使用前也得要在文档内导入
+
+```ts
+<script lang="ts">
+  import Profile from '$lib/components/extra/profile.svelte'
+  import YouTube from '$lib/components/extra/youtube.svelte'
+  // 上面这行是模拟了你同时导入了两个组件的情况，实际使用时请删掉
+</script>
+```
+
+使用方法也是同上
+
+```ts
+<Profile subname="这里是姓氏" bio={`这里是简介。<br>这是第二行简介。`}/>
+// 更高级一点的？你也可以在里面手动指定全部信息：
+<Profile name="姓名" avatar="/assets/maskable@512.png" subname="这里是姓氏" bio={`这里是简介。<br>这是第二行简介。`} />
+```
+
+还可以在里面放 HTML 代码，甚至也可以套组件本身：
+
+```ts
+<Profile name="姓名" avatar="/assets/maskable@512.png" subname="这里是姓氏" bio={`这里是简介。<br>这是第二行简介。`} >
+  <YouTube id="WysuxO4yR04" />
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5THlVUJAn3kq087DxcWTTa?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  <Profile name="姓名" avatar="/assets/maskable@512.png" subname="这里是姓氏" bio={`这里是简介。<br>这是第二行简介。`} />
+</Profile>
+```
+
+### 状态提示
+
+此教程在官方文档里也有：[**状态提示 | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#状态提示)
+
+就是本文章开头那个提示栏，它包含在 Urara 内可直接使用，导入：
+
+```ts
+<script>
+  import Alert from '$lib/components/extra/alert.svelte'
+</script>
+```
+
+使用方法：
+
+```ts
+<Alert status="warning" description="警告信息" title="警告标题"/>
+```
+
+**status** 有 `info`、`success`、`warning` 和 `error` 四个选项，可以根据需要自己选择，不填默认就是 `info` 图标，而且会没有强调色
+
+至于为什么我的使用例不填 **description** 不会出现一行 **undefined**？因为我看好像有时候并不需要标题，就改掉了
+
+方法是打开 `src/components/extra/alert.svelte` 文件，把第二行和第三行的 `undefined = 'undefined'` 改成 `undefined = ''`
+
+### Spotify 音乐
+
+昨天自己照着 [**YouTube 视频**](#youtube-视频) 改出来的，应该没什么 Bug 了，后面会考虑要不要加到官方文档里去
+
+没包含在 Urara 里，要手动下载 [**spotify.svelte**](https://github.com/Interstellar750/hexo_s/raw/urara/src/lib/components/extra/spotify.svelte)，同样放到 `src/lib/components/extra/` 目录里
+
+导入：
+
+```ts
+<script lang="ts">
+  import Spotify from '$lib/components/extra/spotify.svelte'
+</script>
+```
+
+使用方法：
+
+```ts
+<Spotify type="album" id="0vXB2JFdOphGK7ybYLXSRI" compact="true" />
+```
+
+**type** 是 ID 的类型，有 `artist` `album` `track` 三个选项，从 Spotify 分享链接可以看到
+
+**compact** 是卡片布局，默认为 `false` 紧凑布局，改为 `compact"true"`
+
+**theme** 为组件背景，默认为 `true`，若改为 `theme=""` 就会让背景变为默认的灰色
+
+**width** 为卡片宽度，默认定义为 `100%`，不加 `%` 时就是像素宽度
+
+**嗯，从这混乱的组件就可以看出，质量不咋样，我的想法是 `compact` 和 `theme` 能通过 `true` 和 `false` 来控制，但搞了好久不知道怎么声明布尔变量，后面再修吧...** 
 
 ## 网页拓展
 
