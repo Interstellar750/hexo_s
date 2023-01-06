@@ -125,7 +125,7 @@ $ hexo init # 此步如果有报错，请使用 sudo 执行或清空部署文件
 
 **安装配置 Termux**
 
-下载链接 [~~Play Store~~](https://play.google.com/store/apps/details?id=com.termux) 不推荐，已经很久没更新了 | [__F-Droid__](https://f-droid.org/repo/com.termux_118.apk) | [__Hubert's Box__](https://t5d.trle5.xyz/Apk/com.termux_118_f-droid.apk)
+下载链接 [~~Play Store~~](https://play.google.com/store/apps/details?id=com.termux) 不推荐，已经很久没更新了 | [**F-Droid**](https://f-droid.org/repo/com.termux_118.apk) | [**Hubert's Box**](https://t5d.trle5.xyz/Apk/ADB-tools-3.0.apk) (仅 arm64—v8a) | [**GitHub Releases**](https://github.com/termux/termux-app/releases/latest)
 
 安装并打开，等待下载需要的配置文件
 
