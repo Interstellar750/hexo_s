@@ -1,7 +1,7 @@
 ---
 title: 'Urara 入门教程'
 created: 2022-11-20
-updated: 2022-12-21
+updated: 2023-01-06
 image: /post/urara-intro/urara.webp
 tags: 
    - Urara
@@ -9,6 +9,10 @@ tags:
    - 博客
 summary: '力所能及写的搭建教程'
 ---
+
+<script>
+  import Alert from '$lib/components/extra/alert.svelte'
+</script>
 
 题图来自 [Urara demo](https://urara-demo.netlify.app/) 并进行过圆角填充
 
@@ -152,19 +156,26 @@ Urara 的后端结构大致分为 `src` 与 `urara` 文件夹，其中 `src` 文
 
 > 不会写 Markdown？很简单，来看 [Markdown 官方教程](https://markdown.com.cn/basic-syntax/) 
 
-首先我在这里放一个普通的文档头（其实就本文的）
+首先我在这里放一个文档头
 
 ```markdown title="+page.md"
 ---
 title: 'Urara 入门教程' // 此为文章的标题
+layout: 'article' // @ 文章类型，用于 IndieWeb
 created: 2022-11-20 // 文章创建时间，可在博客主页文章标题上方看到
 updated: 2022-11-20 // @ 文章更新时间，把鼠标放在文章创建时间上即可看到
+published: 2023-01-05 // @ 文章发布日期，如果设定了，此日期会替换创建日期作为文章默认显示日期
 image: /post/urara-intro/urara.webp // @ 题图，会在主页作为文章卡片的底图，进入文章后将在文章标题下方显示
-tags:  // @ 标签，即用来说明文章包含哪些部分的东西，会在桌面端主页右侧显示，移动端平排在个人资料下方
+tags: // @ 标签，即用来说明文章包含哪些部分的东西，会在桌面端主页右侧显示，移动端平排在个人资料下方
    - Urara
    - 技术
    - 博客 // 只要遵循这个标签格式，可以一直添加
+in_reply_to: // 回复提示，代表这篇文章是用来回复某个链接的
+- 'https://example.com/post123'
+- 'https://example.com/post456' // 遵循这个标签格式，也可以一直添加
 summary: '力所能及写的搭建教程' // @ 概括语句，会显示在主页文章卡片下方看到，进入文章后会被隐藏
+flags: // @ 文章选项
+  - unlisted // @ 添加此选项后文章不会出现在主页
 ---
 ```
 
@@ -181,11 +192,32 @@ created: 2000-01-01 // 创建时间
 
 **如果不留日期，似乎还可以达成置顶文章的效果？**
 
+Urara 的文件头目前兼容 [**FFF 0.3**](https://fff.js.org/version/0.3.html)，以上的内容只经过我简单的测试，可能还有其他选项可用
+
 ### 博客风格自定义
 
 接下来就是修改例如个人资料、标题和页脚之类的东西了，对于没什么代码知识的人可能会觉得非常难搞，加油 😇
 
 #### 博客标题以及个人资料卡片
+
+<Alert status="warning" title="目前 Urara 启用了 imagetools 优化头像，这暂时修改了设定头像的路径"/>
+
+如需修改头像，请把下方文件中的 `/static/assets/maskable@512.png` 替换成您头像的路径
+
+```ts title="src/lib/components/index_profile.svelte" {2,3}
+<script lang="ts">
+  import { site } from '$lib/config/site'
+  import { src, width, height } from '/static/assets/maskable@512.png?width=384&format=webp&metadata'
+  import srcset from '/static/assets/maskable@512.png?w=48;96;192&avif&srcset'
+</script>
+⬇️6
+```
+
+您也可以进行还原到启用 imagetools 前的 [**commit:e05c757**](https://github.com/importantimport/urara/commit/284d74b7cfeb9a6e25f874877d8998724d7eb84a) 来暂时禁用它
+
+```bash
+git reste 284d74b7cfeb9a6e25f874877d8998724d7eb84a
+```
 
 也就是博客的名称和主页左边那块，我们需要修改 `src/lib/config/site.ts` 文件，依然是使用本站的文件作为示例
 
@@ -237,7 +269,7 @@ export const theme: ThemeConfig = [
 
 由于全拉出来就太长了，这里只截取三了个主题，如果有不需要的主题直接删除就行
 
-**注意主题显示名字需使用两个 ' 号围起来，也要注意两个主题之间的英文逗号**
+**注意主题显示名字需使用两个 `'` 号围起来，也要注意两个主题之间的英文逗号**
 
 **接下来往下看，你会看到一些 link 与 text，这对应着博客的顶栏**
 
