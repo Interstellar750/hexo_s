@@ -1,7 +1,7 @@
 ---
 title: '欢迎参观'
 created: 2022-03-01
-updated: 2022-11-30
+updated: 2023-01-06
 flags:
   - unlisted
 ---
@@ -69,6 +69,21 @@ flags:
 **Mastodon:** [trle5@kwaa.moe](https://kwaa.moe/@trle5) 在 [kwaa](https://kwaa.moe/@kwa) 大佬的实例上注册的
 
 **GitHub:** [Hubert Chen](https://github.com/interstellar750) (好像并不能联系到人...)
+
+### GPG 公钥
+
+```bash
+pub   rsa4096/AAC376410634FF86 2023-01-01 [SC] (签名 证明)
+      7456 A0AB 47EC E8BE 1AD0 89D9 AAC3 7641 0634 FF86
+uid         [unknown] Hubert Chen <01@trle5.xyz>
+sub   rsa4096/B716CE1EAA7B8F00 2023-01-01 [E] (加密)
+sub   rsa4096/B4ED58260C725C91 2023-01-06 [A] (认证)
+sub   rsa4096/2935B4DE0D6F7720 2023-01-06 [SE] (签名 加密)
+```
+
+目前主要用来给 Commit 签名的密钥为 `2935 B4DE 0D6F 7720`，暂无其他签名的公钥
+
+获取公钥文件： [**GitHub**](https://github.com/Interstellar750.gpg) | [**Hubert's Box**](https://t5d.trle5.xyz/GPG/gpg_pub_keys_hubert.asc)
 
 ### 玩游戏
 
