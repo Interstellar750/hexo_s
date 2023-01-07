@@ -1,24 +1,23 @@
 <script lang="ts">
-  export let type = 'artist' | 'album' | 'track'
-  export let id = undefined
-  export let width = undefined
-  export let height = undefined
-  export let theme = true
-  export let compact = false
-  const src = `https://open.spotify.com/embed/${type}/${id}?utm_source=generator${theme ? '' : '&theme=0'}`
-  width = `${width ? width : '100%'}`
-  height = `${compact ? '152' : '352'}`
+  export let type: 'artist' | 'album' | 'track'
+  export let id: string
+  export let theme: boolean = true
+  export let compact: boolean = false
+  export let width: string = '100%'
+  export let height: string = compact ? '152' : '352'
+  const src = `https://open.spotify.com/embed/${type}/${id}?${new URLSearchParams({
+    'utm_source': 'generator',
+    'theme': theme ? '1' : '0'
+  }).toString()}`
 </script>
 
-<div>
-  <iframe
-    style="border-radius:12px"
-    title="Spotify music player"
-    {src}
-    {width}
-    {height}
-    frameborder="0"
-    allowfullscreen=""
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy" />
-</div>
+<iframe
+  title="Spotify music player"
+  class="rounded-box"
+  {src}
+  {width}
+  {height}
+  frameborder="0"
+  allowfullscreen=""
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+  loading="lazy" />
