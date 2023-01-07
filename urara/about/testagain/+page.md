@@ -1,7 +1,7 @@
 ---
 title: '这是一个测试页面'
 created: 2022-01-26
-updated: 2022-12-24
+updated: 2023-01-07
 image: /about/testagain/test.webp
 tags:
   - 测试
@@ -12,6 +12,7 @@ summary: '有点纪念意义就一直放在这里好了'
 import Profile from '$lib/components/extra/profile.svelte'
 import GitHub from '$lib/components/extra/github.svelte'
 import YouTube from '$lib/components/extra/youtube.svelte'
+import Spotify from '$lib/components/extra/spotify.svelte'
 </script>
 
 test
@@ -41,3 +42,7 @@ test
 **YouTube 视频**
 
 <YouTube id="WysuxO4yR04" />
+
+**Spotify 音乐**
+
+<Spotify type="album" id="0vXB2JFdOphGK7ybYLXSRI" compact={false} theme={true} width="100%" />
