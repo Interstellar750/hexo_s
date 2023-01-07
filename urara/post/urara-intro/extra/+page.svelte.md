@@ -1,7 +1,7 @@
 ---
 title: 'Urara 拓展插件'
 created: 2022-12-21
-updated: 2023-01-06
+updated: 2023-01-07
 tags: 
    - Urara
    - 拓展
@@ -105,7 +105,9 @@ Urara 默认包含这个拓展，使用方法只需要在文档内导入一下�
 
 ### Spotify 音乐
 
-昨天自己照着 [**YouTube 视频**](#youtube-视频) 改出来的，应该没什么 Bug 了，后面会考虑要不要加到官方文档里去
+此教程在官方文档里也有：[**Spotify | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#spotify)
+
+昨天自己照着 [**YouTube 视频**](#youtube-视频) 改出来的，应该没什么 Bug 了，~~后面会考虑要不要加到官方文档里去~~ 已添加
 
 没包含在 Urara 里，要手动下载 [**spotify.svelte**](https://github.com/Interstellar750/hexo_s/raw/urara/src/lib/components/extra/spotify.svelte)，同样放到 `src/lib/components/extra/` 目录里
 
@@ -120,18 +122,21 @@ Urara 默认包含这个拓展，使用方法只需要在文档内导入一下�
 使用方法：
 
 ```ts
-<Spotify type="album" id="0vXB2JFdOphGK7ybYLXSRI" compact="true" />
+<Spotify type="album" id="0vXB2JFdOphGK7ybYLXSRI" compact={true} theme={true} width="100%" />
 ```
+**id** 为播放清单的 ID，在 Spotify 分享链接时可以看到
 
-**type** 是 ID 的类型，有 `artist` `album` `track` 三个选项，从 Spotify 分享链接可以看到
+**type** 是 ID 的类型，有 `artist` `album` `track` 三个选项，在分享链接的前一部分
 
-**compact** 是卡片布局，默认定义为 `false` 常规布局，改为 `compact"true"` 为紧凑布局
+**compact** 是卡片布局，默认定义为 `{false}` 常规布局，改为 `{true}` 为紧凑布局
 
-**theme** 为组件背景，默认为 `true`，若改为 `theme=""` 就会让背景变为默认的灰色
+**theme** 为组件背景，默认为 `{true}`，若改为 `{false}` 就会让背景变为默认的灰色
 
 **width** 为卡片宽度，默认定义为 `100%`，不加 `%` 时就是像素宽度
 
-嗯，从这混乱的组件就可以看出，质量不咋样，我的想法是 `compact` 和 `theme` 能通过 `true` 和 `false` 来控制，但搞了好久不知道怎么声明布尔变量，后面再修吧...
+~~嗯，从这混乱的组件就可以看出，质量不咋样，我的想法是 `compact` 和 `theme` 能通过 `true` 和 `false` 来控制，但搞了好久不知道怎么声明布尔变量，后面再修吧...~~
+
+又麻烦大佬帮我修了，这下应该不会出现问题了
 
 ## 网页拓展
 
@@ -153,7 +158,7 @@ Urara 默认包含这个拓展，使用方法只需要在文档内导入一下�
 pnpm add -D svelte-bricks
 ```
 
-添加方法就是把上面两个代码块的高亮行加进对应的位置就行，大致没有排序限制吧，添加后记得运行一下 `pnpm i` 再进行开发服务器测试
+添加后记得运行一下 `pnpm i` 再进行开发服务器测试
 
 接下来是最重要的一步，在 `src/lib/config/` 文件夹中，创建一个名为 `friends.ts` 的文件，再复制以下内容粘贴保存，样式来自 [./kwaa.dev](https://kwaa.dev/about) 博客的 [GitHub 仓库](https://github.com/kwaa/blog/blob/main/src/lib/config/friends.ts) (太长了，删掉了一些)
 
@@ -281,6 +286,49 @@ export const friends: Friend[] = [
   }
 ]
 ```
+
+### 项目展示
+
+此教程在官方文档里也有：[**项目展示 | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#项目展示)
+
+由 [**SevcheCC**] 制作，可以去看看 [**为博客写一个Project showcase 页面**](https://seviche.cc/2022-05-26-write-a-page-template/) 和 [**Projects | Seviche.cc**](https://seviche.cc/projects/)
+
+配置过程与友链页面差不多，也是要下两个文件和自己配置一个
+
+首先下载 [projects.svelte](https://github.com/importantimport/urara-docs/raw/master/public/extension/project/projects.svelte) 文件，放进 `src/lib/components/extra/` 文件夹内
+
+再下载 [+page.svelte](https://github.com/importantimport/urara-docs/raw/master/public/extension/project/%2Bpage.svelte) 文件，放进 `src/routes/friends/` 文件夹内，`src/routes/` 里默认是没有 `projects` 文件夹的，请手动创建并将文件放入其中
+
+再到 `src/lib/config/` 目录新建一个 `projects.ts` 文件，复制以下内容粘贴到文件内：
+
+```ts
+export type Project = {
+  id: string
+  name: string
+  tags?: string[]
+  feature?: string
+  description?: string
+  img: string
+  link?: string
+}
+
+export const projects: Project[] = [
+  {
+    id: 'urara', // HTML ID
+    name: 'Urara', // 项目名
+    tags: ['Svelte', 'TypeScript'], // 标签
+    description: // 描述
+      "🌸 Sweet, Powerful, IndieWeb-Compatible SvelteKit Blog Starter. [δ](Delta)",
+    feature: 'Svelte', // 特点
+    img: 'https://github.com/importantimport/urara/raw/main/urara/hello-world/urara.webp', // 项目图片
+    link: 'https://github.com/importantimport/urara' // 链接
+  }
+]
+```
+
+![一个与页脚等宽的项目卡片，左侧是展示图片，右侧是介绍信息](/post/urara-intro/extra/urara-projects.webp)
+
+目前这个拓展不能不放图片，图片框架有最小限制，图片尺寸不够的话会顶部居中对齐，图片过高则会往下纵向拓展，宽度固定
 
 ## 评论功能
 
