@@ -193,11 +193,11 @@ Spotify 的听歌排行，有 101 首，最近发现好像有些歌莫名奇妙�
 
 ||Spotify 竟然也可以像网易云一样在网页嵌入专辑了，试一试，现在换成根据组件改的 Urara 插件了，体验应该没差别||
 
-<Spotify type="album" id="730DV2yB8G1svAKIvD4pdh" compact="true" />
+<Spotify type="album" id="730DV2yB8G1svAKIvD4pdh" compact={true} />
 
 很喜欢的一部纯音乐专辑，很轻快的感觉
 
-<Spotify type="album" id="0vXB2JFdOphGK7ybYLXSRI" compact="true" />
+<Spotify type="album" id="0vXB2JFdOphGK7ybYLXSRI" compact={true} />
 
 **Daxten** 的第二部专辑，目前也就只有两部专辑，这个专辑是有 Epidemic Sound 唱片公司的其他歌手合作制作的
 
