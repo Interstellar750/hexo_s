@@ -16,7 +16,7 @@
   }${fs ? '' : 'fs=0&'}${loop ? 'loop=1' : ''}`
 </script>
 
-<div class="relative pb-[56.25%] mb-2">
+<div class="relative pb-[56.25%] mb-4">
   <iframe
     {src}
     class="absolute w-full h-full"
