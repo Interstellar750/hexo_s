@@ -1,7 +1,7 @@
 ---
 title: 'Urara 拓展插件'
 created: 2022-12-21
-updated: 2023-01-07
+updated: 2023-01-10
 tags: 
    - Urara
    - 拓展
@@ -109,7 +109,7 @@ Urara 默认包含这个拓展，使用方法只需要在文档内导入一下�
 
 昨天自己照着 [**YouTube 视频**](#youtube-视频) 改出来的，应该没什么 Bug 了，~~后面会考虑要不要加到官方文档里去~~ 已添加
 
-没包含在 Urara 里，要手动下载 [**spotify.svelte**](https://github.com/Interstellar750/hexo_s/raw/urara/src/lib/components/extra/spotify.svelte)，同样放到 `src/lib/components/extra/` 目录里
+已经包含在 Urara 里了||还混了个贡献者||，要使用直接导入既可
 
 导入：
 
@@ -124,19 +124,68 @@ Urara 默认包含这个拓展，使用方法只需要在文档内导入一下�
 ```ts
 <Spotify type="album" id="0vXB2JFdOphGK7ybYLXSRI" compact={true} theme={true} width="100%" />
 ```
-**id** 为播放清单的 ID，在 Spotify 分享链接时可以看到
 
-**type** 是 ID 的类型，有 `artist` `album` `track` 三个选项，在分享链接的前一部分
+- **id** 为播放清单的 ID，在 Spotify 分享链接时可以看到
 
-**compact** 是卡片布局，默认定义为 `{false}` 常规布局，改为 `{true}` 为紧凑布局
+- **type** 是 ID 的类型，有 `artist` `album` `track` 三个选项，默认定义为 `"track"`
 
-**theme** 为组件背景，默认为 `{true}`，若改为 `{false}` 就会让背景变为默认的灰色
+- **compact** 是卡片布局，默认定义为 `{false}` 常规布局，改为 `{true}` 为紧凑布局
 
-**width** 为卡片宽度，默认定义为 `100%`，不加 `%` 时就是像素宽度
+- **theme** 为组件背景，默认为 `{true}`，若改为 `{false}` 就会让背景变为默认的灰色
+
+- **width** 为卡片宽度，默认定义为 `100%`，不加 `%` 时就是像素宽度
 
 ~~嗯，从这混乱的组件就可以看出，质量不咋样，我的想法是 `compact` 和 `theme` 能通过 `true` 和 `false` 来控制，但搞了好久不知道怎么声明布尔变量，后面再修吧...~~
 
 又麻烦大佬帮我修了，这下应该不会出现问题了
+
+### SoundCloud 音乐
+
+此教程在官方文档里也有：[**SoundCloud | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#soundcloud)
+
+Urara 最近新加的拓展，测试的时候去 SoundCloud 复制了一下原本的嵌入码，那是真的长，格式化代码后都要看一阵子
+
+导入拓展：
+
+```ts
+<script lang="ts">
+  import SoundCloud from '$lib/components/extra/soundcloud.svelte'
+</script>
+```
+
+使用方法：
+
+```ts
+<SoundCloud type="playlist" id="1259265289" />
+```
+
+上面这个样子也是最简单的样式，下面是一些自定义项
+
+- **type** ID 类型，默认是 `track`，若分享的是播放列表则需要修改为 `playlist`
+- **visual** 默认为 `{true}`，禁用后若是单曲那么组件宽度会变矮，播放列表的话封面就会变小
+- **color** 颜色，默认是 `#ff5500` (16进制值)，其实改的是播放按钮的颜色，使用时忽略 # 号
+- **autoplay** 自动播放，加载组件后会自动开始播放音乐，默认为 `{false}`
+- **width** 宽度，同样支持百分比和像素宽度
+
+这个最难的在于抓取歌曲 ID，它不显示在地址栏，需要手动点击分享，再选择嵌入，复制代码后，里面会有一串数字，那就是需要的 ID 了：
+
+```html title="SoundCloud 嵌入代码长得很，这里只截取了 iframe 的部分" {9}
+<iframe 
+  width="100%" 
+  height="450" 
+  scrolling="no" 
+  frameborder="no" 
+  allow="autoplay" 
+  src="
+    https://w.soundcloud.com/player/?url=
+    https%3A//api.soundcloud.com/playlists/
+    1259265289
+    &color=%2322ecf1&auto_play=false&hide_related=false
+    &show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+</iframe>
+```
+
+获取到 ID 后替换掉上方示例里的 ID 既可，同时需要注意分享的类型，不然会指向错误的页面
 
 ## 网页拓展
 
@@ -148,9 +197,9 @@ Urara 默认包含这个拓展，使用方法只需要在文档内导入一下�
 
 这个来说相对简单，复制几个文件再照着改就行
 
-首先下载 [friend.svelte](https://github.com/importantimport/urara-docs/raw/master/public/extension/friend/friend.svelte) 文件，放进 `src/lib/components/extra/` 文件夹内
+首先下载 [**friend.svelte**](https://github.com/importantimport/urara-docs/raw/master/public/extension/friend/friend.svelte) 文件，放进 `src/lib/components/extra/` 文件夹内
 
-再下载 [+page.svelte](https://github.com/importantimport/urara-docs/raw/master/public/extension/friend/%2Bpage.svelte) 文件，放进 `src/routes/friends/` 文件夹内，`src/routes/` 里默认是没有 `friends` 文件夹的，请手动创建并将文件放入其中
+再下载 [**+page.svelte**](https://github.com/importantimport/urara-docs/raw/master/public/extension/friend/%2Bpage.svelte) 文件，放进 `src/routes/friends/` 文件夹内，`src/routes/` 里默认是没有 `friends` 文件夹的，请手动创建并将文件放入其中
 
 对了，还需要安装 `svelte-bricks` 依赖
 
@@ -160,7 +209,7 @@ pnpm add -D svelte-bricks
 
 添加后记得运行一下 `pnpm i` 再进行开发服务器测试
 
-接下来是最重要的一步，在 `src/lib/config/` 文件夹中，创建一个名为 `friends.ts` 的文件，再复制以下内容粘贴保存，样式来自 [./kwaa.dev](https://kwaa.dev/about) 博客的 [GitHub 仓库](https://github.com/kwaa/blog/blob/main/src/lib/config/friends.ts) (太长了，删掉了一些)
+接下来是最重要的一步，在 `src/lib/config/` 文件夹中，创建一个名为 `friends.ts` 的文件，再复制以下内容粘贴保存，样式来自 [**./kwaa.dev**](https://kwaa.dev/about) 博客的 [**GitHub 仓库**](https://github.com/kwaa/blog/blob/main/src/lib/config/friends.ts) (太长了，删掉了一些)
 
 ```ts title="src/lib/config/friends.ts"
 export interface FriendOld {
@@ -260,15 +309,17 @@ export const friends: Friend[] = [
 
 ![我自己的朋友卡片，描述是 你好呀👋](/post/urara-intro/extra/urara-friends-me.webp)
 
-也可以随时找我申请友链，在 [关于我](/about) 页面使用任意方式联系我即可
+也可以随时找我申请友链，在 [**关于我**](/about) 页面使用任意方式联系我即可
 
 <big><b>朋友卡片的社交平台图标</b></big>
 
-应该有些人发现在我的 [朋友页面](/friends)，点进卡片时，有些并不是博客链接，而是社交平台的链接，于是我就在朋友卡片右下角加了个社交软件的图标
+应该有些人发现在我的 [**朋友页面**](/friends)，点进卡片时，有些并不是博客链接，而是社交平台的链接，于是我就在朋友卡片右下角加了个社交软件的图标
 
-嗯，这个功能是我魔改出来的，其实本来还[打算再加个社交平台的名称](https://t.me/Riocoolapk/946539)，最后只做成这个样子，没有前端知识，只会照着模板改
+嗯，这个功能是我魔改出来的，其实本来还[**打算再加个社交平台的名称**](https://t.me/Riocoolapk/946539)，最后只做成这个样子，没有前端知识，只会照着模板改
 
-如果你有加这个小图标的想法，可以看看我博客仓库的 [BE5D947](https://github.com/Interstellar750/hexo_s/commit/be5d9479583c7a2bb5fd8f42a731de6078ae9805) 这个提交中对 `friend.svelte` 和 `friends.ts` 的修改，至于图标我是从 [ICONS8](https://icons8.com/) 上下载的
+如果你有加这个小图标的想法，可以看看我博客仓库的 [**BE5D947**](https://github.com/Interstellar750/hexo_s/commit/be5d9479583c7a2bb5fd8f42a731de6078ae9805) 这个提交中对 `friend.svelte` 和 `friends.ts` 的修改，至于图标我是从 [**ICONS8**](https://icons8.com/) 上下载的
+
+上面这个图标在近期可能会改一下，看看能不能换个其他方便一点的办法
 
 这个图标与朋友描述占同一行，它们可以同时存在，也可以单独出现一个，社交平台图标路径的使用方法类似头像，贴上图标路径加上就行
 
@@ -291,13 +342,13 @@ export const friends: Friend[] = [
 
 此教程在官方文档里也有：[**项目展示 | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#项目展示)
 
-由 [**SevcheCC**] 制作，可以去看看 [**为博客写一个Project showcase 页面**](https://seviche.cc/2022-05-26-write-a-page-template/) 和 [**Projects | Seviche.cc**](https://seviche.cc/projects/)
+由 [**SevcheCC**](https://github.com/Sevichecc) 制作，可以去看看 [**为博客写一个Project showcase 页面**](https://seviche.cc/2022-05-26-write-a-page-template/) 和 [**Projects | Seviche.cc**](https://seviche.cc/projects/)
 
 配置过程与友链页面差不多，也是要下两个文件和自己配置一个
 
-首先下载 [projects.svelte](https://github.com/importantimport/urara-docs/raw/master/public/extension/project/projects.svelte) 文件，放进 `src/lib/components/extra/` 文件夹内
+首先下载 [**projects.svelte**](https://github.com/importantimport/urara-docs/raw/master/public/extension/project/projects.svelte) 文件，放进 `src/lib/components/extra/` 文件夹内
 
-再下载 [+page.svelte](https://github.com/importantimport/urara-docs/raw/master/public/extension/project/%2Bpage.svelte) 文件，放进 `src/routes/friends/` 文件夹内，`src/routes/` 里默认是没有 `projects` 文件夹的，请手动创建并将文件放入其中
+再下载 [**+page.svelte**](https://github.com/importantimport/urara-docs/raw/master/public/extension/project/%2Bpage.svelte) 文件，放进 `src/routes/friends/` 文件夹内，`src/routes/` 里默认是没有 `projects` 文件夹的，请手动创建并将文件放入其中
 
 再到 `src/lib/config/` 目录新建一个 `projects.ts` 文件，复制以下内容粘贴到文件内：
 
@@ -338,9 +389,9 @@ export const projects: Project[] = [
 
 本站就在用，依赖于 GitHub 项目仓库的 Discussions 功能，注定了对于国内的网络有点难访问，有时候可能会串评论，需要手动刷新
 
-好消息是，Urara 自带 giscus 拓展，这里我们就不需要像其他拓展一样手动去找文件了，只需要修改已有的文件既可
+好消息是，Urara 自带 Giscus 拓展，这里我们就不需要像其他拓展一样手动去找文件了，只需要修改已有的文件既可
 
-首先需要去 [Giscus.app](https://giscus.app/) 配置一下，跟着提示的步骤走就行
+首先需要去 [**Giscus.app**](https://giscus.app/) 配置一下，跟着提示的步骤走就行
 
 至于 **页面 ↔️ discussion 映射关系** 这个怎么选都行，它目前并没有被分离出来，需要修改的话我后面会说
 
@@ -423,4 +474,4 @@ export type UtterancesConfig = {
 
 根据前面说到的有时候会串评论的问题，~~我这里就把 `data-mapping` 改成了 `og:title`，其实有没有效果我自己都有点不清楚~~
 
-现在还有串评论的问题就改回来了，留着 pathname 似乎是比较好的选项，不过依然有个小问题，例如我的 [关于我](/about) 目录下还有三个文章，当 about/ 这个页面没有单独开一个讨论时，子目录里有其他页面已经开了讨论页面，那么里面的评论就会串到父文章来，不过也有解决方法，进入对应仓库的 Discussions 按照 giscus app 的格式开一个新讨论就行
+现在还有串评论的问题就改回来了，留着 pathname 似乎是比较好的选项，不过依然有个小问题，例如我的 [**关于我**](/about) 目录下还有三个文章，当 about/ 这个页面没有单独开一个讨论时，子目录里有其他页面已经开了讨论页面，那么里面的评论就会串到父文章来，不过也有解决方法，进入对应仓库的 Discussions 按照 giscus app 的格式开一个新讨论就行
