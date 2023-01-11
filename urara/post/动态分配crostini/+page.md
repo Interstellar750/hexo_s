@@ -2,7 +2,7 @@
 title: '在 Chrome OS 上为 Linux 虚拟机开启动态磁盘大小'
 created: 2022-10-22
 updated: 2022-11-08
-image: /post/动态分配crostini/Linux.webp
+image: ./Linux.webp
 tags: 
    - Chrome OS
    - Linux

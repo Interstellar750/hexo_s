@@ -2,7 +2,7 @@
 title: '搭建一个自己的博客'
 created: 2022-03-05
 updated: 2022-12-21
-image: /post/搭建一个自己的博客/banner.webp
+image: ./banner.webp
 tags: 
    - Hexo
    - 技术
@@ -36,11 +36,11 @@ summary: '使用 Hexo 后端与 GitHub Pages 服务'
 
 登录到 GitHub 网页版后，可以看见左上角的 **Recent Repositories** 旁有个 **New** 按钮，点击它来新建仓库
 
-![在 GitHub 网页新建项目](/post/搭建一个自己的博客/github-repo-desktop.webp)
+![在 GitHub 网页新建项目](./github-repo-desktop.webp)
 
 如果是使用手机来访问，可以进入 `https://github.com/<你的 GitHub 用户名>?tab=repositories` ，就能看见那个 New 按钮了
 
-![在 GitHub 移动端网页新建项目](/post/搭建一个自己的博客/github-repo.webp)
+![在 GitHub 移动端网页新建项目](./github-repo.webp)
 
 创建仓库需要设定仓库名与仓库类型（公开或私密），如果你希望使用 GitHub Pages 给的二级域名，你需要把仓库名设为 `<你的 GitHub 用户名>.github.io` ，否则你的 GitHub Pages 网页会变成 `<你的 GitHub 用户名>.github.io/<创建的仓库名>`，但如果你使用自定义域名的话随便设置都没问题，仓库类型推荐使用公开，因为似乎只有 Github 付费用户才能在私密的仓库中开启 GitHub Pages 功能
 
@@ -125,7 +125,7 @@ $ hexo init # 此步如果有报错，请使用 sudo 执行或清空部署文件
 
 **安装配置 Termux**
 
-下载链接 [~~Play Store~~](https://play.google.com/store/apps/details?id=com.termux) 不推荐，已经很久没更新了 | [**F-Droid**](https://f-droid.org/repo/com.termux_118.apk) | [**Hubert's Box**](https://t5d.trle5.xyz/Apk/ADB-tools-3.0.apk) (仅 arm64—v8a) | [**GitHub Releases**](https://github.com/termux/termux-app/releases/latest)
+下载链接 [~~Play Store~~](https://play.google.com/store/apps/details?id=com.termux) 不推荐，已经很久没更新了 | [**F-Droid**](https://f-droid.org/repo/com.termux_118.apk) | [**Hubert's Box**](https://t5d.trle5.xyz/Apk/ADB-tools-3.0.apk) (仅 arm64-v8a) | [**GitHub Releases**](https://github.com/termux/termux-app/releases/latest)
 
 安装并打开，等待下载需要的配置文件
 
@@ -229,7 +229,7 @@ git config --global user.mail "<username@github.com>"
 
 **设定了不公开邮箱地址？**
 
-前往 [邮箱设定](https://github.com/settings/emails) ，找到你的邮箱地址，旁边会有一个提示符号 ，把鼠标放上去或点击它，就会显示一段话和一个格式为 `<number>+<username>@users.noreply.github.com` 的邮箱地址，复制它然后粘贴到终端里即可![GitHub 的邮箱设定，开启了非公开状态，图里显示了一个数字加用户名的替代邮箱](/post/搭建一个自己的博客/github-email.webp)
+前往 [邮箱设定](https://github.com/settings/emails) ，找到你的邮箱地址，旁边会有一个提示符号 ，把鼠标放上去或点击它，就会显示一段话和一个格式为 `<number>+<username>@users.noreply.github.com` 的邮箱地址，复制它然后粘贴到终端里即可![GitHub 的邮箱设定，开启了非公开状态，图里显示了一个数字加用户名的替代邮箱](./github-email.webp)
 
 呃，还得安装一下 Hexo 提供的一键部署工具
 
