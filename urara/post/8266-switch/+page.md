@@ -2,7 +2,7 @@
 title: '做一个简单的网络继电器'
 created: 2022-12-04
 updated: 2022-12-23
-image: ./relay.webp
+image: /post/8266-switch/relay.webp
 tags: 
    - Homekit
    - esp8266

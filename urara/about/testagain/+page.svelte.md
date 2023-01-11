@@ -2,7 +2,7 @@
 title: '这是一个测试页面'
 created: 2022-01-26
 updated: 2023-01-07
-image: ./test.webp
+image: /about/testagain/test.webp
 tags:
   - 测试
 summary: '有点纪念意义就一直放在这里好了'

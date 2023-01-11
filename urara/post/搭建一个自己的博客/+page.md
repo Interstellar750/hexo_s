@@ -2,7 +2,7 @@
 title: '搭建一个自己的博客'
 created: 2022-03-05
 updated: 2022-12-21
-image: ./banner.webp
+image: /post/搭建一个自己的博客/banner.webp
 tags: 
    - Hexo
    - 技术

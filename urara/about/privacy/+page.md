@@ -2,7 +2,7 @@
 title: '隐私声明'
 created: 2022-12-27
 updated: 2022-12-27
-image: ./visibility_off.webp
+image: /about/privacy/visibility_off.webp
 flags:
   - unlisted
 toc: false

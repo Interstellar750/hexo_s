@@ -2,7 +2,7 @@
 title: '2022 年度总结'
 created: 2022-12-28
 updated: 2023-01-05
-image: ./2023.webp
+image: /talk/page112/2023.webp
 tags:
    - 年度总结
 summary: '又是一年，今年做了什么呢'

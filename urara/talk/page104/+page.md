@@ -2,7 +2,7 @@
 title: '闲谈杂聊'
 created: 2022-04-07 08:06:21
 updated: 2022-12-21
-image: ./hero.webp 
+image: /talk/page104/hero.webp
 tags: 
    - 闲聊
 summary: '四月不知过的怎么样'
