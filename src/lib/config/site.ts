@@ -1,7 +1,7 @@
 import type { SiteConfig } from '$lib/types/site'
 
 export const site: SiteConfig = {
-  protocol: 'https://',
+  protocol: import.meta.env.URARA_SITE_PROTOCOL ?? 'https://',
   domain: import.meta.env.URARA_SITE_DOMAIN ?? 'trle5.xyz',
   title: 'Hubert\u0027s\u0020Blog',
   subtitle: '',

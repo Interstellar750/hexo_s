@@ -16,7 +16,7 @@
     <p>
       {#if footerConfig.nav}
         {#each footerConfig.nav as { text, link }, i}
-          <a href={link} rel="noopener external noreferrer" target="_blank">{text}</a>
+          <a href={link} rel="noopener noreferrer external" target="_blank">{text}</a>
           {#if i + 1 < footerConfig.nav.length}
             <span class="mr-1">·</span>
           {/if}
@@ -32,7 +32,7 @@
         <b>{site.author.name}</b>
       </a>
       <a
-      rel="noopener external noreferrer"
+      rel="noopener noreferrer external"
         target="_blank"
         class="tooltip hover:text-secondary"
         data-tip="CC BY 4.0"
