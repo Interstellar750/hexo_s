@@ -281,7 +281,7 @@ export const friends: Friend[] = [
 
 演示图
 
-![三个朋友卡片样式，其中有一个的背景使用了 Daisy UI 主题的第一和第三色做了一个左下角到右上角的渐变](./urara-friends.webp)
+![三个朋友卡片样式，其中有一个的背景使用了 Daisy UI 主题的第一和第三色做了一个左下角到右上角的渐变](/post/urara-intro/extra/urara-friends.webp)
 
 可以看到，这个好友卡片有两种样式（页脚不算），看源文件也能看出来，有渐变底的那个卡片里有 HTML 格式的代码，我不会改，如果你有能力可以试着自己改， [kwaa](https://kwaa.dev/) 大佬提供了一个 [Tailwind Play](https://play.tailwindcss.com/0AHHfFWTgL) 用于参考与修改
 
@@ -307,7 +307,7 @@ export const friends: Friend[] = [
 
 效果图
 
-![我自己的朋友卡片，描述是 你好呀👋](./urara-friends-me.webp)
+![我自己的朋友卡片，描述是 你好呀👋](/post/urara-intro/extra/urara-friends-me.webp)
 
 也可以随时找我申请友链，在 [**关于我**](/about) 页面使用任意方式联系我即可
 
@@ -377,7 +377,7 @@ export const projects: Project[] = [
 ]
 ```
 
-![一个与页脚等宽的项目卡片，左侧是展示图片，右侧是介绍信息](./urara-projects.webp)
+![一个与页脚等宽的项目卡片，左侧是展示图片，右侧是介绍信息](/post/urara-intro/extra/urara-projects.webp)
 
 目前这个拓展不能不放图片，图片框架有最小限制，图片尺寸不够的话会顶部居中对齐，图片过高则会往下纵向拓展，宽度固定
 
