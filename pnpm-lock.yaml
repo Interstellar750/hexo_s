@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@iconify-json/heroicons-outline': ^1.1.5
   '@iconify-json/heroicons-solid': ^1.1.6
+  '@iconify-json/simple-icons': ^1.1.40
   '@sveltejs/adapter-auto': ^1.0.0
   '@sveltejs/adapter-netlify': ^1.0.0
   '@sveltejs/adapter-node': ^1.1.0
@@ -58,6 +59,7 @@ specifiers:
 devDependencies:
   '@iconify-json/heroicons-outline': 1.1.5
   '@iconify-json/heroicons-solid': 1.1.6
+  '@iconify-json/simple-icons': 1.1.40
   '@sveltejs/adapter-auto': 1.0.0_l5ueyfihz3gpzzvvyo2ean5u3e
   '@sveltejs/adapter-netlify': 1.0.0_l5ueyfihz3gpzzvvyo2ean5u3e
   '@sveltejs/adapter-node': 1.1.0_l5ueyfihz3gpzzvvyo2ean5u3e
@@ -1531,6 +1533,12 @@ packages:
 
   /@iconify-json/heroicons-solid/1.1.6:
     resolution: {integrity: sha512-akzICPMJ4TIQ13RxprpBNtSYl7M3+k4c5bAivtvK62B18wHS6yT1qWEFH9Q3+n08EQm2E99uHZ9yl2Wam8uMuQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/simple-icons/1.1.40:
+    resolution: {integrity: sha512-k+dCMQsVDVh2mrIkJpD5d/Jax+UTAlOf3YejXW1ZAwBtlu6Mq4CkO50VSJujNZRGFtPmPGAZSWbr1q72FFmR7A==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true

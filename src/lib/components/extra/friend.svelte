@@ -3,6 +3,7 @@
   import Footer from '$lib/components/footer.svelte'
   export let item: unknown
   let friend = item as unknown as Friend
+  const socials = `i-simple-icons-${friend.social}`
 </script>
 
 {#if friend.id === 'footer'}
@@ -40,7 +41,7 @@
       </div>
       {#if friend.social}
         <div class="prose opacity-70 p-note"> {friend.descr ?? ''}
-          <img class="{friend.class?.img ?? 'rounded-full'} w-6 opacity-100" align="right" src={friend.social} alt={friend.id} />
+          <img class="{socials} rounded-full w-6" align="right" alt=""/>
         </div>
       {:else}
         <div class="prose opacity-70 p-note"> {friend.descr ?? ''}

@@ -27,6 +27,7 @@
   "devDependencies": {
     "@iconify-json/heroicons-outline": "^1.1.5",
     "@iconify-json/heroicons-solid": "^1.1.6",
+    "@iconify-json/simple-icons": "^1.1.40",
     "@sveltejs/adapter-auto": "^1.0.0",
     "@sveltejs/adapter-netlify": "^1.0.0",
     "@sveltejs/adapter-node": "^1.1.0",
