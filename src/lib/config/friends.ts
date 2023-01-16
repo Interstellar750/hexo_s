@@ -35,7 +35,7 @@ export const friends: Friend[] = [
     name: 'Katari',
     link: 'https://katari_v.t.me',
     descr: '',
-    social: 'telegram',
+    social: 'i-simple-icons-telegram',
     avatar: '/assets/friends_avatar/katari.webp'
   },
   {
@@ -63,7 +63,7 @@ export const friends: Friend[] = [
     name: 'HANNARI',
     link: 'https://github.com/Twinkle-qwq',
     descr: '江江，我是有栖！',
-    social: 'github',
+    social: 'i-simple-icons-github',
     avatar: 'https://avatars.githubusercontent.com/u/53106606'
   },
   {
@@ -82,7 +82,7 @@ export const friends: Friend[] = [
     name: '12d',
     link: 'https://t.me/diversesystem',
     descr: '您在看胡伯特的网页',
-    social: 'telegram',
+    social: 'i-simple-icons-telegram',
     avatar: '/assets/friends_avatar/aeciane.webp'
   },
   {
@@ -92,7 +92,7 @@ export const friends: Friend[] = [
     name: 'iiii90909',
     link: 'https://t.me/pass25',
     descr: '',
-    social: 'telegram',
+    social: 'i-simple-icons-telegram',
     avatar: '/assets/friends_avatar/iiii90909.webp'
   },
   {
@@ -102,7 +102,7 @@ export const friends: Friend[] = [
     name: '那里有5块钱',
     link: 'https://t.me/wdnmd23333',
     descr: '想和你晚上一起看星星捏',
-    social: 'telegram',
+    social: 'i-simple-icons-telegram',
     avatar: 'https://avatars.githubusercontent.com/u/120037547'
   },
   /*  {
