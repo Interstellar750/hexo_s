@@ -8,7 +8,7 @@ flags:
 toc: false
 ---
 
-**本站源代码存放在** [**GitHub**](https://github.com/interstellar750/hexo_s) **仓库，博客托管在** [**Vercel**](https://vercel.com/) **平台，域名 DNS 解析由** [**Cloudflare**](https://www.cloudflare.com/) **提供，我可得知的数据如下：**
+**本站源代码存放在** [**GitHub**](https://github.com/interstellar750/hexo_s/) **仓库，博客托管在** [**Vercel**](https://vercel.com/) **平台，域名 DNS 解析由** [**Cloudflare**](https://www.cloudflare.com/) **提供，我可得知的数据如下：**
 
 ## GitHub 仓库
 
@@ -20,7 +20,7 @@ toc: false
 
 ## Vercel 平台
 
-我在 Vercel 平台为本站开启了 [Audiences](https://vercel.com/docs/concepts/analytics/audiences)，这是一项统计功能，最长可以记录三个月的数据，因此我可以通过 **Audiences** 得知：
+我在 Vercel 平台为本站开启了 [Audiences](https://vercel.com/docs/concepts/analytics/audiences/)，这是一项统计功能，最长可以记录三个月的数据，因此我可以通过 **Audiences** 得知：
 
 - **访客数据**
   - 来自哪个国家

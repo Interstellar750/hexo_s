@@ -81,12 +81,12 @@ flags:
 
 **2022/11/19 同步与开源**
 
-昨天晚上给 Urara 的 [这个](https://github.com/importantimport/urara/issues/44) 议题发了一个 comment，今天中午问题就修复了，要在这里说一句非常感谢大佬们，自己没学过前端也就只能提个议题或报告一下问题了，修复问题这种问题很可惜帮不上忙 😥
+昨天晚上给 Urara 的 [这个](https://github.com/importantimport/urara/issues/44/) 议题发了一个 comment，今天中午问题就修复了，要在这里说一句非常感谢大佬们，自己没学过前端也就只能提个议题或报告一下问题了，修复问题这种问题很可惜帮不上忙 😥
 
 推完这次更新后我的整个博客的源码就开源啦，至于之前为什么不放出来，第一个原因是可以用之前的 [blog](https://github.com/Interstellar750/blog) 项目直接部署，但换到 Urara 后端之后这样就不行了，除非点击任意链接后网页链接都会自动加上 `.html` 后缀，不然就会出错，没那个技术力的我就只能弃用之前的方法了，第二个就是当时有巨多问题，自己修也不知道怎么修
 
 **2022/12/01 开通 Giscus**
 
-成功开通了 Giscus 讨论功能，比想象中的要简单好多，不过看 [#47](https://github.com/importantimport/urara/issues/47) 这个议题好像说会有 bug 导致登不上 Giscus，但我自己试了试没问题，有点奇怪
+成功开通了 Giscus 讨论功能，比想象中的要简单好多，不过看 [#47](https://github.com/importantimport/urara/issues/47/) 这个议题好像说会有 bug 导致登不上 Giscus，但我自己试了试没问题，有点奇怪
 
 修了，但似乎只修了 Giscus 的登录问题，sitemap 还是没法使用
