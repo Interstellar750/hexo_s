@@ -134,7 +134,7 @@ export const head: HeadConfig = {
 export const header: HeaderConfig = {
   nav: [
     {
-      text: '关于我',
+      text: '关于',
       link: '/about'
     },
     // 注意这里不要给目录前加 . 号，不然多次点击目录会叠起来
