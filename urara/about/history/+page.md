@@ -1,7 +1,7 @@
 ---
 title: '建站历程'
 created: 2022-10-22
-updated: 2023-01-19
+updated: 2023-01-24
 summary: '因为提前感觉到这个页面会变得很长很长，就先分离出来了'
 flags:
   - unlisted
@@ -11,10 +11,8 @@ flags:
 
 以后也得想个办法整理一下这个页面
 
-## 建站初期 & hexo & chic
-
 <details>
-  <summary><b>早期都是在折腾，文章几乎没写</b></summary>
+  <summary><big><b>建站初期 & hexo & chic</b></big></summary>
 
 **2022/01/24 初次建立** <br>
 初次建立并使用 [GitHub Pages](https://github.io/) 来作为服务器 （其实并不是第一次，前前后后试了好几次，因为碰到了好多 bug）
@@ -54,7 +52,8 @@ flags:
 
 </details>
 
-## 切换至 Urara
+<details>
+  <summary><big><b>切换至 Urara</b></big></summary>
 
 **2022/10/23 切换到 Urara 后端** <br>
 花了差不多整个下午的时间一直搞到凌晨两点多，终于把 Urara 后端配置好了，从九月月底在 [Dejavu's Blog](https://t.me/dejavuBlog/2069/) 频道看见 Urara 直到今天才完全成功切换到这个后端，配置其实不算太难，我完全没有 svelte 的基础，但看着原文件和 Urara 作者 [藍+85CD](https://kwaa.dev/) 的博客改也勉强可以了，后面估计我还得改不少东西
@@ -78,3 +77,16 @@ flags:
 成功开通了 Giscus 讨论功能，比想象中的要简单好多，不过看 [#47](https://github.com/importantimport/urara/issues/47/) 这个议题好像说会有 bug 导致登不上 Giscus，但我自己试了试没问题，有点奇怪
 
 修了，但似乎只修了 Giscus 的登录问题，sitemap 还是没法使用
+
+</details>
+
+## 一周年
+
+**2023/01/24 续费域名** <br>
+博客也一周年了，先要续费的是在 [**freenom**](https://freenom.com/) 上注册的免费域名 [**trle5.tk**](https://trle5.tk/)，不出意料的免费续费了一年，虽然目前已经闲置很久了
+
+博客目前主要用的 [**trle5.xyz**](https://trle5.xyz) 打算在今天转移到 [**Blacknight**](https://www.blacknight.com/)，本来是打算转到 [**Cloudflare**](https://www.cloudflare.com/)，但架不住 [5 欧元一年](https://zh-hans.tld-list.com/顶级域名/xyz) 的续费/转移价格，便宜
+
+但是被限制付款了，发个工单问问客服，不行那就高价转到 Cloudflare
+
+至于 [**trle5.dev**](https://trle5.dev/) 最便宜还是 $10 以上，但过期时间在六月，再等等吧
