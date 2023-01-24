@@ -5,6 +5,7 @@ updated: 2023-01-05
 image: /talk/page112/2023.webp
 tags:
    - 年度总结
+   - 闲聊
 summary: '又是一年，今年做了什么呢'
 ---
 

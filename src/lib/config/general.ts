@@ -153,20 +153,7 @@ export const header: HeaderConfig = {
     },
     {
       text: '闲聊',
-      children: [
-        {
-          text: '2022 年度总结',
-          link: '/talk/page112'
-        },
-        {
-          text: '2022 下半年的总结',
-          link: '/talk/page111'
-        },
-        {
-          text: '闲谈杂聊',
-          link: '/talk/page104'
-        }
-      ]
+      link: '/?tags=闲聊'
     },
     {
       text: '朋友们',
