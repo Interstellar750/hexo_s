@@ -74,31 +74,14 @@
 </script>
 
 <div class="flex flex-col gap-8">
-  <div class="flex">
-    <p class="flex-1 m-auto italic opacity-50">
-      {`sort-by=${config?.sortBy ?? 'created'}&sort-dir=${sortDirUp ? 'up' : 'down'}`}
-    </p>
-    <button
-      class="btn btn-ghost btn-sm float-right"
-      on:click={() => {
-        sortDirUp = !sortDirUp
-        reset()
-      }}>
-      {#if sortDirUp === true}
-        <span class="i-heroicons-outline-sort-ascending" />
-      {:else}
-        <span class="i-heroicons-outline-sort-descending" />
-      {/if}
-    </button>
-  </div>
   {#key mentions}
     {#each mentions as mention}
       {@const [wmProperty, borderColor, textColor, tooltipColor] = {
-        'in-reply-to': ['💬 replied', 'border-primary/50', 'text-primary', 'tooltip-primary'],
-        'like-of': ['❤️ liked', 'border-secondary/50', 'text-secondary', 'tooltip-secondary'],
-        'repost-of': ['🔄 reposted', 'border-accent/50', 'text-accent', 'tooltip-accent'],
-        'bookmark-of': ['⭐️ bookmarked', 'border-neutral/50', 'text-neutral', 'tooltip-neutral'],
-        'mention-of': ['💬 mentioned', 'border-base-300/50', 'text-base-content', 'tooltip-base-content'],
+        'in-reply-to': ['💬 回复：', 'border-primary/50', 'text-primary', 'tooltip-primary'],
+        'like-of': ['❤️ 喜欢', 'border-secondary/50', 'text-secondary', 'tooltip-secondary'],
+        'repost-of': ['🔄 转发', 'border-accent/50', 'text-accent', 'tooltip-accent'],
+        'bookmark-of': ['⭐️ 收藏', 'border-neutral/50', 'text-neutral', 'tooltip-neutral'],
+        'mention-of': ['💬 提到：', 'border-base-300/50', 'text-base-content', 'tooltip-base-content'],
         rsvp: [
           `📅 RSVPed ${
             mention.rsvp &&
@@ -128,18 +111,24 @@
             <div class="flex-1 px-4 py-2 m-auto">
               <p>
                 {#if mention?.author?.url}
+                  <b>
                   <a class="font-semibold {textColor} hover:underline" href={mention.author.url}>
                     {mention.author?.name ?? new URL(mention.url).host}
                   </a>
+                  </b>
                 {:else}
+                  <b>
                   {mention?.author?.name ?? new URL(mention.url).host}
+                  </b>
                 {/if}
+                <b>
                 <a class="{textColor} hover:underline" href={mention['wm-source']}>
                   {wmProperty}
                 </a>
-                this post on
+                </b>
                 <span
-                  class="tooltip tooltip-bottom xl:tooltip-right {tooltipColor}"
+                  class="tooltip tooltip-bottom xl:tooltip-left opacity-70 {tooltipColor}"
+                  style="float:right"
                   data-tip={new Date(mention.published ?? mention['wm-received']).toLocaleString()}>
                   {mention.published ? mention.published.slice(0, 10) : mention['wm-received'].slice(0, 10)}
                 </span>
@@ -163,7 +152,7 @@
           load()
         }}
         class="btn btn-primary btn-block">
-        LOAD
+        加载更多
       </button>
     {:else if config?.form !== true}
       <div class="divider mt-0 -mb-2">END</div>
@@ -173,21 +162,7 @@
   {/if}
   {#if config?.form === true}
     <form id="webmention-form" method="post" action="https://webmention.io/{config.username}/webmention">
-      <input type="hidden" name="target" value={site.protocol + site.domain + post.path} />
-      <div class="label gap-4">
-        <span class="label-text">send webmentions here:</span>
-        {#if config?.commentParade === true}
-          <span class="label-text-alt text-right">
-            or <a
-              class="hover:!text-primary"
-              href="https://quill.p3k.io/?dontask=1&me=https://commentpara.de/&reply={encodeURI(
-                site.protocol + site.domain + post.path
-              )}">
-              comment anonymously
-            </a>
-          </span>
-        {/if}
-      </div>
+    <input type="hidden" name="target" value={site.protocol + site.domain + post.path} />
       <div class="flex gap-2">
         <div class="flex-1">
           <input
@@ -195,9 +170,20 @@
             type="text"
             id="reply-url"
             name="source"
-            placeholder="https://example.com/my-post" />
+            placeholder="在此处填入 Webmention 链接" />
         </div>
-        <button class="btn btn-primary flex-none mt-auto" type="submit" id="webmention-submit">Send</button>
+        <button class="btn btn-primary flex-none mt-auto" type="submit" id="webmention-submit">发送</button>
+          {#if config?.commentParade === true}
+            <a 
+              href="https://quill.p3k.io/?dontask=1&me=https://commentpara.de/&reply={encodeURI(
+                site.protocol + site.domain + post.path
+              )}">
+              <button class="btn btn-secondary flex-none mt-auto"
+                >
+                匿名评论
+              </button>
+            </a>
+          {/if}
       </div>
     </form>
   {/if}
