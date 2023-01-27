@@ -143,26 +143,39 @@ export const header: HeaderConfig = {
       children: [
         {
           text: '建站历程',
-		  link: '/about/history'
+          link: '/about/history'
         },
         {
           text: '待办事项',
           link: '/about/todolist'
+        },
+        {
+          text: '隐私声明',
+          link: '/about/privacy'
         }
       ]
     },
     {
-      text: '闲聊',
-      link: '/?tags=闲聊'
+      text: '分类',
+      children: [
+        {
+          text: '闲聊',
+          link: '/talk'
+        },
+        {
+          text: '文章',
+          link: '/post'
+        }
+      ]
     },
     {
       text: '朋友们',
       link: '/friends'
     },
-	{
-	  text: '📁',
-	  link: 'https://t5d.trle5.xyz'
-	}
+	  {
+	    text: '📁',
+	    link: 'https://t5d.trle5.xyz'
+	  }
   ]
 }
 
