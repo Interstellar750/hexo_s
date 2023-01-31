@@ -20,6 +20,8 @@ pnpm-debug.log*
 # temp file
 src/routes/**/+page.svelte.md
 src/routes/**/+page.md
+src/routes/post/+page.svelte
+src/routes/talk/+page.svelte
 src/static
 *.config.js
 urara.js
