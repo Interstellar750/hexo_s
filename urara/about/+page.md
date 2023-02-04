@@ -1,7 +1,7 @@
 ---
 title: '欢迎参观'
 created: 2022-03-01
-updated: 2023-01-24
+updated: 2023-02-04
 flags:
   - unlisted
 ---
@@ -132,11 +132,11 @@ ssb>  ed25519/7043720D3C7D7718 2023-01-19 [A] (认证)
 
 #### 操作系统
 
-[**Windows 10**](https://www.microsoft.com/zh-cn/windows/get-windows-10) LTSC 1809
+[**Windows 10**](https://www.microsoft.com/zh-cn/windows/get-windows-10) LTSC 2021
 
-[**FydeOS**](https://fydeos.io/download/) FydeOS for PC 15.1 (台式机的第二个系统)
+[**FydeOS**](https://fydeos.io/download/) FydeOS for PC 15.0 (台式机的第二个系统)
 
-[**ChromeOS**](https://www.google.com/chromebook/chrome-os/) beta 108.0.5359.58
+[**ChromeOS**](https://www.google.com/chromebook/chrome-os/) beta 110.0.5481.82
 
 [**Debian**](https://www.debian.org/) bullseye | kernel 5.10.147 (Chrome OS 的虚拟机)
 
@@ -164,6 +164,6 @@ Urara 有不少基于 [**Daisy UI**](https://github.com/saadeghi/daisyui) 的主
 
 本站还开通了 [**Webmention**](https://indieweb.org/Webmention)，目前好像是使用到了 [**webmention.io**](https://webmention.io/) 的服务，至于与 Fediverse 交互嘛，后面再打算吧。虽然一开始有奇奇怪怪的问题用不了，但现在已经工作正常了
 
-使用 Webmention 很简单，要发评论只需要点击 **Send** 按钮上方的 **comment anonymosuly** 后就会被定向到 [**commentpara.de**](https://commentpara.de/)，设定显示信息后既可填写评论内容
+使用 Webmention 很简单，要发评论只需要点击 **匿名评论** 后就会被定向到 [**commentpara.de**](https://commentpara.de/)，设定显示信息后既可填写评论内容
 
 但有个缺陷，使用这个方法发送的评论没法回复，只能在文章内再发一条评论，且没有任何通知...
