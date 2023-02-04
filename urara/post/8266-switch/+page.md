@@ -1,7 +1,7 @@
 ---
 title: '做一个简单的网络继电器'
 created: 2022-12-04
-updated: 2023-11-23
+updated: 2023-02-04
 image: /post/8266-switch/relay.webp
 tags: 
    - Homekit
@@ -209,4 +209,8 @@ MEPLHAA Script 里填写的脚本不需要修改，还是像上面那样，这�
 
 也就是 `IO2` 和 `GND(-)`，短接一下就切换开关状态，或许也可以通过修改脚本来让它变成那种常规的按下即开，松手即关的开关，但我还是不会改它的脚本...
 
-近期正在尝试在 Ubuntu Touch 上跑 Home Assistant，过程顺利的话会补上接入 Home Assistant 的教程，不自己编译内核大致是跑不起 docker，只能跑 Python 版的 core
+-----
+
+~~近期正在尝试在 Ubuntu Touch 上跑 Home Assistant，过程顺利的话会补上接入 Home Assistant 的教程，不自己编译内核大致是跑不起 docker，只能跑 Python 版的 core~~
+
+坏消息，Ubuntu Touch 自带终端的 apt 有空间问题，而 Libertine 也不是那么方便，寒假也快结束了，这部分还是算了...
