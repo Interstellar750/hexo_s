@@ -1,7 +1,7 @@
 ---
 title: 'Urara 拓展插件'
 created: 2022-12-21
-updated: 2023-01-10
+updated: 2023-02-05
 tags: 
    - Urara
    - 拓展
@@ -16,7 +16,7 @@ summary: 'Urara 可用拓展插件使用教程'
 
 <Alert status="success" title="本文包含的大多数拓展已包含在官方文档内"/>
 
-查看官方拓展文档：[**拓展 | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html)
+查看官方拓展文档：[**拓展 | Urara Docs**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html)
 
 ## 文章组件
 
@@ -24,7 +24,7 @@ summary: 'Urara 可用拓展插件使用教程'
 
 ### YouTube 视频
 
-此教程在官方文档里也有：[**YouTube | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#youtube)
+此教程在官方文档里也有：[**YouTube | Urara Docs**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#youtube)
 
 Urara 默认包含这个拓展，使用方法只需要在文档内导入一下就可以用了
 
@@ -47,7 +47,7 @@ Urara 默认包含这个拓展，使用方法只需要在文档内导入一下�
 
 ### 资料卡片
 
-此教程在官方文档里也有：[**资料卡片 | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#资料卡片)
+此教程在官方文档里也有：[**资料卡片 | Urara Docs**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#资料卡片)
 
 首先要去下载 [**profile.svelte**](https://github.com/importantimport/urara-docs/raw/master/public/extension/profile/profile.svelte)，下载完成之后放进 `src/lib/components/extra/` 目录里
 
@@ -81,7 +81,7 @@ Urara 默认包含这个拓展，使用方法只需要在文档内导入一下�
 
 ### 状态提示
 
-此教程在官方文档里也有：[**状态提示 | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#状态提示)
+此教程在官方文档里也有：[**状态提示 | Urara Docs**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#状态提示)
 
 就是本文章开头那个提示栏，它包含在 Urara 内可直接使用，导入：
 
@@ -105,7 +105,7 @@ Urara 默认包含这个拓展，使用方法只需要在文档内导入一下�
 
 ### Spotify 音乐
 
-此教程在官方文档里也有：[**Spotify | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#spotify)
+此教程在官方文档里也有：[**Spotify | Urara Docs**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#spotify)
 
 昨天自己照着 [**YouTube 视频**](#youtube-视频) 改出来的，应该没什么 Bug 了，~~后面会考虑要不要加到官方文档里去~~ 已添加
 
@@ -141,7 +141,7 @@ Urara 默认包含这个拓展，使用方法只需要在文档内导入一下�
 
 ### SoundCloud 音乐
 
-此教程在官方文档里也有：[**SoundCloud | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#soundcloud)
+此教程在官方文档里也有：[**SoundCloud | Urara Docs**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#soundcloud)
 
 Urara 最近新加的拓展，测试的时候去 SoundCloud 复制了一下原本的嵌入码，那是真的长，格式化代码后都要看一阵子
 
@@ -193,7 +193,7 @@ Urara 最近新加的拓展，测试的时候去 SoundCloud 复制了一下原�
 
 ### Friends 页面
 
-此教程在官方文档里也有：[**友链 | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#友链)
+此教程在官方文档里也有：[**友链 | Urara Docs**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#友链)
 
 这个来说相对简单，复制几个文件再照着改就行
 
@@ -340,7 +340,7 @@ export const friends: Friend[] = [
 
 ### 项目展示
 
-此教程在官方文档里也有：[**项目展示 | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#项目展示)
+此教程在官方文档里也有：[**项目展示 | Urara Docs**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#项目展示)
 
 由 [**SevcheCC**](https://github.com/Sevichecc) 制作，可以去看看 [**为博客写一个Project showcase 页面**](https://seviche.cc/2022-05-26-write-a-page-template/) 和 [**Projects | Seviche.cc**](https://seviche.cc/projects/)
 
@@ -383,9 +383,67 @@ export const projects: Project[] = [
 
 ## 评论功能
 
-### Giscus 评论系统
+### Webmention
 
-此教程在官方文档里也有：[**Giscus | Urara**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#giscus)
+此教程在官方文档里也有：[**Webmention | Urara Docs**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#webmention)
+
+一种让一个网页可以与另一个网页进行交互的协议？其实原理我也不太懂，也可以跟 Mastodon 这种 Fediverse(联邦宇宙) 平台进行互动，但本站目前并没有这个功能...
+
+还有一个发送 Webmention 链接的功能，我不太会用，就没什么说明。同时还支持基于 [**commentpara.de**](https://commentpara.de/) 的匿名评论功能，但似乎与目前的 Urara 依赖有兼容性问题，我降了 sveltekit 与 vite 版本后才能正常工作
+
+这个组件默认包含在 Urara 里，所以就只用改配置，首先看 `src/lib/config/general.ts` 文件，大概在百来行的位置：
+
+```ts title="src/lib/config/general.ts" {9}
+export const head: HeadConfig = {
+  custom: ({ dev, post, page }) =>
+    dev
+      ? []
+      : [
+          // IndieAuth
+          '<link rel="authorization_endpoint" href="https://indieauth.com/auth">',
+          '<link rel="token_endpoint" href="https://tokens.indieauth.com/token">',
+        ],
+  me: ['https://github.com/<用户名>']
+}
+```
+
+要改的也就是高亮行，把 `<用户名>` 改成你的 GitHub 用户名，再到 GitHub 的个人页面里修改个人信息，在 **Website** 框内填入你的网站域名，后面就可以使用 [**IndieAuth**](https://indieauth.com/) 登录了
+
+接下来是添加 Webmention 评论组件，编辑 `src/lib/config/post.ts` 文件：
+
+```ts title="src/lib/config/post.ts"
+import type { PostConfig } from '$lib/types/post'
+
+export const post: PostConfig = {
+  comment: {
+    use: ['Webmention', '其他评论系统'],
+    style: 'boxed', // 评论系统栏样式: none / bordered / lifted / boxed
+    webmention: {
+      username: '[在此输入域名]',
+      sortBy: 'created', // 排序方式: created / updated
+      sortDir: 'down', // 排序顺序: up / down
+      form: true, // 启用评论: true / false
+      commentParade: true // 启用匿名评论: true / false
+    }
+  }
+}
+```
+
+填写域名和调整设置后对博客进行部署就可以去测试了，匿名评论不可用那就用 [**Webmention Rocks!**](https://webmention.rocks/) 来进行测试吧，要看评论的话要登录 [**Webmention.io**](https://webmention.io/)，这就是为什么前面要设置 **IndieAuth** 的原因
+
+**Webmention.io** 的 **Settings** 页面提供了评论订阅链接，它类似下面这样：
+
+```text
+https://webmention.io/api/mentions.atom?token=0123456789ABCDEF_ghIJK
+```
+
+其中的 `0123456789ABCDEF_ghIJK` 是 API Key，用处就是查看所有 Webmention，保密与否看你自己，上面的链接可以使用 RSS 阅读器来订阅
+
+还可以设定屏蔽来自某个域名的 Webmention 或删除评论
+
+### Giscus
+
+此教程在官方文档里也有：[**Giscus | Urara Docs**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#giscus)
 
 本站就在用，依赖于 GitHub 项目仓库的 Discussions 功能，注定了对于国内的网络有点难访问，有时候可能会串评论，需要手动刷新
 
@@ -475,3 +533,55 @@ export type UtterancesConfig = {
 根据前面说到的有时候会串评论的问题，~~我这里就把 `data-mapping` 改成了 `og:title`，其实有没有效果我自己都有点不清楚~~
 
 现在还有串评论的问题就改回来了，留着 pathname 似乎是比较好的选项，不过依然有个小问题，例如我的 [**关于我**](/about) 目录下还有三个文章，当 about/ 这个页面没有单独开一个讨论时，子目录里有其他页面已经开了讨论页面，那么里面的评论就会串到父文章来，不过也有解决方法，进入对应仓库的 Discussions 按照 giscus app 的格式开一个新讨论就行
+
+### Utterances
+
+此教程在官方文档里也有：[**Utterances | Urara Docs**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#utterances)
+
+同样是基于 GitHub 服务的评论系统，但 Utterances 用的是 Issues 功能，如果有 Issues 功能需求的就不要用了，也可以把评论仓库换到其他仓库，本质上更推荐用 Giscus
+
+首先是访问 [**utteranc.es**](https://utteranc.es/) 进行配置，跟着说明走就行，只是没有多语言，后面就会得到一个 HTML 格式的代码：
+
+```html
+<script src="https://utteranc.es/client.js"
+      repo="[在此输入仓库]"
+      issue-term="pathname"
+      theme="preferred-color-scheme"
+      crossorigin="anonymous"
+      async>
+</script>
+```
+
+再接着编辑 `src/lib/config/post.ts` 文件，加入 Utterances 评论系统：
+
+```ts title="src/lib/config/post.ts"
+import type { PostConfig } from '$lib/types/post'
+
+export const post: PostConfig = {
+  comment: {
+    use: ['Utterances', '其他评论系统'],
+    style: 'boxed', // 评论系统栏样式: none / bordered / lifted / boxed
+    utterances: {
+      repo: '[在此输入仓库]',
+      lable: '', // 标签
+      theme: 'preferred-color-scheme', // 主题
+    }
+  }
+}
+```
+
+之后部署博客，在网页上登录 GitHub 并授权，试一下能否正常工作，不要忘记在设定的评论仓库安装 [**utterances app**](https://github.com/apps/utterances)
+
+## 界面组件
+
+目前就功能按钮这一类
+
+### 功能按钮
+
+此教程在官方文档里也有：[**功能按钮 | Urara Docs**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#功能按钮)
+
+配置起来很简单，只需要放文件就行，组件放在 [**importantimport/urara-docs**](https://github.com/importantimport/urara-docs/tree/master/public/extension/actions)，下载想要添加的组件
+
+然后到 `src/lib/components/` 目录里新建一个名为 `actions` 的文件夹，再把下载好的按钮组件丢进去就行
+
+重启开发服务器或构建后，点进一篇文章就可以看到左侧的按钮了。使用手机或窗口宽度不足的话，按钮就会隐藏起来
