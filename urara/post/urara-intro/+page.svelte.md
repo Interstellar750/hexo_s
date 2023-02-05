@@ -1,7 +1,7 @@
 ---
 title: 'Urara 入门教程'
 created: 2022-11-20
-updated: 2023-01-06
+updated: 2023-02-05
 image: /post/urara-intro/urara.webp
 tags: 
    - Urara
@@ -200,24 +200,7 @@ Urara 的文件头目前兼容 [**FFF 0.3**](https://fff.js.org/version/0.3.html
 
 #### 博客标题以及个人资料卡片
 
-<Alert status="warning" title="目前 Urara 启用了 imagetools 优化头像，这暂时修改了设定头像的路径"/>
-
-如需修改头像，请把下方文件中的 `/static/assets/maskable@512.png` 替换成您头像的路径
-
-```ts title="src/lib/components/index_profile.svelte" {2,3}
-<script lang="ts">
-  import { site } from '$lib/config/site'
-  import { src, width, height } from '/static/assets/maskable@512.png?width=384&format=webp&metadata'
-  import srcset from '/static/assets/maskable@512.png?w=48;96;192&avif&srcset'
-</script>
-⬇️6
-```
-
-您也可以进行还原到启用 imagetools 前的 [**commit:e05c757**](https://github.com/importantimport/urara/commit/284d74b7cfeb9a6e25f874877d8998724d7eb84a) 来暂时禁用它
-
-```bash
-git reste 284d74b7cfeb9a6e25f874877d8998724d7eb84a
-```
+<Alert status="success" title="Urara 对头像禁用了 imagetools 优化，您可以根据之前的方式重新设定头像路径"/>
 
 也就是博客的名称和主页左边那块，我们需要修改 `src/lib/config/site.ts` 文件，依然是使用本站的文件作为示例
 
@@ -232,8 +215,8 @@ export const site: SiteConfig = {
   lang: 'zh-CN', // 更改语言，目前不清楚会影响到哪里 
   description: '你好呀👋', // 站点描述，适用于有链接预览的应用，可以看后面配图
   author: {
-    name: 'Hubert\u0020Chen', // 个人资料卡片的用户名，这里同样使用了 Unicode 代码
     avatar: '/assets/images/avatar/70455873_p3.webp', // 头像
+    name: 'Hubert\u0020Chen', // 个人资料卡片的用户名，这里同样使用了 Unicode 代码
     status: '😉', // 状态，也可以用文字，不过超过一个字符的话就会溢出边框
     bio: '你好呀👋' // 简介
   },
