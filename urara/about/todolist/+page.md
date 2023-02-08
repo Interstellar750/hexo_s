@@ -1,7 +1,7 @@
 ---
 title: '待办事项'
 created: 2022-11-23
-updated: 2023-01-31
+updated: 2023-02-08
 summary: '有时候也得记一下自己要干嘛'
 flags:
   - unlisted
@@ -48,7 +48,7 @@ flags:
 
   - ~~还有没加完的拓展使用教程（~~[~~文档~~](https://urara-docs.netlify.app/zh-hans/)~~刚写完，缓一缓）~~
   - ~~根据~~ [~~FFF~~](https://fff.js.org/) ~~来重新调整一下文件头的教程~~
-  - 拓展教程还差一些
+  - ~~拓展教程还差一些~~
 
 </details>
 

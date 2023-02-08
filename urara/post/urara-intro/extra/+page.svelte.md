@@ -1,7 +1,7 @@
 ---
 title: 'Urara 拓展插件'
 created: 2022-12-21
-updated: 2023-02-05
+updated: 2023-02-08
 tags: 
    - Urara
    - 拓展
@@ -186,6 +186,28 @@ Urara 最近新加的拓展，测试的时候去 SoundCloud 复制了一下原�
 ```
 
 获取到 ID 后替换掉上方示例里的 ID 既可，同时需要注意分享的类型，不然会指向错误的页面
+
+### GitHub 仓库
+
+此教程在官方文档里也有：[**GitHub 仓库 | Urara Docs**](https://urara-docs.netlify.app/zh-hans/advanced/extension.html#github-仓库)
+
+一个用来展示 GitHub 仓库的组件，组织和个人的仓库都可以，只能展示公开仓库，没授权访问私有仓库的功能
+
+还未包含在 Urara 里，就要麻烦手动下载组件了：[**github.svelte**](https://github.com/importantimport/urara-docs/raw/master/public/extension/github/github.svelte)，再放到 `src/lib/components/extra/` 目录里。
+
+在使用前导入：
+
+```ts
+<script>
+  import GitHub from '$lib/components/extra/github.svelte'
+</script>
+```
+
+这个组件使用起来很简单，填入用户或组织名，再填写名下的仓库名就可以了：
+
+```ts
+<GitHub user="importantimport" repo="urara"/>
+```
 
 ## 网页拓展
 
