@@ -1,7 +1,7 @@
 ---
 title: '欢迎参观'
 created: 2022-03-01
-updated: 2023-02-04
+updated: 2023-02-08
 flags:
   - unlisted
 ---
@@ -120,7 +120,7 @@ ssb>  ed25519/7043720D3C7D7718 2023-01-19 [A] (认证)
 
 **平板电脑:** [Chromebook duet](https://www.lenovo.com/il/en/laptops/lenovo/student-chromebooks/Lenovo-CT-X636/p/ZZICZCTCT1X)
 
-**台式电脑:** [Intel® Core™ i5-4460 / HD Graphics 4600](https://www.intel.com/content/www/us/en/products/sku/80817/intel-core-i54460-processor-6m-cache-up-to-3-40-ghz/specifications.html) / 4GB DDR3 / 240GB SATA SSD x 2
+**台式电脑:** [Intel i5-4460 / HD 4600](https://www.intel.com/content/www/us/en/products/sku/80817/intel-core-i54460-processor-6m-cache-up-to-3-40-ghz/specifications.html) & [NVIDIA Tesla P4](https://www.nvidia.cn/content/dam/en-zz/zh_cn/Solutions/deep-learning/deep-learning-solutions/inference-platform/hpc/222754_Tesla_P4_Datasheet_nvidia-hr-cn.pdf) / 8GB DDR3 / 240GB SATA SSD x 3
 
 **其他设备**
 
