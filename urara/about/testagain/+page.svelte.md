@@ -1,7 +1,7 @@
 ---
 title: '这是一个测试页面'
 created: 2022-01-26
-updated: 2023-01-07
+updated: 2023-02-26
 image: /about/testagain/test.webp
 tags:
   - 测试
@@ -13,6 +13,7 @@ import Profile from '$lib/components/extra/profile.svelte'
 import GitHub from '$lib/components/extra/github.svelte'
 import YouTube from '$lib/components/extra/youtube.svelte'
 import Spotify from '$lib/components/extra/spotify.svelte'
+import Music from '$lib/components/extra/music.svelte'
 </script>
 
 test
@@ -46,3 +47,7 @@ test
 **Spotify 音乐**
 
 <Spotify type="album" id="0vXB2JFdOphGK7ybYLXSRI" compact={false} theme={true} width="100%" />
+
+**音乐播放器**
+
+<Music cover="https://i.scdn.co/image/ab67616d00001e02bae58503113500726b3fa0ea" link="https://t5d.trle5.xyz/Music/BlackOut-Daxten.mp3" title="Black Out - Daxten"/>
