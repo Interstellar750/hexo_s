@@ -7,8 +7,8 @@
 <div class="card bg-base-100 !bg-base-200 my-4">
   <div class="p-7">
     <div class="flex">
-      <div class="flex-initial pr-4">
-        <img class="w-24 h-auto mt-auto ml-auto mb-auto rounded-xl" alt="album_cover" src={cover}/>
+      <div class="card-title flex-initial pr-4">
+        <img class="w-24 h-auto mt-auto ml-auto mb-auto rounded-box" alt="album_cover" src={cover}/>
       </div>
       <span class="mb-auto !text-4xl font-medium">
         <style scoped>
