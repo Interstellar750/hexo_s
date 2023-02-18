@@ -20,7 +20,7 @@
         <div class="card-actions">
           <a href="/" class="btn btn-neutral no-underline shadow-xl hover:shadow-2xl mt-8">
             <span class="i-heroicons-outline-home -ml-1 mr-2" />
-            Back to Home
+            返回主页
           </a>
         </div>
       </main>
