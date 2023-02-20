@@ -116,7 +116,7 @@ ssb>  ed25519/7043720D3C7D7718 2023-01-19 [A] (认证)
 
 #### 硬件
 
-**手机:** [Xperia 1](https://www.sony-asia.com/electronics/smartphones/xperia-1) / [iPhone SE 2020](https://zh.m.wikipedia.org/zh-hans/IPhone_SE_(%E7%AC%AC%E4%BA%8C%E4%BB%A3))
+**手机:**  [iPhone SE 2020](https://zh.m.wikipedia.org/zh-hans/IPhone_SE_(%E7%AC%AC%E4%BA%8C%E4%BB%A3)) / [~~Xperia 1~~](https://www.sony-asia.com/electronics/smartphones/xperia-1)
 
 **~~平板电脑:~~** [~~Chromebook duet~~](https://www.lenovo.com/il/en/laptops/lenovo/student-chromebooks/Lenovo-CT-X636/p/ZZICZCTCT1X) 卖了，可能会换台性能更好 Chromebook 或转 Windows 阵营
 
@@ -140,7 +140,7 @@ ssb>  ed25519/7043720D3C7D7718 2023-01-19 [A] (认证)
 
 [**~~Debian~~**](https://www.debian.org/) ~~bullseye | kernel 5.10.147 (Chrome OS 的虚拟机)~~
 
-[**Android**](https://www.android.com/) 11 (Xperia 1) | 9 (ChromeOS)
+[**~~Android~~**](https://www.android.com/) ~~11 (Xperia 1) | 9 (ChromeOS)~~
 
 [**iPhone OS**](https://www.apple.com/ios/) 14.4.2 (iPhone SE 2022)
 
