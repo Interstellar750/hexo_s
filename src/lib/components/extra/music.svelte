@@ -10,14 +10,7 @@
       <div class="card-title flex-initial pr-4">
         <img class="w-24 h-auto mt-auto ml-auto mb-auto rounded-box" alt="album_cover" src={cover}/>
       </div>
-      <span class="mb-auto !text-4xl font-medium">
-        <style scoped>
-          span {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-          }
-        </style>
+      <span class="mb-auto !text-4xl font-medium" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
         <a rel="noopener noreferrer external" target="_blank" class="ml-4 no-underline font-semibold" href={link}>
           {title}
         </a>

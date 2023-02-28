@@ -40,7 +40,7 @@
       </div>
       {#if friend.social}
         <div class="prose opacity-70 p-note"> {friend.descr ?? ''}
-          <img class="{friend.social} rounded-full w-6" align="right" alt=""/>
+          <img class="{friend.social} rounded-full w-6" style="float: right" alt=""/>
         </div>
       {:else}
         <div class="prose opacity-70 p-note"> {friend.descr ?? ''}
