@@ -1,7 +1,7 @@
 ---
 title: '欢迎参观'
 created: 2022-03-01
-updated: 2023-02-23
+updated: 2023-03-05
 flags:
   - unlisted
 ---
@@ -51,6 +51,8 @@ flags:
 **Mastodon:** [trle5@kwaa.moe](https://kwaa.moe/@trle5) 在 [kwaa](https://kwaa.moe/@kwa) 大佬的实例上注册的
 
 **GitHub:** [Hubert Chen](https://github.com/interstellar750) (好像并不能联系到人...)
+
+**Gitea:** [Hubert Chen](https://trle5.dev/trle5) 自己在 VPS 上用 docker 跑了个 Gitea，有时候 SSL 证书会抽风
 
 #### GPG 公钥
 
@@ -116,7 +118,7 @@ ssb>  ed25519/7043720D3C7D7718 2023-01-19 [A] (认证)
 
 #### 硬件
 
-**手机:**  [iPhone SE 2020](https://zh.m.wikipedia.org/zh-hans/IPhone_SE_(%E7%AC%AC%E4%BA%8C%E4%BB%A3)) / [~~Xperia 1~~](https://www.sony-asia.com/electronics/smartphones/xperia-1)
+**手机:**  [iPhone SE 2020](https://zh.m.wikipedia.org/zh-hans/IPhone_SE_(%E7%AC%AC%E4%BA%8C%E4%BB%A3))
 
 **笔记本电脑:** [Pixelbook Go](https://store.google.com/us/product/pixelbook_go): i5-8200Y / 16GB LPDDR3 / 128GB eMMC
 
@@ -134,11 +136,11 @@ ssb>  ed25519/7043720D3C7D7718 2023-01-19 [A] (认证)
 
 [**Windows 10**](https://www.microsoft.com/zh-cn/windows/get-windows-10) LTSC 2021
 
-[**FydeOS**](https://fydeos.io/download/) FydeOS for PC 15.0 (台式机的第二个系统)
+[**Fyde OS**](https://fydeos.io/download/) FydeOS for PC 15.0 (台式机的第二个系统)
 
-[**ChromeOS**](https://www.google.com/chromebook/chrome-os/) 109.0.5414.125
+[**Chrome OS**](https://www.google.com/chromebook/chrome-os/) 111.0.5563.54 beta
 
-[**Debian**](https://www.debian.org/) bullseye | kernel 5.10.153 (Chrome OS 的虚拟机)
+[**Debian**](https://www.debian.org/) bullseye | kernel 5.15.89 (Chrome OS 的虚拟机)
 
 [**Android**](https://www.android.com/) 11 (Chrome OS) 有生之年
 
