@@ -1,7 +1,7 @@
 ---
 title: '建站历程'
 created: 2022-10-22
-updated: 2023-01-24
+updated: 2023-03-05
 summary: '因为提前感觉到这个页面会变得很长很长，就先分离出来了'
 flags:
   - unlisted
@@ -90,3 +90,8 @@ flags:
 但是被限制付款了，发个工单问问客服，不行那就高价转到 Cloudflare
 
 至于 [**trle5.dev**](https://trle5.dev/) 最便宜还是 $10 以上，但过期时间在六月，再等等吧
+
+**2023/03/02 购入服务器** <br>
+从 [RackNerd](https://racknerd.com/) 买了个服务器，折腾两天后搭好了一个能用的 [memos](https://github.com/usememos/memos)，分配的二级域名为 [memos.trle5.xyz](https://memos.trle5.xyz/)
+
+还有一个 SSL 证书时不时抽风的 [Gitea](https://github.com/go-gitea/gitea) 服务则是为了操作方便把 [trle5.dev](https://trle5.dev/) 拿来用，原来朋友的博客就给他安排了个二级域名：[blog.trle5.dev](https://blog.trle5.dev)，但他好像打算把博客重构了
