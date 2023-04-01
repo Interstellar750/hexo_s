@@ -1,7 +1,7 @@
 ---
 title: 'Urara 入门教程'
 created: 2022-11-20
-updated: 2023-02-05
+updated: 2023-04-01
 image: /post/urara-intro/urara.webp
 tags: 
    - Urara
@@ -192,7 +192,7 @@ created: 2000-01-01 // 创建时间
 
 **如果不留日期，似乎还可以达成置顶文章的效果？**
 
-Urara 的文件头目前兼容 [**FFF 0.3**](https://fff.js.org/version/0.3.html)，以上的内容只经过我简单的测试，可能还有其他选项可用
+Urara 的文件头目前兼容部分 [**FFF 0.5**](https://fff.js.org/version/0.5.html)，以上的内容只经过我简单的测试，可能还有其他选项可用
 
 ### 博客风格自定义
 
@@ -208,7 +208,7 @@ Urara 的文件头目前兼容 [**FFF 0.3**](https://fff.js.org/version/0.3.html
 import type { SiteConfig } from '$lib/types/site'
 
 export const site: SiteConfig = {
-  protocol: 'https://', // 选择博客传输协议，http 或 https
+  protocol: import.meta.env.URARA_SITE_DOMAIN ?? 'https://', // 选择博客传输协议，http 或 https
   domain: import.meta.env.URARA_SITE_DOMAIN ?? 'trle5.xyz', // 把 trle5.xyz 替换成你的域名，点击文章内的用户名称就会访问这个域名
   title: 'Hubert\u0027s\u0020Blog', // 博客标题，这里使用了 Unicode 代码来显示一些符号
   subtitle: '', // 副标题，会显示在浏览器标签栏内的博客标题后面
@@ -458,21 +458,45 @@ Powered by // 可读文字
 
 ![网站页脚，名为“这里是文字”的超链接弹出了信息框，显示 “这里是弹出的文字”](/post/urara-intro/footer-test.webp)
 
-接下来也就没有其他要修改的地方了，那么这篇文章就正式结束了吧，当然如果后续发现错漏时，依然是会来修正的
+#### Favicon 设定
 
-拜拜 👋
+近期想起来好像还是在用着模板的默认图标，考虑着要不要换一个，各种替换后测试服务器里还是没变，仔细找了找，原来 favicon 引用的是外部图片，想要在本地查看效果就要改一改配置文件：
+
+```ts title="src/lib/config/icon.ts" {2}
+// 忽略前三行
+export const favicon: Icon = {
+  src: site.protocol + site.domain + '/favicon.png', // favicon 源图片路径
+  sizes: '48x48', // 后处理图标尺寸（也许？）
+  type: 'image/png' // 源图片类型
+}
+```
+
+第 3 行的作用就是指定 favicon 的路径，前面加上 `site.protocol + site.domain +` 意思就是在图标路径前方加上了设定好的传输协议和域名，效果就是引用已经部署了的站点资源，自然就在本地修改没什么用了，为了能在本地测试效果在部署，我们把这部分去掉就行：
+
+```ts title="src/lib/config/icon.ts" {2}
+// 忽略前三行
+export const favicon: Icon = {
+  src: '/favicon.png', // favicon 源图片路径
+  sizes: '48x48', // 后处理图标尺寸（也许？）
+  type: 'image/png' // 源图片类型
+}
+```
+
+暂时不清楚修改这个会不会有什么副作用，若使用 Vercel 或 Netlify 部署，请自己考虑要不要把这个修改同步到远程仓库
+
+### 拓展
 
 **拓展页面太长，我就把它分出去了：**[**Urara 拓展插件**](/post/urara-intro/extra/)
 
-### 部署
+## 部署
 
 Urara 现在拥有一键预构建网页的 [GitHub Actions](https://github.com/features/actions) 脚本，这部分的使用教程过段时间我会更新到官方文档里面去，~~就不在这里写了~~ 官方文档写不了太详细和可能会遇到的坑，还是在这写一份吧
 
-#### 使用 GitHub Pages 部署
+### 使用 GitHub Pages 部署
 
 GitHub 的免费网页托管服务，可以存放静态网页，例如 `.html` 文件，也可以在上面存放 `.md` 文件，会自动转换为可访问的网页
 
-**需要注意：GitHub Pages 在私有仓库开启需要订阅 GitHub Pro，如果不想开放博客后端请使用 Vercel 或 Netlifly 部署**
+**需要注意：GitHub Pages 在私有仓库开启需要订阅 GitHub Pro，如果不想开放博客后端请使用 Vercel 或 Netlify 部署**
 
 同上，只要你在仓库内启用了 GitHub Actions 且没有多余的分支时（一个存放博客的分支，另一个由 Actions 自动生成的 `gh-pages` 分支），每次进行提交时，Actions 都会对仓库进行一次预构建，然后推送到 `gh—pages` 分支<sup>存在即覆盖，没有就生成</sup>，如果没有自动运行，那就自己进到 **Actions** 选项卡选择 **Deploy to GitHub Pages**，再选择你博客的分支运行就行
 
@@ -480,7 +504,7 @@ GitHub 的免费网页托管服务，可以存放静态网页，例如 `.html` �
 
 如果不想使用这个功能，可以把 `.github/workflows` 这个文件夹删掉，或在 **Actions** 选项卡里点击 **Deploy to GitHub Pages**，再到右上角点击 **Disable workflow** 来将其禁用掉
 
-#### 使用 Vercel 部署
+### 使用 Vercel 部署
 
 免费又好用的 Serverless 平台，用来托管博客再好不过了，免费用户每个月 100GB 流量限制，对于静态博客来说应该很充裕了吧，可选择托管服务器区域，选个亚洲部分国内速度也不错
 
@@ -501,3 +525,9 @@ Vercel 可以使用 GitHub 直接注册帐号并登录，也有其他注册的�
 至于下面的 **Environment Variables** 不用填，留空就行，然后点击 **Deploy** 按钮，等待下方的部署过程，成功后会有烟花庆祝 🎉
 
 部署失败的话请看 log 找问题，如果在本地 `pnpm dev` 可以正常访问，但在 Vercel 上却不能部署的话，试试在本地运行 `pnpm build` 看看哪里报了错
+
+------
+
+接下来也就没有其他要修改的地方了，那么这篇文章就正式结束了吧，当然如果后续发现错漏时，依然是会来修正的
+
+拜拜 👋
