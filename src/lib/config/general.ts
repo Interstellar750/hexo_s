@@ -173,8 +173,25 @@ export const header: HeaderConfig = {
       link: '/friends'
     },
 	  {
-	    text: '📁',
-	    link: 'https://t5d.trle5.xyz'
+	    text: '🧰',
+	    children: [
+        {
+          text: '📁 Hubert\u0027s Box',
+          link: 'https://t5d.trle5.xyz/'
+        },
+        {
+          text: '🎼 Lrc-maker',
+          link: 'https://lrc-maker.trle5.xyz/'
+        },
+        {
+          text: '✍ Memos',
+          link: 'https://memos.trle5.xyz/'
+        },
+        {
+          text: '☕ Gitea',
+          link: 'https://trle5.dev/'
+        }
+      ]
 	  }
   ]
 }
