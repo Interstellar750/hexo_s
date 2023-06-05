@@ -1,24 +1,22 @@
 // sveltekit config type
 import type { Config } from '@sveltejs/kit'
 // svelte adapter
-import adapterAuto from '@sveltejs/adapter-auto'
-import adapterNode from '@sveltejs/adapter-node'
+import adapterVercel from '@sveltejs/adapter-vercel'
+import adapterNetlify from '@sveltejs/adapter-netlify'
 import adapterStatic from '@sveltejs/adapter-static'
 // svelte preprocessor
 import { mdsvex } from 'mdsvex'
 import mdsvexConfig from './mdsvex.config.js'
-import preprocess from 'svelte-preprocess'
+import { vitePreprocess } from '@sveltejs/kit/vite'
 
-const defineConfig = (config: Config) => config
-
-export default defineConfig({
+export default {
   extensions: ['.svelte', ...(mdsvexConfig.extensions as string[])],
-  preprocess: [mdsvex(mdsvexConfig), preprocess()],
+  preprocess: [mdsvex(mdsvexConfig), vitePreprocess()],
   kit: {
-    adapter: Object.keys(process.env).some(key => ['VERCEL', 'CF_PAGES', 'NETLIFY'].includes(key))
-      ? adapterAuto()
-      : process.env.ADAPTER === 'node'
-      ? adapterNode({ out: 'build' })
+    adapter: Object.keys(process.env).some(key => key === 'VERCEL')
+      ? adapterVercel()
+      : Object.keys(process.env).some(key => key === 'NETLIFY')
+      ? adapterNetlify()
       : adapterStatic({
           pages: 'build',
           assets: 'build',
@@ -27,6 +25,11 @@ export default defineConfig({
     prerender: {
       handleMissingId: 'warn'
     },
-    csp: { mode: 'auto' }
+    csp: {
+      mode: 'auto',
+      directives: {
+        'style-src': ['self', 'unsafe-inline', 'https://giscus.app']
+      }
+    }
   }
-})
+} as Config
