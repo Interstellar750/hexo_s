@@ -107,6 +107,15 @@ export const friends: Friend[] = [
     social: 'i-simple-icons-telegram',
     avatar: 'https://avatars.githubusercontent.com/u/120037547'
   },
+  {
+      id: 'zhishixiang',
+      rel: 'friend',
+      title: '西行妖',
+      name: '☭IcyCoffee4513',
+      link: 'https://my.toho.red/',
+      descr: '人生五十年，如梦亦如幻',
+      avatar: 'https://avatars.githubusercontent.com/u/59593524'
+  },
   /*  {
       id: '',
       rel: 'friend',
