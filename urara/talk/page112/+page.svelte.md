@@ -31,7 +31,7 @@ summary: '又是一年，今年做了什么呢'
 
 <big><b>架构</b></big>
 
-博客架构从 [**Hexo**](https://github.com/hexojs/hexo) 换到 [**Urara**](https://github.com/importantimport/urara) 的内容在 [**建站历程#切换至-urara**](/about/history/#切换至-urara) 也有说，现在回想，换到 Urara 本质上还是因为懒<sup>虽说配置也有些麻烦</sup>，它集成了许多功能，例如评论和当时我琢磨很久的 RSS 订阅问题，这种插件要我去自己找可能更费劲
+博客架构从 [**Hexo**](https://github.com/hexojs/hexo) 换到 [**Urara**](https://github.com/importantimport/urara) 的内容在 [**建站历程**](/about/history/) 也有说，现在回想，换到 Urara 本质上还是因为懒<sup>虽说配置也有些麻烦</sup>，它集成了许多功能，例如评论和当时我琢磨很久的 RSS 订阅问题，这种插件要我去自己找可能更费劲
 
 Urara 吸引我的其实还有设计，切换页面有动画、组件颜色跟随主题颜色等这些功能我很喜欢，以及简洁的设计||和有点劝退的配置环节||，在下面放个项目卡片，这个是 Urara 的插件
 
