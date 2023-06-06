@@ -36,7 +36,7 @@
 - [**Actions**](https://urara-docs.netlify.app/advanced/extension.html#action-buttons) | 未修改
 - [**Profile Card**](https://urara-docs.netlify.app/advanced/extension.html#profile-card) | 未修改
 - [**GitHub Card**](https://github.com/kwaa/blog/blob/main/src/lib/components/extra/github.svelte) | 未修改
-- [**Friends**](https://urara-docs.netlify.app/advanced/extension.html#friends) | 添加了社交平台图标
+- [**Friends**](https://urara-docs.netlify.app/advanced/extension.html#friends) | 添加了社交平台或自定义图标
 
 来自 [**jiwaszki/jiwaszki.github.io**](https://github.com/jiwaszki/jiwaszki.github.io)
 

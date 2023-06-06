@@ -6,7 +6,8 @@ export interface FriendOld {
   html?: string // HTML
   title?: string // 标题
   descr?: string // 描述
-  social?: string // 社交软件图标
+  social?: string // 社交软件图标类名
+  social_img?: string // 社交软件图片
   avatar?: string // 头像
   name?: string // backwards compatibility
 }
@@ -20,7 +21,8 @@ export type Friend = {
   name?: string // 人名
   avatar?: string // 头像
   descr?: string // 描述
-  social?: string // 社交软件图标
+  social?: string // 社交软件图标类名
+  social_img?: string // 社交软件图片
   class?: {
     avatar?: string // 头像类名
     img?: string // 图片类名
@@ -112,6 +114,8 @@ export const friends: Friend[] = [
       name: '',
       link: '',
       descr: '',
+      social: '',
+      social_img: '',
       avatar: ''
     } */
 ]
