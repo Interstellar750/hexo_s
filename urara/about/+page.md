@@ -1,36 +1,36 @@
 ---
 title: '欢迎参观'
 created: 2022-03-01
-updated: 2023-03-05
+updated: 2023-08-22
 flags:
   - unlisted
 ---
 
 ## 自我介绍
 
-**这里是 Hubert，先自我介绍吧**
+<big><b>这里是 Hubert，先自我介绍吧</b></big>
 
-普通人类，年龄为 17 岁，姑且还是个学生，喜欢独处
+普通人类，喜欢独处
 
 交际能力挺差，有很多类型的朋友，应该挺友善，大部分时间很闲
 
 文笔挺差，英语水平很拉
 
-**会些什么**
+<big><b>会些什么</b></big>
 
-**C 语言** 目前是有点懒了，这个进度不知道多久能学完
+**C 语言** 说来惭愧，学习用的仓库最后一次提交已经停在二月，还能算会的程度吗...
 
-**Linux** 较为差劲，有时也会犯低级错误
+**Linux** 略有提升？
 
 其他日常能用到的基本都会，但不常用就忘了
 
-**兴趣爱好**
+<big><b>兴趣爱好</b></big>
 
 日常消遣方式是在 Telegram 上聊天与刷频道，其次就是玩游戏
 
 喜欢瞎折腾，虽然最后都能成，但也得折腾好久，哪方面都一样
 
-有空会看番||或画画||，平均追完一部番似乎得半年...
+近期在重拾兴趣，可能会把画画捡一捡？
 
 ### 联系方式
 
@@ -48,11 +48,11 @@ flags:
 
 **Twitter:** [@interstellar750](https://twitter.com/interstellar750) 请谨慎关注，可能会有 NSFW 内容
 
-**Mastodon:** [trle5@kwaa.moe](https://kwaa.moe/@trle5) 在 [kwaa](https://kwaa.moe/@kwa) 大佬的实例上注册的
+**Fediverse:** [trle5@hyp3r.link](https://social.hyp3r.link/@trle5) 在 [kwaa](https://social.hyp3r.link/@kwa) 大佬的实例上注册的，近期有迁移
 
 **GitHub:** [Hubert Chen](https://github.com/interstellar750) (好像并不能联系到人...)
 
-**Gitea:** [Hubert Chen](https://trle5.dev/trle5) 自己在 VPS 上用 docker 跑了个 Gitea，有时候 SSL 证书会抽风
+**Gitea:** [Hubert Chen](https://trle5.dev/trle5) 自己在 VPS 上用 docker 跑了个 Gitea
 
 #### GPG 公钥
 
@@ -90,7 +90,7 @@ ssb>  ed25519/7043720D3C7D7718 2023-01-19 [A] (认证)
 
 #### 玩游戏
 
-|| 不过也没什么可玩的了... ||
+近期真正闲下来，玩了不少游戏
 
 **Steam:** [interstellar](https://steamcommunity.com/id/interstellar750)
 
@@ -118,33 +118,33 @@ ssb>  ed25519/7043720D3C7D7718 2023-01-19 [A] (认证)
 
 #### 硬件
 
-**手机:**  [iPhone SE 2020](https://zh.m.wikipedia.org/zh-hans/IPhone_SE_(%E7%AC%AC%E4%BA%8C%E4%BB%A3))
+**手机:**  [iPhone SE 2020](https://zh.m.wikipedia.org/zh-hans/IPhone_SE_(%E7%AC%AC%E4%BA%8C%E4%BB%A3)) A13 / 3GB / 64GB 
 
-**笔记本电脑:** [Pixelbook Go](https://store.google.com/us/product/pixelbook_go): i5-8200Y / 16GB LPDDR3 / 128GB eMMC
+**笔记本电脑:** [Pixelbook Go](https://store.google.com/us/product/pixelbook_go) i5-8200Y / 16GB LPDDR3 / 128GB eMMC
 
 **台式电脑:** [Intel i5-4460 / HD 4600](https://www.intel.com/content/www/us/en/products/sku/80817/intel-core-i54460-processor-6m-cache-up-to-3-40-ghz/specifications.html) & [NVIDIA Tesla P4](https://www.nvidia.cn/content/dam/en-zz/zh_cn/Solutions/deep-learning/deep-learning-solutions/inference-platform/hpc/222754_Tesla_P4_Datasheet_nvidia-hr-cn.pdf) / 8GB DDR3 / 240GB SATA SSD x 3
 
+**开发板:** [Orange Pi Zero2](http://www.orangepi.cn/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-Zero-2.html) H616 / 1GB DDR3 / 64GB Micro SD
+
 **其他设备**
 
-**120GB mSATA 移动硬盘** 挺不错，但感觉有点不稳定
+**120GB mSATA 移动硬盘** 日常当备份盘用
 
 **64GB** [**Kingston DataTraveler Exodia**](https://www.kingston.com/cn/usb-flash-drives/datatraveler-exodia-usb-3-2-usb-flash-drive) 好看不好用，连续读写速度大致 20 MB/s （不炸就算成功）
 
-**高漫** [**M5 数位板**](https://www.gaomon.cn/Pen_Tablet/M5.html) 画画不怎么样的我感觉还行
+**高漫** [**M5 数位板**](https://www.gaomon.cn/Pen_Tablet/M5.html) 现在是常年吃灰
 
 #### 操作系统
 
 [**Windows 10**](https://www.microsoft.com/zh-cn/windows/get-windows-10) LTSC 2021
 
-[**Fyde OS**](https://fydeos.io/download/) FydeOS for PC 15.0 (台式机的第二个系统)
+[**Chrome OS**](https://www.google.com/chromebook/chrome-os/) 115.0.5790.160 stable
 
-[**Chrome OS**](https://www.google.com/chromebook/chrome-os/) 111.0.5563.54 beta
-
-[**Debian**](https://www.debian.org/) bullseye | kernel 5.15.89 (Chrome OS 的虚拟机)
+[**Debian**](https://www.debian.org/) bullseye | kernel 5.15.112 (Chrome OS 的虚拟机)
 
 [**Android**](https://www.android.com/) 11 (Chrome OS) 有生之年
 
-[**iPhone OS**](https://www.apple.com/ios/) 14.4.2 (iPhone SE 2022)
+[**iPhone OS**](https://www.apple.com/ios/) 17.0 beta 6 (iPhone SE 2022)
 
 ## 关于本站
 
@@ -153,6 +153,8 @@ ssb>  ed25519/7043720D3C7D7718 2023-01-19 [A] (认证)
 ### 博客后端
 
 建立初期使用 [**Hexo**](https://github.com/hexojs/hexo)，使用过 [**Chic**](https://github.com/Siricee/hexo-theme-Chic) 主题，目前基于 [**Urara**](https://github.com/importantimport/urara)，后面估计也懒得换了
+
+鉴于博客放图片都被刷流量，后面可能会基于 [**Lonor/site**](https://github.com/Lonor/site) 开个镜像站，图片尽量使用矢量图替代，这个模板能禁用 JavaScript 不丢失网页布局，但模板并没有像 Urara 这样白模化，估计有点费劲
 
 Urara 有不少基于 [**Daisy UI**](https://github.com/saadeghi/daisyui) 的主题，可以在右上角进行切换，挑一个喜欢的吧
 

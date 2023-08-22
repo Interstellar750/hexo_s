@@ -1,7 +1,7 @@
 ---
 title: '待办事项'
 created: 2022-11-23
-updated: 2023-02-08
+updated: 2023-07-30
 summary: '有时候也得记一下自己要干嘛'
 flags:
   - unlisted
@@ -33,6 +33,9 @@ flags:
 </details>
 
 - 补上一篇关于 ssh 设定的小教程
+- 以 docker 为平台搭建自部署服务
+  - 写了大半，由于服务器被打，要考虑一下防 IP 和端口泄露问题
+- 今年上半年的近况
 
 ### 需要修改 / 补充的文章
 
@@ -74,7 +77,8 @@ flags:
 <details>
   <summary><strike><b>Webmentions 似乎用不了，暂时搞不懂是什么原因</b></strike></summary>
 
-  - 结果是用于匿名评论的 [**comment parade**](https://commentpara.de/) 与 **sveltejs/kit** 的 `^1.0.11` 版本不兼容，降到 `1.0.0-next.544` 版本就正常了
+  - ~~结果是用于匿名评论的 [**comment parade**](https://commentpara.de/) 与 **sveltejs/kit** 的 `^1.0.11` 版本不兼容，降到 `1.0.0-next.544` 版本就正常了~~
+  - 跟着上游更新了依赖，估计又不能用了
 
 </details>
 
