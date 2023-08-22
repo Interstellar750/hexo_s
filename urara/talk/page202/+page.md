@@ -1,7 +1,7 @@
 ---
 title: '年间'
 created: 2023-02-09
-updated: 2023-02-24
+updated: 2023-07-30
 image: /talk/page202/square.webp
 tags:
    - 闲聊
@@ -85,7 +85,11 @@ summary: '换句话说就是寒假期间'
 
 同样，LTSC 2021 有个众为人知的输入法 bug，它会导致输入法缺失一个依赖库，反复唤醒 Windows Update 来尝试安装这个拓展，结果就是会导致 wsappx 进程大量占用 CPU 与内存。
 
-虽然听说这个 bug 已经被更新修复了，但去管 Windows Update 的人可是少之又少，我从 [**美樂地**](https://meledee.com/) 的[**博客文章**](https://meledee.com/2021/12/3959.html) 中找到了解决方法，只需要去下载 [**VCLibs**](https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/cpp/libraries/c-runtime-packages-desktop-bridge) 选择对应的处理器架构进行安装即可
+虽然听说这个 bug 已经被更新修复了，但去管 Windows Update 的人可是少之又少，我从 [**美樂地**](https://meledee.com/) 的[**博客文章**](https://meledee.com/2021/12/3959.html) 中找到了解决方法，~~只需要去下载 [**VCLibs**](https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/cpp/libraries/c-runtime-packages-desktop-bridge) 选择对应的处理器架构进行安装即可~~
+
+划掉的链接有错误，需要的并不是上面链接里的 VCLibs，需要的是下方添加商店 GitHub 仓库里的安装程序：[**x86**](https://github.com/kkkgo/LTSC-Add-MicrosoftStore/blob/master/Microsoft.VCLibs.140.00_14.0.26706.0_x86__8wekyb3d8bbwe.Appx) [**x64**](https://github.com/kkkgo/LTSC-Add-MicrosoftStore/blob/master/Microsoft.VCLibs.140.00_14.0.26706.0_x64__8wekyb3d8bbwe.Appx)
+
+但好像只安装 VCLibs 并不能解决这个占用资源的 bug，如果安装后 bug 还在，就要考虑要不要直接装商店了
 
 如果有为 LTSC [**添加商店**](https://github.com/kkkgo/LTSC-Add-MicrosoftStore)，则可以直接双击安装，否则就需要手动在 PowerShell 管理员模式下运行安装命令：
 
@@ -125,7 +129,7 @@ Add-AppxPackage -Path "appx包路径"
 | 物理分数 |          |            | 6331        |
 | 综合得分 |          |            | 5192        |
 
-为什么不直接贴 3DMark 自带的链接？因为当时根据 [**几簟生凉**](https://www.jianshu.com/u/0a32fce0aadf) 的 [**Tesla P4 玩游戏**](https://www.jianshu.com/p/68bf40eb9b64) 文章安装的 [**GRID 驱动**](https://cloud.google.com/compute/docs/gpus/grid-drivers-table?hl=zh-cn#windows_drivers) 会导致一些信息被修改，3D Mark 会识别失败，就会被隐藏，无法公开访问
+为什么不直接贴 3DMark 自带的链接？因为当时根据 [**几簟生凉**](https://www.jianshu.com/u/0a32fce0aadf) 的 [**Tesla P4 玩游戏**](https://www.jianshu.com/p/68bf40eb9b64) 文章安装的 [**GRID 驱动**](https://cloud.google.com/compute/docs/gpus/grid-drivers-table?hl=zh-cn#windows_drivers) 会导致一些信息被修改，3D Mark 会识别失败，评分就会被隐藏，无法公开访问
 
 ## 打游戏
 
