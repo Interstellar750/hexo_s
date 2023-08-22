@@ -1,7 +1,7 @@
 ---
 title: '隐私声明'
 created: 2022-12-27
-updated: 2023-02-04
+updated: 2023-08-22
 image: /about/privacy/visibility_off.webp
 flags:
   - unlisted
@@ -20,7 +20,7 @@ toc: false
 
 ## Vercel 平台
 
-我在 Vercel 平台为本站开启了 [Audiences](https://vercel.com/docs/concepts/analytics/audiences/)，这是一项统计功能，最长可以记录三个月的数据，因此我可以通过 **Audiences** 得知：
+我在 Vercel 平台为本站开启了 [Web Analytics](https://vercel.com/docs/analytics)，这是一项统计功能，最长可以查看 30 天的数据，因此我可以通过 **Web Analytics** 得知：
 
 - **访客数据**
   - 来自哪个国家
@@ -60,13 +60,12 @@ Cloudflare 为域名托管者提供了免费的流量分析，最长可以记录
 
 ### 数据关联
 
-Vercel 的 Audiences 功能现可对访客数据和浏览数据进行过滤查看，目前可以**同时启用以下所有过滤方式**：
+Vercel 的 Web Analytics 功能现可对访客数据和浏览数据进行过滤查看，目前可以**同时启用以下所有过滤方式**：
 
 - 时间（必选项）
   - 24 小时（精确到每小时）
   - 7 天
   - 30 天
-  - 3 个月
 - 在时间范围内：
   - 页面
     - 被访问过的页面
@@ -94,7 +93,7 @@ Vercel 的 Audiences 功能现可对访客数据和浏览数据进行过滤查�
 
 </details>
 
-**除以上列出的信息外，我获取不到也不会去获取您的其他信息，对于 Vercel 的 Audiences 功能，若您不想被统计到其中，您可以使用** [**Ublock Origin**](https://ublockorigin.com/) **或类似拥有脚本屏蔽功能的软件对** `https://trle5.xyz/_vercel/insights/script.js` **脚本进行屏蔽，而对于 Cloudflare 的流量分析，我暂未找到关闭的方法**
+**除以上列出的信息外，我获取不到也不会去获取您的其他信息，对于 Vercel 的 Web Analytics 功能，若您不想被统计到其中，您可以使用** [**Ublock Origin**](https://ublockorigin.com/) **或类似拥有脚本屏蔽功能的软件对** `https://trle5.xyz/_vercel/insights/script.js` **脚本进行屏蔽，而对于 Cloudflare 的流量分析，我暂未找到关闭的方法**
 
 ## 关于统计数据
 
