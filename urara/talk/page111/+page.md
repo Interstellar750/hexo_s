@@ -104,7 +104,7 @@ esp8266 这块开发板还是在三月初看网上 WIFI 杀手的视频买的，
 
 手机在这段时间内换的可多了，从入学我爸给钱我买的 [**s10e**](https://baike.baidu.com/item/三星Galaxy%20S10e/23298784)，再到 s10e 刷 [**Lineage OS**](https://lineageos.org/) 导致没信号又求我爸给钱买了台港版的 [**x10m2**](https://www.sony-asia.com/electronics/smartphones/xperia-10m2)，虽然这都已经是去年的事了
 
-后面在圣诞节的时候 [**Sailfish OS**](https://sailfishos.org/) 开启了买一送一活动，差不多等于打半价，于是我又与一位 [Jolla-Sailfish OS 中文交流群] 的网友合伙买了 Sailfish OS 的安卓支持，折腾一段时间后发现可以日用，但是使用起来并不舒服，就又找了 [**Sjll**](https://forum.xda-developers.com/m/sjll.8321130/) 的 [**Unofficial Lineages OS**](https://forum.xda-developers.com/t/rom-unofficial-lineageos-18-1-for-xperia-10-ii-gcam-performance.4219081/) 刷着用了，虽说后面索尼也给这台机子推送了 Android 12 固件，但依然改变不了索尼低端机子难用的事实 😥
+后面在圣诞节的时候 [**Sailfish OS**](https://sailfishos.org/) 开启了买一送一活动，差不多等于打半价，于是我又与一位 [Jolla-Sailfish OS 中文交流群](https://t.me/jollacn) 的网友合伙买了 Sailfish OS 的安卓支持，折腾一段时间后发现可以日用，但是使用起来并不舒服，就又找了 [**Sjll**](https://forum.xda-developers.com/m/sjll.8321130/) 的 [**Unofficial Lineages OS**](https://forum.xda-developers.com/t/rom-unofficial-lineageos-18-1-for-xperia-10-ii-gcam-performance.4219081/) 刷着用了，虽说后面索尼也给这台机子推送了 Android 12 固件，但依然改变不了索尼低端机子难用的事实 😥
 
 后面 x10m2 就直接被我挂咸鱼了，不过等了许久并没有人接盘，但有一位日版 Xperia 1 卖家有意向与我换机，想了想就换了，665 换 855 不亏
 
@@ -124,7 +124,7 @@ esp8266 这块开发板还是在三月初看网上 WIFI 杀手的视频买的，
 
 其次是操作习惯，很早就听说了 iOS 没有像安卓那样的侧滑返回手势，但整体来看还是 iOS 体验更好，安卓这边从左右侧都可以侧滑然后松开触发返回动作，但获得的反馈只有一个漂浮在边缘的小图标，当然也是有一些软件支持像 iOS 这种在滑动的同时还能看到前一个页面在显示什么的 UI 设计，不过已经不可以用少来形容了，而是几乎没有，而且还会跟返回手势冲突，就不一定能体验得到这个效果，Telegram、微信和酷安还保留此特性，其中只有 Telegram 效果最好，QQ 也有个类似的特性，具体效果跟系统那个手势差别不大...
 
-除开系统方面，机身重量和尺寸对我实际上没有什么影响，因为用过 150 克的 s10e，尺寸也差不多，尽管用过一段时间 Xpria 1 也没有影响，反而是有时候拿起 Xperia 1 的时候大拇指不由自主的把大拇指往下巴的方向靠 🫥
+除开系统方面，机身重量和尺寸对我实际上没有什么影响，因为用过 150 克的 s10e，尺寸也差不多，尽管用过一段时间 Xperia 1 也没有影响，反而是有时候拿起 Xperia 1 的时候大拇指不由自主的把大拇指往下巴的方向靠 🫥
 
 **还有就是 iOS 的推送优势与号召能力**
 

@@ -60,7 +60,7 @@ flags:
 <details>
   <summary><strike><b>给博客加个评论系统</b></strike></summary>
 
-  - ~~目前的想法是加个~~ [~~Giscus~~](https://giscus.app/zh-CN)~~，得自己摸索摸索~~
+  - ~~目前的想法是加个 [**Giscus**](https://giscus.app/zh-CN)，得自己摸索摸索~~
   - ~~还是有点登录问题~~
   - 已于 [284d74b](https://github.com/importantimport/urara/commit/1ad522ad6929293f33ed678a904c26b4642cb6aa) 被修复
 
