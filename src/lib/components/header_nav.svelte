@@ -24,15 +24,15 @@
           <a class:font-bold={link === path} href={link}>{text}</a>
         </li>
       {:else if children}
-        <li tabindex="0">
+        <li tabindex="0" class="dropdown dropdown-right">
           <span class:font-bold={children.some(({ link }) => link === path)} class="justify-between gap-1 max-w-[13rem]">
             {text}
             <span class="i-heroicons-solid-chevron-right mr-2" />
           </span>
-          <ul class="bg-base-100 text-base-content shadow-lg p-2">
+          <ul class="dropdown-content rounded-box bg-base-100 text-base-content shadow-lg p-2">
             {#each children as { text, link }}
               <li>
-                <a class:font-bold={link === path} href={link}>{text}</a>
+                <a class:font-bold={link === path} class="w-36" href={link}>{text}</a>
               </li>
             {/each}
           </ul>
@@ -55,16 +55,16 @@
           <a class="!rounded-btn" class:font-bold={link === path} href={link}>{text}</a>
         </li>
       {:else if children}
-        <li >
+        <li class="dropdown dropdown-hover">
         <span class:font-bold={children.some(({ link }) => link === path)} class="!rounded-btn gap-1">
           {text}
           <span class="i-heroicons-solid-chevron-down -mr-1" />
         </span>
         <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-          <ul tabindex="0" class="menu rounded-box bg-base-100 text-base-content shadow-lg p-2">
+          <ul tabindex="0" class="dropdown-content menu rounded-box bg-base-100 text-base-content shadow-lg p-2">
             {#each children as { text, link }}
               <li>
-                <a class:font-bold={link === path} href={link}>{text}</a>
+                <a class:font-bold={link === path} class="w-36" href={link}>{text}</a>
               </li>
             {/each}
           </ul>
