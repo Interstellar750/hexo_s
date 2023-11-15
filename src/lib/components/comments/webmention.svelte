@@ -162,7 +162,7 @@
   {/if}
   {#if config?.form === true}
     <form id="webmention-form" method="post" action="https://webmention.io/{config.username}/webmention">
-    <input type="hidden" name="target" value={site.protocol + site.domain + post.path} />
+      <input type="hidden" name="target" value={site.protocol + site.domain + post.path} />
       <div class="flex gap-2">
         <div class="flex-1">
           <input
@@ -173,17 +173,16 @@
             placeholder="在此处填入 Webmention 链接" />
         </div>
         <button class="btn btn-primary flex-none mt-auto" type="submit" id="webmention-submit">发送</button>
-          {#if config?.commentParade === true}
-            <a 
-              href="https://quill.p3k.io/?dontask=1&me=https://commentpara.de/&reply={encodeURI(
-                site.protocol + site.domain + post.path
-              )}">
-              <button class="btn btn-secondary flex-none mt-auto"
-                >
-                匿名评论
-              </button>
-            </a>
-          {/if}
+        {#if config?.commentParade === true}
+          <a
+            href="https://quill.p3k.io/?dontask=1&me=https://commentpara.de/&reply={encodeURI(
+              site.protocol + site.domain + post.path 
+            )}"
+            target="_self"
+            class="btn btn-secondary flex-none mt-auto">
+              匿名评论
+          </a>
+        {/if}
       </div>
     </form>
   {/if}
