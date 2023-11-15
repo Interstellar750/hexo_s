@@ -9,6 +9,7 @@ import { SvelteKitPWA } from '@vite-pwa/sveltekit'
 // postcss & tailwindcss
 import TailwindCSS from 'tailwindcss'
 import tailwindConfig from './tailwind.config'
+// @ts-expect-error ts(7016)
 import LightningCSS from 'postcss-lightningcss'
 
 export default defineConfig({
@@ -26,7 +27,7 @@ export default defineConfig({
   },
   plugins: [
     UnoCSS({
-      include: [/\.svelte$/, /\.md?$/, /\.ts$/],
+      content: { pipeline: { include: [/\.svelte$/, /\.md?$/, /\.ts$/] } },
       extractors: [extractorSvelte],
       presets: [
         presetTagify({
