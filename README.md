@@ -4,7 +4,7 @@
 
 评论功能由 [**Giscus**](https://github.com/giscus/giscus) 与 [**Webmentions**](https://indieweb.org/Webmention) 驱动
 
-在此感谢 [**Urara 的贡献者们**](https://github.com/importantimport/urara/graphs/contributors)，以及 [**Giscus 的贡献者们**](https://github.com/giscus/giscus/graphs/contributors)
+在此感谢 [**Urara 的贡献者们**](https://github.com/importantimport/urara/graphs/contributors)，以及 [**Giscus 的贡献者们**](https://github.com/giscus/giscus/graphs/contributors)，还有本项目 [**众多依赖项**](https://github.com/Interstellar750/hexo_s/network/dependencies) 的贡献者们
 
 ### 为什么项目名是 `hexo_s`？
 
