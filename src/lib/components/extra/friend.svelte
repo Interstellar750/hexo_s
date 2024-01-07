@@ -38,18 +38,13 @@
           <span class="opacity-50 text-right">{friend.title}</span>
         </div>
       </div>
-      {#if friend.social}
-        <div class="prose opacity-70 p-note"> {friend.descr ?? ''}
-          <img class="{friend.social} rounded-full w-6 float-right" alt=""/>
-        </div>
-      {:else if friend.social_img}
-        <div class="prose opacity-70 p-note"> {friend.descr ?? ''}
+      <div class="prose opacity-70 p-note"> {friend.descr ?? ''}
+        {#if friend.social}
+          <span class="{friend.social} w-6 float-right" alt=""/>
+        {:else if friend.social_img}
           <img class="rounded-full w-6 float-right" src="{friend.social_img}" alt=""/>
-        </div>
-      {:else}
-        <div class="prose opacity-70 p-note"> {friend.descr ?? ''}
-          </div>
-      {/if}
+        {/if}
+      </div>
     </div>
   </a>
 {/if}
