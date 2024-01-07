@@ -28,7 +28,7 @@ export const copyCode = () => {
         btn.textContent = copiedText
         setTimeout(() => {
             btn.textContent = copyText
-        }, 2000)
+        }, 3000)
         selection.removeRange(range)
     }
 
@@ -36,26 +36,20 @@ export const copyCode = () => {
         // add copy button
         const copyBtn: HTMLElement = document.createElement('button')
         copyBtn.textContent = copyText
-        copyBtn.classList.add('btn', 'btn-secondary', 'btn-xs', 'absolute', 'right-2', 'top-3', 'hidden')
+        copyBtn.classList.add('btn', 'btn-neutral', 'btn-xs', 'absolute', 'right-3', 'top-3', 'opacity-40', 'no-animation')
         block.prepend(copyBtn)
 
         block.addEventListener('mouseenter', () => {
-            copyBtn.classList.remove('hidden')
+            copyBtn.classList.remove('opacity-40')
         })
 
         block.addEventListener('mouseleave', () => {
-            copyBtn.classList.add('hidden')
+            copyBtn.classList.add('opacity-40')
         })
 
         copyBtn.addEventListener('click', e => {
-            copyBtn.classList.remove('btn-secondary')
-            copyBtn.classList.add('btn-success')
             e.preventDefault()
             copy(block, copyBtn)
-            setTimeout(() => {
-                copyBtn.classList.remove('btn-success')
-                copyBtn.classList.add('btn-secondary')
-            }, 1950)
         })
     })
 }

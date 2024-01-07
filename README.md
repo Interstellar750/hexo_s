@@ -44,6 +44,6 @@
 
 来自 [**Sevichecc/Urara-Blog**](https://github.com/Sevichecc/Urara-Blog)
 
-- [**copyCode**](https://github.com/Sevichecc/Urara-Blog/blob/main/src/lib/utils/copyCode.ts) | 修改了交互文本并添加了切换色
+- [**copyCode**](https://github.com/Sevichecc/Urara-Blog/blob/main/src/lib/utils/copyCode.ts) | 修改了交互文本和按钮样式
 
 此页面可能会有遗漏，若上方没有包含您的插件，我表示非常抱歉
