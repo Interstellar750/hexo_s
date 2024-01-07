@@ -42,12 +42,14 @@
       <a
       	rel="noopener external noreferrer"
         target="_blank"
-        class="tooltip hover:text-secondary"
-        data-tip="今年是何年"
-        href="https://time.is/">
-        <b>{footerConfig.since && footerConfig.since !== new Date().toJSON().substring(0, 4)
+        class:tooltip={footerConfig.since}
+        class="hover:text-secondary"
+        data-tip=
+          {footerConfig.since && footerConfig.since !== new Date().toJSON().substring(0, 4)
           ? `${footerConfig.since} - ${new Date().toJSON().substring(0, 4)}`
-          : new Date().toJSON().substring(0, 4)} </b>
+          : new Date().toJSON().substring(0, 4)}
+        href="/about/history" >
+        <b>{new Date().toJSON().substring(0, 4)}</b>
       </a>
       | 由
       <a

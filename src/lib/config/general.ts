@@ -210,7 +210,8 @@ export const footer: FooterConfig = {
       text: 'Source',
       link: 'https://github.com/interstellar750/hexo_s'
     }
-  ]
+  ],
+  since: '2022'
 }
 
 export const date: DateConfig = {
