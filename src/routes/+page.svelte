@@ -50,17 +50,17 @@
   <div
     in:fly={{ x: -25, duration: 300, delay: 500 }}
     out:fly={{ x: -25, duration: 300 }}
-    class="flex-1 w-full max-w-screen-md xl:order-last mx-auto xl:ml-0 xl:mr-8 xl:max-w-md">
+    class="flex-1 w-full max-w-screen-md xl:order-last mx-auto xl:ml-0 xl:mr-8 xl:max-w-md mask-r">
     {#if allTags && Object.keys(allTags).length > 0}
       <div
-        class="flex xl:flex-wrap gap-2 overflow-x-auto xl:overflow-x-hidden overflow-y-hidden max-h-24 my-auto xl:max-h-fit max-w-fit xl:max-w-full pl-8 md:px-0 xl:pl-8 xl:pt-8">
+        class="flex xl:flex-wrap gap-2 overflow-x-auto xl:overflow-x-hidden overflow-y-hidden max-h-24 my-auto mb-1 xl:max-h-fit max-w-fit xl:max-w-full px-6 md:px-0 xl:px-8 xl:pt-8">
         {#each allTags as tag}
           <button
             id={tag}
             on:click={() => (tags.includes(tag) ? (tags = tags.filter(tagName => tagName != tag)) : (tags = [...tags, tag]))}
             class:!btn-secondary={tags.includes(tag)}
             class:shadow-lg={tags.includes(tag)}
-            class="btn btn-sm btn-ghost normal-case border-dotted border-base-content/20 border-2 mt-4 mb-8 xl:m-0">
+            class="btn btn-sm btn-ghost normal-case border-dotted border-base-content/20 border-2 mt-4 mb-4 xl:m-0">
             #{tag}
           </button>
         {/each}
