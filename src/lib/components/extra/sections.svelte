@@ -57,7 +57,7 @@
     <div
       in:fly={{ x: -25, duration: 300, delay: 500 }}
       out:fly={{ x: -25, duration: 300 }}
-      class="flex-1 w-full max-w-screen-md xl:order-last mx-auto xl:ml-0 xl:mr-8 xl:max-w-md mask-r">
+      class="flex-1 w-full max-w-screen-md xl:order-last mx-auto xl:ml-0 xl:mr-8 xl:max-w-md mask-r md-mask-r">
       <!-- TODO: add box with "{section.id} related tags:" -->
       {#if allTags && Object.keys(allTags).length > 0}
         <div
