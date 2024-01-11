@@ -61,7 +61,7 @@
       <!-- TODO: add box with "{section.id} related tags:" -->
       {#if allTags && Object.keys(allTags).length > 0}
         <div
-          class="flex xl:flex-wrap gap-2 overflow-x-auto xl:overflow-x-hidden overflow-y-hidden max-h-24 my-auto mb-1 xl:max-h-fit max-w-fit xl:max-w-full px-6 md:px-0 xl:px-8 xl:pt-8">
+          class="flex xl:flex-wrap gap-2 overflow-x-auto xl:overflow-x-hidden overflow-y-hidden max-h-24 my-auto mb-1 xl:max-h-fit max-w-fit xl:max-w-full px-6 md:px-0 xl:pl-8 xl:pt-8">
           {#each allTags as tag}
             <button
               id={tag}
