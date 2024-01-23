@@ -44,13 +44,13 @@
   <div
     in:fly={{ x: 25, duration: 300, delay: 500 }}
     out:fly={{ x: 25, duration: 300 }}
-    class="flex-1 w-full max-w-screen-md order-first mx-auto xl:mr-0 xl:ml-8 xl:max-w-md">
+    class="flex-1 w-full max-w-screen-md custom-1728-max-w-screen-lg order-first mx-auto xl:mr-0 xl:ml-8 xl:max-w-md">
     <Profile />
   </div>
   <div
     in:fly={{ x: -25, duration: 300, delay: 500 }}
     out:fly={{ x: -25, duration: 300 }}
-    class="flex-1 w-full max-w-screen-md xl:order-last mx-auto xl:ml-0 xl:mr-8 xl:max-w-md mask-r md-mask-r">
+    class="flex-1 w-full max-w-screen-md custom-1728-max-w-screen-lg xl:order-last mx-auto xl:ml-0 xl:mr-8 xl:max-w-md mask-r md-mask-r">
     {#if allTags && Object.keys(allTags).length > 0}
       <div
         class="flex xl:flex-wrap gap-2 overflow-x-auto xl:overflow-x-hidden overflow-y-hidden max-h-24 my-auto mb-1 xl:max-h-fit max-w-fit xl:max-w-full px-6 md:px-0 xl:pl-8 xl:pt-8">
@@ -67,7 +67,7 @@
       </div>
     {/if}
   </div>
-  <div class="flex-none w-full max-w-screen-md mx-auto xl:mx-0">
+  <div class="flex-none w-full max-w-screen-md custom-1728-max-w-screen-lg mx-auto xl:mx-0">
     {#key posts}
       <!-- {:else} is not used because there is a problem with the transition -->
       {#if loaded && posts.length === 0}

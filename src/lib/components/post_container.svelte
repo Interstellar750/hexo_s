@@ -37,7 +37,7 @@
       </div>
     {/if}
   </div>
-  <div class="flex-none w-full max-w-screen-md mx-auto xl:mx-0">
+  <div class="flex-none w-full max-w-screen-md custom-1728-max-w-screen-lg mx-auto xl:mx-0">
     <Card {post}>
       <slot />
     </Card>
