@@ -1,7 +1,7 @@
 ---
 title: '年间'
 created: 2023-02-09
-updated: 2023-07-30
+updated: 2024-01-23
 image: /talk/page202/square.webp
 tags:
    - 闲聊
@@ -85,6 +85,9 @@ summary: '换句话说就是寒假期间'
 
 同样，LTSC 2021 有个众为人知的输入法 bug，它会导致输入法缺失一个依赖库，反复唤醒 Windows Update 来尝试安装这个拓展，结果就是会导致 wsappx 进程大量占用 CPU 与内存。
 
+<details>
+  <summary><b>之前说的方法</b></summary>
+
 虽然听说这个 bug 已经被更新修复了，但去管 Windows Update 的人可是少之又少，我从 [**美樂地**](https://meledee.com/) 的[**博客文章**](https://meledee.com/2021/12/3959.html) 中找到了解决方法，~~只需要去下载 [**VCLibs**](https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/cpp/libraries/c-runtime-packages-desktop-bridge) 选择对应的处理器架构进行安装即可~~
 
 划掉的链接有错误，需要的并不是上面链接里的 VCLibs，需要的是下方添加商店 GitHub 仓库里的安装程序：[**x86**](https://github.com/kkkgo/LTSC-Add-MicrosoftStore/blob/master/Microsoft.VCLibs.140.00_14.0.26706.0_x86__8wekyb3d8bbwe.Appx) [**x64**](https://github.com/kkkgo/LTSC-Add-MicrosoftStore/blob/master/Microsoft.VCLibs.140.00_14.0.26706.0_x64__8wekyb3d8bbwe.Appx)
@@ -96,7 +99,12 @@ summary: '换句话说就是寒假期间'
 ```cmd
 Add-AppxPackage -Path "appx包路径"
 ```
+
 安装后可能需要重启才能生效，过了一段时间才写的文章只能记起这么一部分了
+
+</details>
+
+在今年朋友找我配电脑的时候，要给他装系统时我就安装了 Windows 10 LTSC 2021，||其实就是再下镜像要等。||但我在折腾了大半个晚上后，发现上面这些方法都不管用，想要解决这个输入法占用问题，唯一的办法可能就只有联网获取 Windows Update 了。在等待它安装的时候可能还会资源占用过高甚至窗口无响应，请耐心等待
 
 ## 升级硬件
 
