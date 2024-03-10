@@ -55,7 +55,7 @@
           <a class="!rounded-btn" class:font-bold={link === path} href={link}>{text}</a>
         </li>
       {:else if children}
-        <li class="dropdown dropdown-hover">
+        <li class="dropdown dropdown-hover dropdown-end">
         <span class:font-bold={children.some(({ link }) => link === path)} class="!rounded-btn gap-1">
           {text}
           <span class="i-heroicons-solid-chevron-down -mr-1" />
