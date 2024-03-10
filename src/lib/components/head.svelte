@@ -9,7 +9,6 @@
 
 <svelte:head>
   <meta name="author" content={site.author?.name} />
-  <script defer src="/_vercel/insights/script.js"></script>
   {#if post}
     <link rel="canonical" href={site.protocol + site.domain + post.path} />
     {#if post.type === 'article'}
