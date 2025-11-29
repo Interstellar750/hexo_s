@@ -1,0 +1,124 @@
+---
+title: 关于我
+date: 2022-03-01
+updated: 2025-10-23
+category: about
+tags:
+  - 关于
+flags:
+  - hide_post
+  - show_in_category_and_tag
+  - show_in_rss_and_sitemap
+  - no_heading_anchor
+---
+
+**大家好啊，我是 Hubert，~~今天来点大家想看的东西啊~~**
+
+### 会些什么
+
+**Go 语言** 现在写了几个小项目，自我认为还可以
+
+**C 语言** 说实话已经很久没写过了
+
+**Linux** 没什么变化，会些日常用的命令就足够了
+
+### 兴趣爱好
+
+日常消遣方式是在 Telegram 上聊天与刷频道，其次就是玩游戏
+
+有时会画点画画，但还没到入门的阶段
+
+### 联系方式
+
+依然是没有国内的交流平台，不是很喜欢用，有联系需求就发邮件吧
+
+**Telegram:** [@trle5](https://t.me/trle5) / [@include011](https://t.me/include011)
+
+**Matrix:** [@trle5:matrix.org](https://matrix.to/#/@trle5:matrix.org) 不怎么活跃，但应该能收到消息
+
+**Email:** [01@trle5.xyz](mailto:01@trle5.xyz) 用的 Cloudflare 转发到 Gmail
+
+**Twitter:** [@interstellar750](https://twitter.com/interstellar750) 不是很喜欢发推文
+
+**Fediverse:** [trle5@hyp3r.link](https://social.hyp3r.link/@trle5) 在 [kwaa](https://social.hyp3r.link/@kwa) 大佬的实例上注册的，也是不怎么喜欢发文
+
+**GitHub:** [@interstellar750](https://github.com/interstellar750) (好像并不能联系到人...)
+
+**Gitea:** [@trle5](https://gitea.trle5.xyz/trle5) 自己在 VPS 上用 docker 跑了个 Gitea，已经运行三年了
+
+#### GPG 公钥
+
+<details no-indent>
+  <summary><big><code>AAC3 7641 0634 FF86</code></big></summary>
+
+```bash
+sec   rsa4096/AAC376410634FF86 2023-01-01 [SC] (签名 证明)
+      7456 A0AB 47EC E8BE 1AD0 89D9 AAC3 7641 0634 FF86
+uid   [ultimate]    Hubert Chen <01@trle5.xyz>
+ssb   rsa4096/B716CE1EAA7B8F00 2023-01-01 [E] (加密)
+ssb   rsa4096/B4ED58260C725C91 2023-01-06 [A] (认证)
+ssb   rsa4096/2935B4DE0D6F7720 2023-01-06 [SE] (签名 加密)
+```
+</details>
+
+<details no-indent>
+  <summary><big><code>8A2A 227E 222D CCDB</code></big></summary>
+
+```bash
+sec#  ed25519/8A2A227E222DCCDB 2023-01-18 [C] (证明)
+      F154 5A09 2296 673A 0C43 6BE0 8A2A 227E 222D CCDB
+uid   [ultimate]    Hubert Chen <01@trle5.xyz>
+ssb>  ed25519/74D8BCE883FDDEE2 2023-01-19 [S] (签名)
+ssb>  cv25519/FA47AF4129AA0BB1 2023-01-19 [E] (加密)
+ssb>  ed25519/7043720D3C7D7718 2023-01-19 [A] (认证)
+```
+</details>
+
+> 当你需要确认屏幕前的人为“我”时，你不需要任何理由即可向我索要以上方 GPG 密钥进行签名的消息，收到签名的消息时请务必验证消息的时效性，同时请确保验证消息中包含双方的信息以及需要的操作内容
+>
+> 若验证失败或以任何方式拒绝或推脱签名请求，请不要信任此时“我”的任何请求！
+
+获取公钥文件： [GitHub](https://github.com/Interstellar750.gpg) | [Hubert's Gitea](https://gitea.trle5.xyz/trle5.gpg) | [Hubert's Box](https://t5d.trle5.xyz/GPG/gpg_pub_keys_hubert.asc)
+
+目前主要用来给 Commit 签名的密钥为 `2935 B4DE 0D6F 7720`，暂未对其他 GPG 公钥进行证明
+
+#### 游戏平台
+**Steam:** [interstellar](https://steamcommunity.com/id/interstellar750) <br>
+**Xbox:** [interstellar771](https://account.xbox.com/zh-cn/profile?gamertag=interstellar771) <br>
+**Ubisoft:** [interstellar750](https://ubisoftconnect.com/zh-CN/profile/interstellar750) <br>
+**Minecraft ID:** [trle5](https://namemc.com/profile/trle5) <br>
+**EA ID:** `trle5` <br>
+
+#### 音乐
+**Spotify:** [Hubert Chen](https://open.spotify.com/user/31fuag5tpkvedxdfbkbt5zrygfgq) <br>
+**网易云音乐:** [trle5](https://music.163.com/#/user/home?id=1884310694) 不是很常用 <br>
+
+目前主要是用 Spotify，喜欢听的音乐类型比较杂
+
+### 设备
+
+#### 移动设备
+[iPhone 12](https://zh.m.wikipedia.org/wiki/IPhone_12) A14 / 4GB / 128GB <br>
+[iPhone SE 2](https://zh.m.wikipedia.org/zh-hans/IPhone_SE_(第二代)) A13 / 3GB / 64GB <br>
+[iPad mini 5](https://zh.m.wikipedia.org/zh-hans/IPad_mini_(第五代)) A12 / 3GB / 64GB <br>
+[Apple Watch S5](https://zh.m.wikipedia.org/zh-hans/Apple_Watch_Series_5) 44mm / 32GB <br>
+
+#### 硬件
+[i5-4460 / HD 4600](https://www.intel.com/content/www/us/en/products/sku/80817/intel-core-i54460-processor-6m-cache-up-to-3-40-ghz/specifications.html) & [Tesla P4](https://www.nvidia.cn/content/dam/en-zz/zh_cn/Solutions/deep-learning/deep-learning-solutions/inference-platform/hpc/222754_Tesla_P4_Datasheet_nvidia-hr-cn.pdf) / 8GB DDR3 / 240GB SATA SSD x 3 <br>
+[Orange Pi Zero2](http://www.orangepi.cn/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-Zero-2.html) H616 / 1GB DDR3 / 64GB Micro SD <br>
+
+#### 操作系统
+[Windows](https://www.microsoft.com/zh-cn/windows/get-windows-10) LTSC 2021 (21H2) <br>
+[Debian](https://www.debian.org/) bullseye | kernel 5.10.0 服务器用 <br>
+[iOS](https://www.apple.com/ios/) 15.6 (iPhone 12) 17.7 (iPhone SE 2) <br>
+[iPad OS](https://www.apple.com/ipados/) 17.3.1 (iPad mini 5) <br>
+
+### 关于本站
+
+想想也是得在这个页面写一点关于本站的信息
+
+#### 博客后端
+建立初期使用 [Hexo](https://github.com/hexojs/hexo)，使用过 [Chic](https://github.com/Siricee/hexo-theme-Chic) 主题，很长一段时间在使用 [Urara](https://github.com/importantimport/urara) 模板，现在用的是自己写的 [tplate](https://gitea.trle5.xyz/trle5/tplate)
+
+#### 评论系统
+目前支持基于 [GitHub Discussions](https://docs.github.com/zh/discussions) 的 [Giscus](https://github.com/) 以及基于 [webmention.io](https://webmention.io/) 的 [Webmention](https://indieweb.org/Webmention)，由于我换成了自己的博客模板，显示信息的部分就交给 [kwaa](https://github.com/kwaa) 开发的 [seia](https://github.com/importantimport/seia) 插件了

@@ -1,0 +1,198 @@
+Title:  tplate
+Author: Hubert Chen
+Desc:   Hubert's Blog based on tplate
+URL:    https://trle5.xyz
+SingleHTML: true
+HeadTag:
+  - <link rel="me" href="https://github.com/Interstellar750">
+  - <link rel="webmention" href="https://webmention.io/trle5.xyz/webmention">
+HeaderButtonsLeft:
+  - Text: Friends
+    URL: /friends
+  - Text: About
+    URL: /category/about
+HeaderButtonsRight:
+  - Text: Category
+    URL: /category
+  - Text: RSS
+    URL: /atom.xml
+    Blank: true
+FooterButtons:
+  - Text: Source
+    URL: https://github.com/Interstellar750/hexo_s
+    Blank: true
+  - Text: Privacy
+    URL: /about/privacy/
+  - Text: RSS
+    URL: /atom.xml
+    Blank: true
+Giscus:
+  Enable: true
+  Repo: interstellar750/hexo_s
+  RepoID: R_kgDOHTJG_w
+  Category: General
+  CategoryID: DIC_kwDOHTJG_84CS2Mz
+  Language: zh-CN
+  NoReactions: true
+  InputAtTop: true
+Seia:
+  Enable: true
+  ShowInputBox: true
+  WebmentionEndpoint: https://webmention.io/trle5.xyz/webmention
+Friends:
+  - Name: Katari
+    Avatar: /assets/friends_avatar/katari.webp
+    Link: https://katari_v.t.me
+  - Name: 摆烂
+    Title: 蒙娜荔坤
+    Desc: 就感觉到快，有催人跑的意思
+    Avatar: https://avatars.githubusercontent.com/u/84896599
+    Link: https://linger040831.github.io/
+  - Name: HANNARI
+    Title:
+    Desc: 江江，我是有栖！
+    Avatar: https://avatars.githubusercontent.com/u/53106606
+    Link: https://github.com/Twinkle-qwq
+  - Name: Kotaruboku
+    Title: 安の故乡
+    Desc: A student
+    Avatar: https://vistre.cn/usr/themes/handsome/assets/img/avatar.png
+    Link: https://vistre.cn/
+  - Name: 12d
+    Title:
+    Desc: 您在看胡伯特的网页
+    Avatar: /assets/friends_avatar/aeciane.webp
+    Link: https://t.me/Lanczos
+  - Name: iiii90909
+    Title:
+    Desc:
+    Avatar: /assets/friends_avatar/iiii90909.webp
+    Link: https://t.me/pass25
+  - Name: 那里有5块钱
+    Title: 0606
+    Desc: 想和你晚上一起看星星捏
+    Avatar: https://avatars.githubusercontent.com/u/120037547
+    Link: https://t.me/wdnmd23333
+  - Name: ☭IcyCoffee4513
+    Title: 西行妖
+    Desc: 人生五十年，如梦亦如幻
+    Avatar: https://avatars.githubusercontent.com/u/59593524
+    Link: https://my.toho.red/
+ExternalPosts:
+  - title: 这是一个测试页面
+    summary: 有点纪念意义就一直放在这里好了
+    image: https://urara.trle5.xyz/about/testagain/test.webp
+    url: https://urara.trle5.xyz/about/testagain/
+    date: 2022-01-26
+    updated: 2023-02-26
+    tags:
+      - 测试
+  - title: 搭建一个自己的博客
+    summary: 使用 Hexo 后端与 GitHub Pages 服务
+    image: https://urara.trle5.xyz/post/搭建一个自己的博客/banner.webp
+    url: https://urara.trle5.xyz/post/搭建一个自己的博客/
+    date: 2022-03-05
+    updated: 2022-12-21
+    category: post
+    tags:
+      - Hexo
+      - 技术
+      - 博客
+  - title: 闲谈杂聊
+    summary: 四月不知过的怎么样
+    image: https://urara.trle5.xyz/talk/page104/hero.webp
+    url: https://urara.trle5.xyz/talk/page104/
+    date: 2022-04-07 08:06:21
+    updated: 2022-12-21
+    category: talk
+    tags:
+      - 闲聊
+  - title: 手机使用 ADB 与 Fastboot 给另一台手机执行命令
+    summary: 未完成，而且好像没找到免 root 执行 fastboot 命令的办法
+    url: https://urara.trle5.xyz/post/phone2adb/
+    date: 2022-05-10
+    updated: 2022-11-06
+    category: post
+    tags:
+      - ADB
+      - 技术
+  - title: 使用 FarPush 搭建微信消息推送服务
+    summary: 在不保留微信后台的前提下正常收到通知推送
+    image: https://urara.trle5.xyz/post/wechatpush/farpush-hms.webp
+    url: https://urara.trle5.xyz/post/wechatpush/
+    date: 2022-09-01
+    updated: 2022-11-03
+    category: post
+    tags:
+      - FarPush
+      - 推送服务
+  - title: 在 Chrome OS 上为 Linux 虚拟机开启动态磁盘大小
+    summary: 不用再反复给 Linux 虚拟机调整磁盘大小了
+    image: https://urara.trle5.xyz/post/动态分配crostini/Linux.webp
+    url: https://urara.trle5.xyz/post/动态分配crostini/
+    date: 2022-10-22
+    updated: 2023-07-30
+    category: post
+    tags:
+      - Chrome OS
+      - Linux
+      - 小教程
+  - title: 2022 下半年的总结
+    summary: 总结一下暑假开始到现在的生活情况
+    image: https://urara.trle5.xyz/talk/page111/flowers.webp
+    url: https://urara.trle5.xyz/talk/page111/
+    date: 2022-11-06
+    updated: 2023-01-04
+    category: talk
+    tags:
+      - 闲聊
+  - title: Urara 入门教程
+    summary: 力所能及写的搭建教程
+    image: https://urara.trle5.xyz/post/urara-intro/urara.webp
+    url: https://urara.trle5.xyz/post/urara-intro/
+    date: 2022-11-20
+    updated: 2023-04-01
+    category: post
+    tags:
+      - Urara
+      - 技术
+      - 博客
+  - title: 做一个简单的网络继电器
+    summary: 可接入 HomeKit 来控制开关
+    image: https://urara.trle5.xyz/post/8266-switch/relay.webp
+    url: https://urara.trle5.xyz/post/8266-switch/
+    date: 2022-12-04
+    updated: 2023-02-04
+    category: post
+    tags:
+      - Homekit
+      - esp8266
+      - 技术
+  - title: Urara 拓展插件
+    summary: Urara 可用拓展插件使用教程
+    url: https://urara.trle5.xyz/post/urara-intro/extra/
+    date: 2022-12-21
+    updated: 2023-02-08
+    category: post
+    tags:
+      - Urara
+      - 拓展
+  - title: 2022 年度总结
+    summary: 又是一年，今年做了什么呢
+    image: https://urara.trle5.xyz/talk/page112/2023.webp
+    url: https://urara.trle5.xyz/talk/page112/
+    date: 2022-12-28
+    updated: 2023-01-05
+    category: talk
+    tags:
+      - 年度总结
+      - 闲聊
+  - title: 年间
+    summary: 换句话说就是寒假期间
+    image: https://urara.trle5.xyz/talk/page202/square.webp
+    url: https://urara.trle5.xyz/talk/page202/
+    date: 2023-02-09
+    updated: 2024-01-23
+    category: talk
+    tags:
+      - 闲聊
