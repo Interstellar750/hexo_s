@@ -159,7 +159,7 @@ var buf bytes.Buffer // 创建一个 buffer 作为执行模板的缓冲
 // 第一个参数同样传入 buf 的地址
 // 第二个参数为模板的名称，这里我使用了文件名，实际上应该自定义模板名称
 // 第三个参数因为暂时不需要数据，同样传入 nil
-err = tmpl.ExecuteTemplate(&buf，"a.tmpl", nil)
+err = tmpl.ExecuteTemplate(&buf, "a.tmpl", nil)
 if err != nil {
     log.Println(err)
 }
