@@ -1,6 +1,7 @@
 ---
 title: 自定义 golang 仓库的 module / 库名
 date: 2025-12-03
+category: post
 tags:
   - go
 ---

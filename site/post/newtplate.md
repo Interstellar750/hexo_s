@@ -113,7 +113,7 @@ lute 好像没有方法在渲染 Markdown 后拿到一些章节数据，不过�
 
 #### 文章分类和标签
 
-在之前使用 Urara 的时候是有从其他仓库里拿过一个 sections 插件（见 [Interstellar750/hexo_s](https://github.com/Interstellar750/hexo_s) 的 README 部分），可以以某个分类来显示其下的文章，这个代码在我的 Urara 库中还有保留，但是 [@jiwaszki](https://github.com/jiwaszki) 似乎转向使用 hugo 来搭建博客，原来的代码就不得而知了...
+在之前使用 Urara 的时候是有从其他仓库里拿过一个 sections 插件（见 [Interstellar750/hexo_s/urara](https://github.com/Interstellar750/hexo_s/tree/urara) 的 README 部分），可以以某个分类来显示其下的文章，这个代码在我的 Urara 库中还有保留，但是 [@jiwaszki](https://github.com/jiwaszki) 似乎转向使用 hugo 来搭建博客，原来的代码就不得而知了...
 
 好在这个写起来也不算太难，其实仔细想想跟 tag 也没差多少，就是分类只能指定一个，而标签能指定多个，最终都是靠标签或分类来索引符合条件的文章而已
 
