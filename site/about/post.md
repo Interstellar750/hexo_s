@@ -1,7 +1,7 @@
 ---
 title: 关于我
 date: 2022-03-01
-updated: 2025-10-23
+updated: 2025-12-18
 category: about
 tags:
   - 关于
@@ -106,6 +106,7 @@ ssb>  ed25519/7043720D3C7D7718 2023-01-19 [A] (认证)
 #### 硬件
 [i5-4460 / HD 4600](https://www.intel.com/content/www/us/en/products/sku/80817/intel-core-i54460-processor-6m-cache-up-to-3-40-ghz/specifications.html) & [Tesla P4](https://www.nvidia.cn/content/dam/en-zz/zh_cn/Solutions/deep-learning/deep-learning-solutions/inference-platform/hpc/222754_Tesla_P4_Datasheet_nvidia-hr-cn.pdf) / 8GB DDR3 / 240GB SATA SSD x 3 <br>
 [Orange Pi Zero2](http://www.orangepi.cn/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-Zero-2.html) H616 / 1GB DDR3 / 64GB Micro SD <br>
+[Xbox Series S](https://www.xbox.com/consoles/xbox-series-s) 1TB <br>
 
 #### 操作系统
 [Windows](https://www.microsoft.com/zh-cn/windows/get-windows-10) LTSC 2021 (21H2) <br>
