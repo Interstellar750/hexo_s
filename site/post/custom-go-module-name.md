@@ -105,6 +105,6 @@ go: github.com/go-yaml/yaml/v3@upgrade (v3.0.1) requires github.com/go-yaml/yaml
 
 由于想到要不直接往文章里塞 `<meta>` 标签就好了，这样也不用担心文章冲突，改了一下博客模板发现还算简单，于是就直接塞到文章里了
 
-但是似乎因为 tailing slash 的缘故，可能还需要改一改，例如目前 `trle5.xyz/tplate` 的信息实际上存储在 `/tplate/index.html`
+但是似乎因为 trailing slash 的缘故，可能还需要改一改，例如目前 `trle5.xyz/tplate` 的信息实际上存储在 `/tplate/index.html`
 
-但 Cloudflare Pages 自动把 `/tplate` 的请求重定向到 `/tplate/index.html`, pkg.go.dev 和 `go` 命令行也能正确抓取到信息，先暂时不动它吧...
+但 Cloudflare Pages 自动把 `/tplate` 的请求重定向到 `/tplate/index.html`, pkg.go.dev 和 `go` 命令行也能正确抓取到信息，~~先暂时不动它吧...~~ 改了
