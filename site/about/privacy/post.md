@@ -72,7 +72,7 @@ Cloudflare Web Analytics 是一个基于 JavaScript 代码的分析工具，最�
 - 核心网络指标（Core Web Vitals）见下方
 </details>
 
-<details no-indent>
+<details>
   <summary><b>核心网络指标（Core Web Vitals）</b></summary>
 
 - 最大内容绘制（LCP）（精确到次数）
@@ -139,7 +139,7 @@ Cloudflare Web Analytics 是一个基于 JavaScript 代码的分析工具，最�
 
 - 与他人展示
   - 你看看我这篇文章竟然有这么多人看：(附上页面浏览数据)
-- 演示流量消耗：
+- 演示流量消耗
   - 压缩了图片大小后，我博客每个月只需要不到 1GB 流量：(附上流量消耗统计)
 - 浏览器类型
   - 访问我博客用的浏览器七八成都是 Chrome：(附上浏览器类型统计)

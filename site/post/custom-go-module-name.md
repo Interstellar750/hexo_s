@@ -1,6 +1,7 @@
 ---
 title: 自定义 golang 仓库的 module / 库名
 date: 2025-12-03
+updated: 2026-03-08
 category: post
 tags:
   - go
@@ -94,6 +95,16 @@ go: github.com/go-yaml/yaml/v3@upgrade (v3.0.1) requires github.com/go-yaml/yaml
 > 1. `go.mod` 中库名为 `example.com/package`
 > 2. 浏览器中 `example.com/package` 可正常访问
 > 3. `example.com/package` 页面为 `HTML` 文档，且其中包含上方的 `<meta>` 标签
-> 4. `<meta>` 标签中的属性已经[按照需求](#创建包含特殊属性的--标签)正确填写了
+> 4. `<meta>` 标签中的属性已经 [按照需求](#创建包含特殊属性的--标签) 正确填写了
 
 之后确保 CDN 缓存之类的不会干扰你的请求，就可以尝试使用新的库名来导入或安装你的项目了
+
+---
+
+2026-03-08 更新：
+
+由于想到要不直接往文章里塞 `<meta>` 标签就好了，这样也不用担心文章冲突，改了一下博客模板发现还算简单，于是就直接塞到文章里了
+
+但是似乎因为 tailing slash 的缘故，可能还需要改一改，例如目前 `trle5.xyz/tplate` 的信息实际上存储在 `/tplate/index.html`
+
+但 Cloudflare Pages 自动把 `/tplate` 的请求重定向到 `/tplate/index.html`, pkg.go.dev 和 `go` 命令行也能正确抓取到信息，先暂时不动它吧...

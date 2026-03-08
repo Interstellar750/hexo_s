@@ -1,7 +1,7 @@
 ---
 title: 关于我
 date: 2022-03-01
-updated: 2025-12-18
+updated: 2026-03-08
 category: about
 tags:
   - 关于
@@ -99,7 +99,7 @@ ssb>  ed25519/7043720D3C7D7718 2023-01-19 [A] (认证)
 
 #### 移动设备
 [iPhone 12](https://zh.m.wikipedia.org/wiki/IPhone_12) A14 / 4GB / 128GB <br>
-[iPhone SE 2](https://zh.m.wikipedia.org/zh-hans/IPhone_SE_(第二代)) A13 / 3GB / 64GB <br>
+[iPhone SE 2](https://zh.m.wikipedia.org/zh-hans/IPhone_SE_(第二代)) A13 / 3GB / 64GB 坏掉了... <br>
 [iPad mini 5](https://zh.m.wikipedia.org/zh-hans/IPad_mini_(第五代)) A12 / 3GB / 64GB <br>
 [Apple Watch S5](https://zh.m.wikipedia.org/zh-hans/Apple_Watch_Series_5) 44mm / 32GB <br>
 
@@ -110,7 +110,7 @@ ssb>  ed25519/7043720D3C7D7718 2023-01-19 [A] (认证)
 
 #### 操作系统
 [Windows](https://www.microsoft.com/zh-cn/windows/get-windows-10) LTSC 2021 (21H2) <br>
-[Debian](https://www.debian.org/) bullseye | kernel 5.10.0 服务器用 <br>
+[Debian](https://www.debian.org/) trixie | kernel 6.12 服务器用 <br>
 [iOS](https://www.apple.com/ios/) 15.6 (iPhone 12) 17.7 (iPhone SE 2) <br>
 [iPad OS](https://www.apple.com/ipados/) 17.3.1 (iPad mini 5) <br>
 
