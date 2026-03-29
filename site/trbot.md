@@ -8,7 +8,7 @@ flags:
   - no_trailing_slash
 head_tags:
   - <meta name="go-import" content="trle5.xyz/trbot git https://gitea.trle5.xyz/trle5/trbot.git">
-  - <meta name="go-source" content="trle5.xyz/trbot _ https://gitea.trle5.xyz/trle5/trbot/src/branch/custom{/dir} https://gitea.trle5.xyz/trle5/trbot/src/branch/custom{/dir}/{file}#L{line}">
+  - <meta name="go-source" content="trle5.xyz/trbot _ https://gitea.trle5.xyz/trle5/trbot/src/branch/main{/dir} https://gitea.trle5.xyz/trle5/trbot/src/branch/main{/dir}/{file}#L{line}">
 ---
 
 https://gitea.trle5.xyz/trle5/trbot
