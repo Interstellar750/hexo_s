@@ -13,6 +13,6 @@ head_tags:
 
 https://gitea.trle5.xyz/trle5/go-ts3
 
-From from: https://github.com/jkoenig134/go-ts3
+Fork from: https://github.com/jkoenig134/go-ts3
 
 在 golang 项目中导入此库：`go get -u trle5.xyz/go-ts3`
