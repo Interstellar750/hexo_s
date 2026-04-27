@@ -3,7 +3,7 @@ Author: Hubert Chen
 Desc:   Hubert's Blog based on tplate
 URL:    https://trle5.xyz
 SingleHTML: true
-Notice: <blockquote>本站正在更换博客模板，由于文章迁移问题，原有的博客将保留访问，但域名将变为 <a href="https://urara.trle5.xyz/">urara.trle5.xyz</a></blockquote>
+Notice: ""
 HeadTags:
   - <link rel="me" href="https://github.com/Interstellar750">
   - <link rel="webmention" href="https://webmention.io/trle5.xyz/webmention">

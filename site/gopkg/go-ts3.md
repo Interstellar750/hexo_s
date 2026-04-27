@@ -2,6 +2,7 @@
 title: go-ts3
 date: 2026-03-29
 summary: 这个文章只是存放了一些 <meta> 标签以让 go 程序能顺利通过这个 URL 获取到仓库信息
+url: /go-ts3
 flags:
   - hide_post
   - no_comment
