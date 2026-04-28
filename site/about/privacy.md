@@ -2,7 +2,7 @@
 title: 隐私声明
 date: 2022-12-27
 updated: 2025-10-24
-image: /about/privacy/visibility_off.webp
+image: /assets/photo/visibility_off.webp
 category: about
 flags:
   - hide_post
