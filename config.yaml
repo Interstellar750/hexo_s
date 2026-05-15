@@ -40,6 +40,10 @@ Seia:
   Enable: true
   ShowInputBox: true
   WebmentionEndpoint: https://webmention.io/trle5.xyz/webmention
+Viewer:
+  Enable: true
+  MinScale: 0.5
+  MaxScale: 8
 Friends:
   - Name: Katari
     Avatar: /assets/friends_avatar/katari.webp
