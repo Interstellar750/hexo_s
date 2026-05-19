@@ -1,17 +1,18 @@
 ---
-title: golang template 库使用教程
-date: 2025-10-28
+title: golang template 库入门教程
+date: 2026-05-16
 summary: 不是很好写
 category: post
 tags:
   - go
   - tmpl
+  - 教程
 flags:
   - hide_post
   - show_in_category_and_tag
 ---
 
-在我写 [tplate](https://gitea.trle5.xyz/trle5/tplate) 时，我发现网上能找到的 golang template 教程都很分散，不是很方便，于是打算写一篇文章留给自己用
+这篇文章本来是 [golang template 库使用教程](/post/go-template/) 的一部分，没写完又不是很好写就拆出来了
 
 本文中展示的库默认使用 `html/template` 库，可能与 `text/template` 用法有些差别
 
@@ -68,54 +69,62 @@ flags:
 
 `html/template` 库提供了三个函数来加载模板，它们分别是：
 
-1. [ParseFS(fs fs.FS, patterns ...string) (*Template, error)](https://pkg.go.dev/html/template#ParseFS)
-2. [ParseFiles(filenames ...string) (*Template, error)](https://pkg.go.dev/html/template#ParseFiles)
+1. [ParseFiles(filenames ...string) (*Template, error)](https://pkg.go.dev/html/template#ParseFiles)
+2. [ParseFS(fs fs.FS, patterns ...string) (*Template, error)](https://pkg.go.dev/html/template#ParseFS)
 3. [ParseGlob(pattern string) (*Template, error)](https://pkg.go.dev/html/template#ParseGlob)
 
 综合使用最多的还是 `template.ParseFiles()` 搭配 `filepath.WalkDir()`
-
-#### ParseFS()
-没有用过，不是很清楚用法
 
 #### ParseFiles()
 接受可变参数的模板路径，通常搭配 `filepath.WalkDir()` 函数来自动解析一个文件夹及其全部子目录下的全部模板文件：
 
 ```go
 var paths []string
-var tmplDir string = "./templates"
-var tmplExt string = ".tmpl"
+var dir string = "templates"
 
-err := filepath.WalkDir(tmplDir, func(path string, d os.DirEntry, err error) error {
-    if err != nil {
-        return err
-    }
-    if !d.IsDir() && filepath.Ext(path) == tmplExt {
+err := filepath.WalkDir(dir, func(path string, d os.DirEntry, err error) error {
+    if err != nil { return err }
+    if !d.IsDir() && filepath.Ext(path) == ".tmpl" {
         paths = append(paths, path)
     }
     return nil
 })
-if err != nil {
-    log.Println(err)
-}
+if err != nil { log.Println(err) }
 
 tmpl, err := template.ParseFiles(paths...)
-if err != nil {
-    log.Println(err)
-}
+if err != nil { log.Println(err) }
+```
+
+#### ParseFS()
+用法类似 `ParseFiles()`，从一个 `fs.FS` 文件系统中加载文件而不是本地目录，一般也是搭配 `fs.WalkDir()` 函数来解析一个文件夹及其全部子目录下的全部模板文件：
+
+```go
+var fsys fs.FS // 需要从其他地方传入一个真实可用的 fs.FS
+var paths []string
+var dir string = "templates"
+
+err := fs.WalkDir(fsys, dir, func(path string, d fs.DirEntry, err error) error {
+    if err != nil { return err }
+    if !d.IsDir() && filepath.Ext(path) == ".tmpl" {
+        paths = append(paths, path)
+    }
+    return nil
+})
+if err != nil { log.Println(err) }
+
+tmpl, err := template.ParseFS(p.EmbedFS, files...)
+if err != nil { log.Println(err) }
 ```
 
 #### ParseGlob()
 接受一个目录路径，仅解析此目录下的文件（拓展名不确定），**不包含子目录和其中的文件**
 
 ```go
-var tmplDir string = "./templates"
+var dir string = "templates"
 
-tmpl, err := template.ParseGlob(tmplDir)
-if err != nil {
-    log.Println(err)
-}
+tmpl, err := template.ParseGlob(dir)
+if err != nil { log.Println(err) }
 ```
-
 
 ### 调用模板
 
@@ -129,17 +138,13 @@ if err != nil {
 
 ```go
 tmpl, err := template.ParseFiles("./a.tmpl") // 只传入了一个模板文件路径
-if err != nil {
-    log.Println(err)
-}
+if err != nil { log.Println(err) }
 
 var buf bytes.Buffer // 创建一个 buffer 作为执行模板的缓冲
 
 // 执行模板时传入 buf 的地址作为 io.Writer 接口，因为暂时不需要数据，data 传入 nil
 err = tmpl.Execute(&buf, nil)
-if err != nil {
-    log.Println(err)
-}
+if err != nil { log.Println(err) }
 
 // 在终端里输出执行模板后的结果
 fmt.Println(buf.String())
@@ -150,9 +155,7 @@ fmt.Println(buf.String())
 
 ```go
 tmpl, err := template.ParseFiles("./a.tmpl", "./b.tmpl", "./c.tmpl") // 传入了三个模板文件的路径
-if err != nil {
-    log.Println(err)
-}
+if err != nil { log.Println(err) }
 
 var buf bytes.Buffer // 创建一个 buffer 作为执行模板的缓冲
 
@@ -160,107 +163,12 @@ var buf bytes.Buffer // 创建一个 buffer 作为执行模板的缓冲
 // 第二个参数为模板的名称，这里我使用了文件名，实际上应该自定义模板名称
 // 第三个参数因为暂时不需要数据，同样传入 nil
 err = tmpl.ExecuteTemplate(&buf, "a.tmpl", nil)
-if err != nil {
-    log.Println(err)
-}
+if err != nil { log.Println(err) }
 
 fmt.Println(buf.String())
 ```
 
 **如果解析了多个模板，但调用时使用 `Template.Execute()` 方法，我不清楚具体会发生什么，但不推荐这样做**
-
-## 模板语法
-
-### if else 条件式
-
-我们也可以在模板中判断一些条件，来控制要执行的数据
-
-```
-{{ if .A }}
-  {{/* 符合 .A 条件的内容 */}}
-{{ end }}
-```
-
-当然也可以嵌套条件式：
-
-```
-{{ if .A }}
-  {{/* 符合 .A 条件时的内容 */}}
-{{ else if .B }}
-  {{/* 符合 .B 条件时的内容 */}}
-{{ else }}
-  {{/* 不符合上面两个条件时的内容 */}}
-{{ end }}
-```
-
-### 遍历
-
-我们只需要简单的使用 `range` 方法即可遍历数组、切片或 map 键值对，下面是一个最简单的演示：
-
-```bash
-{{ range . }}
-当前遍历的值: {{ . }}
-{{ end }}
-```
-
-#### 使用循环外的值
-在 `range` 方法的作用域中，`.` 符号指向的数据将是当前遍历的值，若我们需要在作用域中使用作用域外的数据，可以在使用时添加 `$` 前缀：
-
-```bash
-{{/* 这里假设你在执行模板时，传入的数据中有 Slice 和 Value 这两个变量 */}}
-这是 Value 的值: {{ $.Value }}
-{{ range .Slice }}
-当前遍历的值: {{ . }}
-在循环内调用 Value 的值: {{ $.Value }}
-{{ end }}
-```
-
-#### 获取索引或键
-我们可以在使用 `range` 方法时按照下面的方法创建临时变量来获取索引值或 map 键值对中的键：
-
-```bash
-{{ range $index, $data := . }}
-当前遍历的值: {{ . }}
-index 变量:  {{ $index }}
-data 变量:   {{ $data }}
-{{ end }}
-```
-
-可以看到就算创建了变量，依然可以通过 `{{ . }}` 来直接调用当前作用域中的值
-
-#### 循环为空时的其他条件
-`range` 方法还可以在要遍历的数组、切片或 map 键值对中没有值时，触发其他条件：
-
-```bash
-{{ range . }}
-当前遍历的值: {{ . }}
-{{ else }}
-这个数组是空的
-{{ end }}
-```
-
-### 逻辑判断
-
-golang template 语法相比 go 语言没有那么严格的类型限制，但这可能并不是什么好事...
-
-#### 逻辑运算符
-
-| 关键字 | 使用方法 | 等价 go 语句 | 备注 |
-| :-----: | ----------- | ------------ | :------- |
-| **and** | `and c1 c2` | `c1 && c2`   |          |
-| **or**  | `or c1 c2`  | `c1 \|\| c2` |          |
-| **not** | `not c1`    | `!c1`        |          |
-
-#### 比较运算符
-
-| 关键字 | 使用方法 | 等价 go 语句 | 备注 |
-| :-----: | :--------- | :--------- | :------- |
-| **eq** | `eq c1 c2` | `c1 == c2` | 可以链接多个，例如 eq a b c，等价 a == b == c |
-| **ne** | `ne c1 c2` | `c1 != c2` |   |
-| **lt** | `lt c1 c2` | `c1 <  c2` |   |
-| **le** | `le c1 c2` | `c1 <= c2` |   |
-| **gt** | `gt c1 c2` | `c1 >  c2` |   |
-| **ge** | `ge c1 c2` | `c1 >= c2` |   |
 
 ## 入门示例
 
