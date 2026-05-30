@@ -24,9 +24,6 @@ FooterButtons:
     Blank: true
   - Text: Privacy
     URL: /about/privacy/
-  - Text: RSS
-    URL: /atom.xml
-    Blank: true
 Giscus:
   Enable: true
   Repo: interstellar750/hexo_s
